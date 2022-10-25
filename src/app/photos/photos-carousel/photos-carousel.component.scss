@@ -1,0 +1,96 @@
+.photo-carousel-section {
+    background: -webkit-linear-gradient(#00CCFF, #f5f5f5, transparent);
+    background: -moz-linear-gradient(#00CCFF, #f5f5f5, transparent);
+    background: -ms-linear-gradient(#00CCFF, #f5f5f5, transparent);
+    background: -o-linear-gradient(#00CCFF, #f5f5f5, transparent);
+    background: linear-gradient(#00CCFF, #f5f5f5, transparent);
+    font-family: 'Droid Sans', sans-serif;
+    text-shadow: none;
+    /*
+      #addPhotosBtn {
+          margin-left: 100px;
+          top: 25px;
+  
+          label {
+              color: whitesmoke;
+              font-weight: normal;
+              margin-left: 20px;
+  
+              input {
+                  margin-right: 10px;
+              }
+          }
+          margin-bottom: 10%;
+      }
+      */
+  }
+  .photo-carousel-section .section-heading {
+    color: #000080;
+    text-shadow: 2px 2px 4px #999999;
+  }
+  .photo-carousel-section .section-subheading {
+    color: #000000;
+    text-shadow: 1px 1px 2px #000080;
+  }
+  .photo-carousel-section #photoCarousel {
+    width: 96%;
+    height: auto;
+    margin: auto;
+    padding: 0px;
+  }
+  .photo-carousel-section #photoCarousel #slides_control {
+    height: 420px;
+    width: auto;
+    margin-top: 20px;
+  }
+  .photo-carousel-section #photoCarousel #slides_control carousel {
+    background-color: #99CCFF;
+    margin: 2px;
+    object-fit: contain;
+    height: 420px;
+    max-height: 420px;
+    width: auto;
+    max-width: 420px;
+  }
+  .photo-carousel-section #photoCarousel #slides_control carousel slide {
+    margin: auto;
+    left: 0;
+    height: 420px;
+    width: auto;
+    max-height: 420px;
+    max-width: 420px;
+    object-fit: contain;
+  }
+  .photo-carousel-section #photoCarousel #slides_control carousel slide img {
+    border: 5px dashed #0070C6;
+    margin: 5px auto 5px;
+    height: 100%;
+    max-height: 420px;
+    width: auto;
+    max-width: 420px;
+    overflow-x: hidden;
+    object-fit: contain;
+  }
+  .photo-carousel-section .carousel-caption {
+    bottom: 0px;
+    color: #000000;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 3px #000080;
+  }
+  .photo-carousel-section #slideName {
+    background: -webkit-radial-gradient(#A3A3A3, #ffffff);
+    background: -moz-radial-gradient(#A3A3A3, #ffffff);
+    background: -ms-radial-gradient(#A3A3A3, #ffffff);
+    background: -o-radial-gradient(#A3A3A3, #ffffff);
+    background: radial-gradient(#A3A3A3, #ffffff);
+    border-radius: 7px;
+    margin-bottom: 7px;
+  }
+  .photo-carousel-section .carousel-indicators {
+    bottom: 2px;
+  }
+  .photo-carousel-section #intervalSlide {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  

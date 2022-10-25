@@ -1,0 +1,71 @@
+ction {
+    background: -webkit-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -moz-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -ms-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -o-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: linear-gradient(#f5f5f5, #00CCFF, transparent);
+    color: #000000;
+  }
+  .videos-section .section-heading {
+    color: #000000;
+    text-shadow: 3px 2px 5px #0070C6;
+  }
+  .videos-section .section-subheading {
+    color: #000000;
+    text-shadow: 2px 2px 6px #000000;
+  }
+  .videos-section .vidlst {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 1em;
+    padding-left: 20px;
+  }
+  .videos-section .panel {
+    background-color: transparent;
+    height: auto;
+    margin: 0px auto;
+    overflow-x: wrap;
+    overflow-y: wrap;
+    width: 240px;
+    word-wrap: break-word;
+  }
+  .videos-section .panel .panel-title {
+    height: 30px;
+    text-align: center;
+    text-overflow: wrap;
+    vertical-align: center;
+  }
+  .videos-section .panel .panel-body {
+    text-shadow: 1px 1px 2px #f5f5f5;
+    background-color: #00CCFF;
+  }
+  .videos-section .filterResult {
+    color: #000080;
+    text-shadow: 2px 2px 6px #000000;
+  }
+  .videos-section img {
+    height: 240px;
+    width: auto;
+  }
+  .videos-section select {
+    color: #000080;
+  }
+  .videos-section input {
+    background-color: #f5f5f5;
+  }
+  .videos-section .primary {
+    color: #000080;
+    font-weight: normal;
+    text-shadow: none;
+  }
+  .videos-section .category {
+    color: #000000;
+    font-weight: normal;
+    text-shadow: none;
+  }
+  .videos-section p {
+    text-align: left;
+  }

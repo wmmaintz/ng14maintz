@@ -1,0 +1,59 @@
+.contact-section {
+    background-color: #000080;
+    background-image: url('../../../assets/home/world.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .contact-section .section-heading {
+    color: white;
+  }
+  .contact-section .form-group {
+    margin-bottom: 25px;
+  }
+  .contact-section .form-group input,
+  .contact-section .form-group textarea {
+    padding: 20px;
+  }
+  .contact-section .form-group input.form-control {
+    height: auto;
+  }
+  .contact-section .form-group textarea.form-control {
+    height: 236px;
+  }
+  .contact-section .form-control:focus {
+    border-color: #0000FF;
+    box-shadow: none;
+  }
+  .contact-section ::-webkit-input-placeholder {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-transform: uppercase;
+    color: #99CCFF;
+    font-weight: 700;
+  }
+  .contact-section :-moz-placeholder {
+    /* Firefox 18- */
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-transform: uppercase;
+    color: #99CCFF;
+    font-weight: 700;
+  }
+  .contact-section ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-transform: uppercase;
+    color: #99CCFF;
+    font-weight: 700;
+  }
+  .contact-section :-ms-input-placeholder {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-transform: uppercase;
+    color: #99CCFF;
+    font-weight: 700;
+  }
+  .contact-section .text-danger {
+    color: #FF0000;
+  }
+  .contacts-section .lead {
+    color: #666666;
+  }
+  

@@ -1,0 +1,135 @@
+.photo-gallery-section {
+    color: #000000;
+    background: -webkit-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -moz-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -ms-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: -o-linear-gradient(#f5f5f5, #00CCFF, transparent);
+    background: linear-gradient(#f5f5f5, #00CCFF, transparent);
+  }
+  .photo-gallery-section .section-heading {
+    color: #000080;
+    margin: 50px 0px 0px 0px;
+    text-shadow: 3px 2px 5px #0070C6;
+  }
+  .photo-gallery-section .section-subheading {
+    color: #000000;
+    margin: 0px auto 0px;
+    text-shadow: 2px 2px 6px #000000;
+  }
+  .photo-gallery-section .filterResult {
+    color: #000000;
+    text-shadow: 2px 2px 6px #000000;
+  }
+  .photo-gallery-section ul {
+    display: inline;
+    list-style: none;
+  }
+  .photo-gallery-section ul li a {
+    color: #000080;
+  }
+  .photo-gallery-section .photos {
+    border: 8px solid transparent;
+    border-radius: inherit;
+    display: inline-block;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .photo-gallery-section .back {
+    font-size: 12pt;
+    height: 288px;
+  }
+  .photo-gallery-section .back #fullscreenBtn {
+    margin: 0px auto;
+    text-align: center;
+  }
+  
+
+  ///////////////////////////////////////////////////////////////////////////////////////////
+
+  .photo-grid-section {
+    background: -webkit-linear-gradient(#666666, #000000, transparent);
+    background: -moz-linear-gradient(#666666, #000000, transparent);
+    background: -ms-linear-gradient(#666666, #000000, transparent);
+    background: -o-linear-gradient(#666666, #000000, transparent);
+    background: linear-gradient(#666666, #000000, transparent);
+    color: #000000;
+    font-weight: normal;
+  }
+  .photo-grid-section .section-heading {
+    color: #000000;
+    text-shadow: 3px 2px 5px #999999;
+  }
+  .photo-grid-section .section-subheading {
+    color: #00CCFF;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 6px #A3A3A3;
+  }
+  .photo-grid-section .filter {
+    color: #000000;
+    font-weight: normal;
+    margin: auto;
+    text-align: center;
+    text-shadow: none;
+  }
+  .photo-grid-section .filter label {
+    color: #00CCFF;
+  }
+  .photo-grid-section .filter .primary input,
+  .photo-grid-section .filter .primary select {
+    text-align: left;
+  }
+  .photo-grid-section .photoGrid {
+    border: 1px solid #00CCFF;
+    margin: 0px auto;
+    padding: 10px;
+    padding-right: 20px;
+    vertical-align: middle;
+    width: 95%;
+  }
+  .photo-grid-section .photoGGrid {
+    border-collapse: collapse;
+  }
+  .photo-grid-section .photoGGrid .grid_row {
+    background-color: transparent;
+    color: #f5f5f5;
+    font-family: 'Courier-New';
+  }
+  .photo-grid-section .photoGGrid .grid_row td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+  .photo-grid-section .photoGGrid .grid_row td .dataCell {
+    border: 1px dotted grey;
+  }
+  .photo-grid-section .photoGGrid .grid_row td .checkbox {
+    font-family: Wingdings;
+  }
+  .photo-grid-section .photoGGrid .grid_row td .box {
+    display: block;
+    height: 84px;
+    width: auto;
+  }
+  .photo-grid-section .photoGGrid .grid_row td img {
+    border: 2px solid transparent;
+    display: block;
+    height: 64px;
+    margin: 0px auto 10px;
+    width: auto;
+  }
+  .photo-grid-section .photoGGrid .grid_row td input {
+    background-color: transparent;
+  }
+  .photo-grid-section .photoGGrid .grid_row td input:active {
+    background-color: #000000;
+    border: 1px dotted #A3A3A3;
+  }
+  .photo-grid-section .photoGGrid .hilightRow {
+    color: #ff3300;
+    font-weight: 600;
+  }
+  .photo-grid-section .photoGGrid .ui-grid-footer {
+    background-color: #666666;
+    color: #FF0000;
+    font-weight: 600;
+  }
+  

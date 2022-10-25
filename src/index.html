@@ -4,10 +4,50 @@
   <meta charset="utf-8">
   <title>Maintz</title>
   <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="maintz.com website">
+
+  <!-- social media tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@wmmaintz">
+  <meta name="twitter:title" content="maintz.com website">
+  <meta name="twitter:description" content="maintz.com website using the Angular framework">
+  <meta name="twitter:creator" content="@wmmaintz">
+  <meta name="twitter:image:src" content="assets/logos/web/angular.jpg">
+  <meta property="og:title" content="maintz.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.maintz.com" />
+  <meta property="og:image" content="assets/logos/web/angular.jpg" />
+  <meta property="og:description" content="maintz.com website using the Angular framework.">
+  
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">       
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kaushan+Script">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:wght@300;400;500&display=swap">
+
+  <!-- Angular Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .loading {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <m-root>
+    <div class="loading">Loading ...</div>
+  </m-root>
 </body>
 </html>
