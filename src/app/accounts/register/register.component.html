@@ -1,73 +1,76 @@
-<div class="row">
-    <div class="col s8 offset-s1 ">
-        <div class="card">
-            <div class="sm-jumbotron center-align">
-                <h2>User Registration</h2>
+<section class="section user-section">
+    <p>User Registration works!</p>
+    <div class="row">
+        <div class="col s8 offset-s1 ">
+            <div class="card">
+                <div class="sm-jumbotron center-align">
+                    <h2>User Registration</h2>
+                </div>
+                <!--
+                <form class="col s12 white" #f="ngForm">
+                    <br/>
+                    <div class="class row">
+                        <p>user.Email = [{{user.Email}}]</p>
+                        <div class="input-field col s7">
+                            <input class="validate" type="email" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern" required>
+                            <label data-error="Invalid Email!">Email</label>
+                        </div>
+                        -->
+                        <!-- This is an inline input field: -->
+                        <!--
+                        <div class="input-field inline">
+                            <input class="validate" type="email" id="email_inline" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern" required>
+                            <label for="email_inline">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">
+                                Enter your email in the form yourname@yourdomain.domaintype (i.e. myusername@gmail.com)
+                            </span>
+                        </div>
+                        -->
+                        <!--
+                        <div class="input-field col s5">
+                            <input class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" required minlength="4">
+                            <label [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 4 characters needed'):''">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s5">
+                        <input type="text" class="validate" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName">
+                        <label>First Name</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <input type="text" class="validate" name="MI" #Mi="ngModel" [(ngModel)]="user.MI">
+                            <label>MI</label>
+                        </div>
+                        <div class="input-field col s5">
+                        <input type="text" class="validate" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName">
+                        <label>Last Name</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <input type="text" class="validate" name="Suffix" #Mi="ngModel" [(ngModel)]="user.Suffix">
+                            <label>Suffix</label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" class="validate" name="Phone" #Phone="ngModel" [(ngModel)]="user.Phone">
+                            <label>Phone</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                        <input disabled value="Role: Registered User" type="text" class="validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button [disabled]="!f.valid" class="btn-large btn-submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                -->
             </div>
-            <!--
-            <form class="col s12 white" #f="ngForm">
-                <br/>
-                <div class="class row">
-                    <p>user.Email = [{{user.Email}}]</p>
-                    <div class="input-field col s7">
-                        <input class="validate" type="email" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern" required>
-                        <label data-error="Invalid Email!">Email</label>
-                    </div>
-                    -->
-                    <!-- This is an inline input field: -->
-                    <!--
-                    <div class="input-field inline">
-                        <input class="validate" type="email" id="email_inline" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern" required>
-                        <label for="email_inline">Email</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">
-                            Enter your email in the form yourname@yourdomain.domaintype (i.e. myusername@gmail.com)
-                        </span>
-                    </div>
-                    -->
-                    <!--
-                    <div class="input-field col s5">
-                        <input class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" required minlength="4">
-                        <label [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 4 characters needed'):''">Password</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s5">
-                      <input type="text" class="validate" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName">
-                      <label>First Name</label>
-                    </div>
-                    <div class="input-field col s1">
-                        <input type="text" class="validate" name="MI" #Mi="ngModel" [(ngModel)]="user.MI">
-                        <label>MI</label>
-                    </div>
-                    <div class="input-field col s5">
-                      <input type="text" class="validate" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName">
-                      <label>Last Name</label>
-                    </div>
-                    <div class="input-field col s1">
-                        <input type="text" class="validate" name="Suffix" #Mi="ngModel" [(ngModel)]="user.Suffix">
-                        <label>Suffix</label>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" class="validate" name="Phone" #Phone="ngModel" [(ngModel)]="user.Phone">
-                        <label>Phone</label>
-                    </div>
-
-                    <div class="input-field col s6">
-                      <input disabled value="Role: Registered User" type="text" class="validate">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <button [disabled]="!f.valid" class="btn-large btn-submit" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
-            -->
         </div>
     </div>
-</div>
+</section>

@@ -1,6 +1,8 @@
-<div class="toolbar" role="banner">
-    <m-navigation></m-navigation>
-</div>
+<header>
+    <m-navbar *ngIf="navbarMenu"></m-navbar>
+    <m-sidebar *ngIf="sidebarMenu"></m-sidebar>
+    <m-navigation *ngIf="!navbarMenu && !sidebarMenu"></m-navigation>
+</header>
 
 <!--
     <img
@@ -29,7 +31,6 @@
 
 
 <!--
-<header>
     <nav class="nav navbar-default navbar-fixed-top nav-pills">
         <div class="container-fluid">
             
@@ -241,5 +242,4 @@
         </div>
 
     </nav>
-</header>
 -->

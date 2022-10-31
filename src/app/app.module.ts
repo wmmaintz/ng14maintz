@@ -1,13 +1,12 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Angular Material Modules
-import { MaterialModule } from './material.module';
+// Shared Modules, including Angular Material 
+import { SharedModule } from './shared.module';
 
 // Routing Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -24,8 +23,21 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { SidebarComponent } from './core/sidebar/sidebar.component';
+
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { UnderConstructionComponent } from './core/under-construction/under-construction.component';
+import { LoadingComponent } from './core/loading/loading.component';
+import { CalendarComponent } from './core/calendar/calendar.component';
+import { CalendarThreeMonComponent } from './core/calendar-three-mon/calendar-three-mon.component';
+import { CarouselComponent } from './core/carousel/carousel.component';
+
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatSidenavModule } from '@angular/material/sidenav';
+// import { MatIconModule } from '@angular/material/icon';
+// import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -36,7 +48,13 @@ import { UnderConstructionComponent } from './core/under-construction/under-cons
     NotFoundComponent,
     UnderConstructionComponent,
     DashboardComponent,
-    NavigationComponent
+    NavigationComponent,
+    CalendarComponent,
+    LoadingComponent,
+    CalendarThreeMonComponent,
+    CarouselComponent,
+    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,20 +63,25 @@ import { UnderConstructionComponent } from './core/under-construction/under-cons
     FormsModule,
     HttpClientModule,
     LayoutModule,
-    MaterialModule,
+    SharedModule,
     AboutRoutingModule,
     AccountsRoutingModule,
     PhotosRoutingModule,
     VideosRoutingModule,
     LinksRoutingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // MatToolbarModule,
+    // MatButtonModule,
+    // MatSidenavModule,
+    // MatIconModule,
+    // MatListModule
   ],
   exports: [
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [
-    //'CUSTOM_ELEMENTS_SCHEMA'
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class AppModule { }

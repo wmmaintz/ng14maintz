@@ -1,0 +1,164 @@
+<mat-toolbar>
+  <div fxHide.gt-xs>
+      <button class="navbarBtn"
+        mat-icon-button
+        routerLink="/"
+        matTooltip="Display the HOME screen"
+        aria-label="This button displays the HOME screen tooltip when focused or hovered over">
+        <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home" tooltip="Home">home</mat-icon>
+      </button>
+  </div>
+
+  <mat-nav-list>
+    <button class="navbarBtn" *ngIf="user.role=='admin'"
+      [matMenuTriggerFor]="adminMenu"
+      matTooltip="Display the ADMINISTRATORS menu"
+      aria-label="This button displays the ADMINISTRATORS menu tooltip when focused or hovered over">
+      <mat-icon aria-hidden="false" aria-label="Admin icon" fontIcon="domain" tooltip="Admin Menu">Documentation</mat-icon>&nbsp;
+      <span class="menu-text" *ngIf="showMenuText">Admin</span>
+    </button>
+    <button class="navbarBtn" [matMenuTriggerFor]="aboutMenu" matTooltip="Display the ABOUT menu"><mat-icon>contact_support</mat-icon><span class="menu-text" *ngIf="showMenuText">About</span></button>
+    <button class="navbarBtn" [matMenuTriggerFor]="photoMenu" matTooltip="Display the PHOTOS menu"><mat-icon>photo_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Photos</span></button>
+    <button class="navbarBtn" [matMenuTriggerFor]="videoMenu" matTooltip="Display the VIDEOS menu"><mat-icon>video_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Videos</span></button>
+    <button class="navbarBtn" [matMenuTriggerFor]="linkMenu"  matTooltip="Display the LINKS menu"><mat-icon>link</mat-icon><span class="menu-text" *ngIf="showMenuText">Links</span></button>
+    <button class="navbarBtn" routerLink="/login" *ngIf="!isLoggedIn" matTooltip="Login to the website"><mat-icon>power</mat-icon><span class="menu-text" *ngIf="showMenuText">Login</span></button>
+    <button class="navbarBtn" routerLink="/logoff" *ngIf="isLoggedIn" matTooltip="Logoff of this website"><mat-icon>power_off</mat-icon><span class="menu-text" *ngIf="showMenuText">Logoff</span></button> 
+  </mat-nav-list>
+
+  <mat-menu class="submenu" > <!-- #mainMenu="matMenu"> -->
+
+    <button mat-menu-item [matMenuTriggerFor]="adminMenu" matTooltip="Display The Admin Menu">
+      <mat-icon>domain</mat-icon>
+      <span *ngIf="showMenuText">Admin</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="aboutMenu" matTooltip="Display The About Menu">
+      <mat-icon>about</mat-icon>
+      <span *ngIf="showMenuText">About</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="photoMenu" matTooltip="Display The Photos Menu">
+      <mat-icon>photo</mat-icon>
+      <span *ngIf="showMenuText">Photos</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="videoMenu" matTooltip="Display The Videos Menu">
+      <mat-icon>photos</mat-icon>
+      <span *ngIf="showMenuText">Videos</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="linkMenu" matTooltip="Display The Links Menu">
+      <mat-icon>link</mat-icon>
+      <span *ngIf="showMenuText">Links</span>
+    </button>
+  </mat-menu>
+
+  <mat-menu #adminMenu="matMenu">
+    <button mat-menu-item routerLink="dashboard">
+      <mat-icon>dashboard</mat-icon>
+      <span *ngIf="showMenuText">Dashboard</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="userMenu">
+      <mat-icon aria-hidden="false" aria-label="People icon" fontIcon="people" tooltip="Users Submenu">people</mat-icon>
+      <span *ngIf="showMenuText">Users</span>
+    </button>
+    </mat-menu>    
+
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item routerLink="login">
+      <mat-icon>power</mat-icon>
+      <span *ngIf="showMenuText">Login</span>
+    </button>
+    <button mat-menu-item routerLink="logoff">
+      <mat-icon>power_off</mat-icon>
+      <span *ngIf="showMenuText">Log off</span>
+    </button>
+    <button mat-menu-item routerLink="users-list">
+      <mat-icon>people</mat-icon>
+      <span *ngIf="showMenuText">User List</span>
+    </button>
+    <button mat-menu-item routerLink="register">
+      <mat-icon>person_add</mat-icon>
+      <span *ngIf="showMenuText">Register</span>
+    </button>
+    <button mat-menu-item routerLink="user-edit">
+      <mat-icon>edit</mat-icon>
+      <span *ngIf="showMenuText">Edit User</span>
+    </button>
+  </mat-menu>
+
+  <mat-menu #aboutMenu="matMenu">
+      <button mat-menu-item routerLink="about">
+        <mat-icon>contact_support</mat-icon>
+        <span *ngIf="showMenuText">About</span>
+      </button>
+      <button mat-menu-item routerLink="website">
+        <mat-icon>build</mat-icon>
+        <span *ngIf="showMenuText">Website</span>
+      </button>
+      <button mat-menu-item routerLink="contact-us">
+        <mat-icon>contact_mail</mat-icon>
+        <span *ngIf="showMenuText">Contact Us</span>
+      </button>
+      <button mat-menu-item routerLink="privacy">
+        <mat-icon>P</mat-icon>
+        <span *ngIf="showMenuText">Privacy Statement</span>
+      </button>
+      <button mat-menu-item routerLink="terms">
+        <mat-icon>T</mat-icon>
+        <span *ngIf="showMenuText">Terms of Use</span>
+      </button>
+    </mat-menu>
+
+  <mat-menu #photoMenu="matMenu">
+      <button mat-menu-item routerLink="photos-list">
+        <mat-icon>burst_mode</mat-icon>
+        <mat-icon>blur_linear</mat-icon>
+        <span *ngIf="showMenuText">Photo List</span>
+      </button>
+      <button mat-menu-item routerLink="photo-add-edit">
+        <mat-icon>add_a_photo</mat-icon>
+        <span *ngIf="showMenuText">Add Photo</span>
+      </button>
+      <button mat-menu-item routerLink="photo-add-edit">
+        <mat-icon>edit</mat-icon>
+        <span *ngIf="showMenuText">Edit Photo</span>
+      </button>
+      <button mat-menu-item routerLink="photos-carousel">
+        <mat-icon>party_mode</mat-icon>
+        <span *ngIf="showMenuText">Photos Carousel</span>
+      </button>
+  </mat-menu>
+
+  <mat-menu #videoMenu="matMenu">
+      <button mat-menu-item routerLink="videos-list">
+        <mat-icon>list</mat-icon>
+        <span *ngIf="showMenuText">Video List</span>
+      </button>
+      <button mat-menu-item routerLink="video-add-edit">
+        <mat-icon>video_call</mat-icon>
+        <span *ngIf="showMenuText">Add Video</span>
+      </button>
+      <button mat-menu-item routerLink="video-add-edit">
+        <mat-icon>edit</mat-icon>
+        <span *ngIf="showMenuText">Edit Video</span>
+      </button>
+      <button mat-menu-item routerLink="videos-carousel">
+        <mat-icon>switch_video</mat-icon>
+        <span *ngIf="showMenuText">Videos Carousel</span>
+      </button>
+  </mat-menu>
+
+  <mat-menu #linkMenu="matMenu">
+    <button mat-menu-item routerLink="links-list">
+      <mat-icon>notes</mat-icon>
+      <span *ngIf="showMenuText">Links List</span>
+    </button>
+    <button mat-menu-item routerLink="link-add-edit">
+      <mat-icon>note_add</mat-icon>
+      <span *ngIf="showMenuText">Add Link</span>
+    </button>
+    <button mat-menu-item routerLink="link-add-edit">
+      <mat-icon>edit</mat-icon>
+      <span *ngIf="showMenuText">Edit Link</span>
+    </button>
+  </mat-menu>
+
+
+</mat-toolbar>

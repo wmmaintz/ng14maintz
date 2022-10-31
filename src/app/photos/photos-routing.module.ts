@@ -6,7 +6,8 @@ import { PhotosListComponent }     from './photos-list/photos-list.component';
 import { PhotosCarouselComponent } from './photos-carousel/photos-carousel.component';
 
 const routes: Routes = [
-  { path: 'photo-add-edit', component: PhotoAddEditComponent },
+  { path: 'photo-add-edit',  component: PhotoAddEditComponent },
+  { path: 'photos',          component: PhotosListComponent },
   { path: 'photos-list',     component: PhotosListComponent },
   { path: 'photos-carousel', component: PhotosCarouselComponent },
 ];

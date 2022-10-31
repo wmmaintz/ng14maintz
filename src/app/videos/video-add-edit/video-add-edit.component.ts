@@ -1,18 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { StatesService } from '../../accounts/states.service';
+import { State } from "@app/accounts/state.model";
 @Component({
-  selector: 'app-video-add-edit',
+  selector: 'm-video-add-edit',
   templateUrl: './video-add-edit.component.html',
-  styleUrls: [
-    './video-add-edit.component.scss',
-    '../videos.scss'
-  ]
+  styleUrls: ['./video-add-edit.component.scss']
 })
-export class VideoAddEditComponent implements OnInit {
+export class VideoAddEditComponent {
+  isLoading:boolean = false;
+  addressForm = this.fb.group({
+    company: null,
+    firstName: [null, Validators.required],
+    lastName: [null, Validators.required],
+    address: [null, Validators.required],
+    address2: null,
+    city: [null, Validators.required],
+    state: [null, Validators.required],
+    postalCode: [null, Validators.compose([
+      Validators.required, Validators.minLength(5), Validators.maxLength(5)])
+    ],
+    shipping: ['free', Validators.required]
+  });
 
-  constructor() { }
+  hasUnitNumber = false;
 
-  ngOnInit(): void {
+  states: State[] = [];
+
+  constructor(
+    private fb: FormBuilder,
+    private statesService: StatesService) {
+      this.states = statesService.getStates();
+    }
+
+  onSubmit(): void {
+    alert('Thanks!');
   }
-
 }

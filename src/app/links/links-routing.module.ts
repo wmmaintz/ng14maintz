@@ -5,7 +5,8 @@ import { LinkAddEditComponent }  from './link-add-edit/link-add-edit.component';
 import { LinksListComponent }     from './links-list/links-list.component';
 
 const routes: Routes = [
-  { path: 'link-add-edit', component: LinkAddEditComponent },
+  { path: 'link-add-edit',  component: LinkAddEditComponent },
+  { path: 'links',          component: LinksListComponent },
   { path: 'links-list',     component: LinksListComponent }
 ];
 

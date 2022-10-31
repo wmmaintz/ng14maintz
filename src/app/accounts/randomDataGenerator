@@ -1,0 +1,15 @@
+/* use this definition with json-generator.com */
+[
+    '{{repeat(10, 20)}}',
+    {
+        userId: '{{index()}}',
+        email: '{{email()}}',
+        password: 'password{{index()}}',
+        firstName: '{{firstName()}}',
+        mi: '{{company().toUpperCase().substring(0,1)}}',
+        lastName: '{{surname()}}',
+        suffix: '{{random("", "Sr.", "Jr.", "II", "III", "IV")}}',
+        phone: '+1 {{phone()}}',
+        role: '{{random("user", "contributor", "editor", "admin")}}'
+    }
+]

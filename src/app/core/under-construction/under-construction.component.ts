@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./under-construction.component.scss']
 })
 export class UnderConstructionComponent implements OnInit {
+  underConstruction: boolean = true;
 
   constructor() { }
 

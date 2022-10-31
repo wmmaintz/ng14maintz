@@ -1,1 +1,222 @@
-[{}]
+[
+    {
+      "userId": 0,
+      "email": "callielogan@vortexaco.com",
+      "password": "password0",
+      "firstName": "Savannah",
+      "mi": "T",
+      "lastName": "Shannon",
+      "suffix": "Jr.",
+      "phone": "+1 (901) 438-3316",
+      "role": "admin"
+    },
+    {
+      "userId": 1,
+      "email": "savannahshannon@tellifly.com",
+      "password": "password1",
+      "firstName": "Lori",
+      "mi": "I",
+      "lastName": "Reeves",
+      "suffix": "II",
+      "phone": "+1 (975) 595-3623",
+      "role": "editor"
+    },
+    {
+      "userId": 2,
+      "email": "lorireeves@imageflow.com",
+      "password": "password2",
+      "firstName": "Eloise",
+      "mi": "E",
+      "lastName": "Russell",
+      "suffix": "II",
+      "phone": "+1 (980) 410-3695",
+      "role": "admin"
+    },
+    {
+      "userId": 3,
+      "email": "eloiserussell@eplode.com",
+      "password": "password3",
+      "firstName": "Beatriz",
+      "mi": "S",
+      "lastName": "French",
+      "suffix": "IV",
+      "phone": "+1 (914) 528-3586",
+      "role": "editor"
+    },
+    {
+      "userId": 4,
+      "email": "beatrizfrench@speedbolt.com",
+      "password": "password4",
+      "firstName": "Naomi",
+      "mi": "N",
+      "lastName": "Marshall",
+      "suffix": "",
+      "phone": "+1 (962) 415-2882",
+      "role": "editor"
+    },
+    {
+      "userId": 5,
+      "email": "naomimarshall@netplode.com",
+      "password": "password5",
+      "firstName": "Denise",
+      "mi": "M",
+      "lastName": "Copeland",
+      "suffix": "II",
+      "phone": "+1 (887) 528-3234",
+      "role": "contributor"
+    },
+    {
+      "userId": 6,
+      "email": "denisecopeland@mitroc.com",
+      "password": "password6",
+      "firstName": "Brooks",
+      "mi": "F",
+      "lastName": "Swanson",
+      "suffix": "II",
+      "phone": "+1 (915) 544-3576",
+      "role": "user"
+    },
+    {
+      "userId": 7,
+      "email": "brooksswanson@farmex.com",
+      "password": "password7",
+      "firstName": "Reyna",
+      "mi": "B",
+      "lastName": "Little",
+      "suffix": "Jr.",
+      "phone": "+1 (801) 501-3341",
+      "role": "editor"
+    },
+    {
+      "userId": 8,
+      "email": "reynalittle@buzzworks.com",
+      "password": "password8",
+      "firstName": "Aguirre",
+      "mi": "Z",
+      "lastName": "Potter",
+      "suffix": "Jr.",
+      "phone": "+1 (841) 528-3864",
+      "role": "admin"
+    },
+    {
+      "userId": 9,
+      "email": "aguirrepotter@zepitope.com",
+      "password": "password9",
+      "firstName": "Rice",
+      "mi": "V",
+      "lastName": "Waters",
+      "suffix": "III",
+      "phone": "+1 (837) 479-3471",
+      "role": "editor"
+    },
+    {
+      "userId": 10,
+      "email": "ricewaters@vortexaco.com",
+      "password": "password10",
+      "firstName": "Moody",
+      "mi": "T",
+      "lastName": "Wiley",
+      "suffix": "III",
+      "phone": "+1 (815) 537-3464",
+      "role": "admin"
+    },
+    {
+      "userId": 11,
+      "email": "moodywiley@turnabout.com",
+      "password": "password11",
+      "firstName": "Tamika",
+      "mi": "N",
+      "lastName": "Skinner",
+      "suffix": "III",
+      "phone": "+1 (995) 559-3514",
+      "role": "admin"
+    },
+    {
+      "userId": 12,
+      "email": "tamikaskinner@nimon.com",
+      "password": "password12",
+      "firstName": "Davis",
+      "mi": "T",
+      "lastName": "Downs",
+      "suffix": "II",
+      "phone": "+1 (918) 465-3195",
+      "role": "user"
+    },
+    {
+      "userId": 13,
+      "email": "davisdowns@tropolis.com",
+      "password": "password13",
+      "firstName": "Thelma",
+      "mi": "E",
+      "lastName": "Carroll",
+      "suffix": "IV",
+      "phone": "+1 (919) 481-3199",
+      "role": "user"
+    },
+    {
+      "userId": 14,
+      "email": "thelmacarroll@eternis.com",
+      "password": "password14",
+      "firstName": "Paulette",
+      "mi": "T",
+      "lastName": "Lambert",
+      "suffix": "III",
+      "phone": "+1 (952) 439-2126",
+      "role": "admin"
+    },
+    {
+      "userId": 15,
+      "email": "paulettelambert@terrago.com",
+      "password": "password15",
+      "firstName": "Wilkins",
+      "mi": "K",
+      "lastName": "Conway",
+      "suffix": "IV",
+      "phone": "+1 (846) 404-3347",
+      "role": "admin"
+    },
+    {
+      "userId": 16,
+      "email": "wilkinsconway@keengen.com",
+      "password": "password16",
+      "firstName": "Mccall",
+      "mi": "E",
+      "lastName": "Hopkins",
+      "suffix": "IV",
+      "phone": "+1 (827) 543-2235",
+      "role": "admin"
+    },
+    {
+      "userId": 17,
+      "email": "mccallhopkins@entogrok.com",
+      "password": "password17",
+      "firstName": "Lorna",
+      "mi": "E",
+      "lastName": "Carey",
+      "suffix": "II",
+      "phone": "+1 (869) 444-2668",
+      "role": "editor"
+    },
+    {
+      "userId": 18,
+      "email": "lornacarey@earbang.com",
+      "password": "password18",
+      "firstName": "Snow",
+      "mi": "B",
+      "lastName": "Casey",
+      "suffix": "Jr.",
+      "phone": "+1 (883) 435-2398",
+      "role": "contributor"
+    },
+    {
+      "userId": 19,
+      "email": "snowcasey@bulljuice.com",
+      "password": "password19",
+      "firstName": "Williams",
+      "mi": "S",
+      "lastName": "Cantu",
+      "suffix": "Sr.",
+      "phone": "+1 (802) 571-2968",
+      "role": "user"
+    }
+  ]

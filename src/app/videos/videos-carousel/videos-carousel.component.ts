@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-videos-carousel',
+  selector: 'm-videos-carousel',
   templateUrl: './videos-carousel.component.html',
   styleUrls: [
     './videos-carousel.component.scss',
@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   ]  
 })
 export class VideosCarouselComponent implements OnInit {
+  isLoading:boolean = false;
 
   constructor() { }
 

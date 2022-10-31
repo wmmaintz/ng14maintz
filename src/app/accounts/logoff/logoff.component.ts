@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-logoff',
+  selector: 'm-logoff',
   templateUrl: './logoff.component.html',
   styleUrls: [
     './logoff.component.scss',

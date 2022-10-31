@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-privacy',
+  selector: 'm-privacy',
   templateUrl: './privacy.component.html',
   styleUrls: [
     './privacy.component.scss',
-    '../accounts.scss'
+    '../about.scss'
   ]
 })
 export class PrivacyComponent implements OnInit {

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from "./home/home/home.component";
-import { UnderConstructionComponent } from './core/under-construction/under-construction.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 
 const aboutModule = () => import('./about/about.module').then(x => x.AboutModule);
@@ -13,14 +12,13 @@ const linksModule  = () => import('./links/links.module').then(x => x.LinksModul
 const routes: Routes = [
   { path: "", component:HomeComponent},
   { path: "dashboard", component:DashboardComponent},
-  { path: "under-construction", component:UnderConstructionComponent },
   { path: "about", loadChildren: aboutModule },
   { path: 'photos', loadChildren: photosModule },
   { path: 'videos', loadChildren: videosModule },
   { path: 'links', loadChildren: videosModule },
 
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-terms',
+  selector: 'm-terms',
   templateUrl: './terms.component.html',
   styleUrls: [
     './terms.component.scss',
-    '../accounts.scss'
+    '../about.scss'
   ]
 })
 export class TermsComponent implements OnInit {

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photos-carousel.component.scss']
 })
 export class PhotosCarouselComponent implements OnInit {
+  isLoading:boolean = false;
 
   constructor() { }
 

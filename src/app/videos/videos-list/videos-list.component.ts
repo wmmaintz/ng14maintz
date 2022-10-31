@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingComponent } from '../../core/loading/loading.component';
 
 @Component({
-  selector: 'app-videos-list',
+  selector: 'm-videos-list',
   templateUrl: './videos-list.component.html',
   styleUrls: [
     './videos-list.component.scss',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class VideosListComponent implements OnInit {
+  isLoading:boolean = false;
 
   constructor() { }
 

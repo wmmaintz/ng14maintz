@@ -1,196 +1,207 @@
-<mat-sidenav-container class="sidenav-container">
+<div class="toolbar" role="banner">
+  &nbsp;Menu
 
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="openMatMenuProgrammatically()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <!-- Display the 3-Line "hamburger" menu icon -->
+    <button
+      type="button"
+      aria-label="Toggle Side Navigation"
+      mat-icon-button
+      (click)="drawer.toggle()"
+      *ngIf="isHandset$ | async">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <!-- <img -->
+      <!-- width="40" -->
+      <!-- alt="Angular Logo" -->
+      <!-- src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" -->
+    <!-- />&nbsp; -->
+    <!-- <span>Maintz</span> -->
+  <!--  -->
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-
-    <mat-toolbar>Main Menu</mat-toolbar>
-
-    <mat-nav-list>
-      <a mat-list-item routerLink="about">About Maintz.com</a>
-      <a mat-list-item routerLink="website">Website Construction</a>
-      <a mat-list-item routerLink="contact-us">Contact Us</a>
-      <button mat-menu-item [matMenuTriggerFor]="homeMenu"><mat-icon>home</mat-icon><span *ngIf="showMenuText">Home</span></button>
-      <button mat-menu-item [matMenuTriggerFor]="photoMenu"><mat-icon>photo</mat-icon><span *ngIf="showMenuText">Photos</span></button>
-      <button mat-menu-item [matMenuTriggerFor]="videoMenu"><mat-icon>photos</mat-icon><span *ngIf="showMenuText">Videos</span></button>
-      <button mat-menu-item [matMenuTriggerFor]="linkMenu"><mat-icon>link</mat-icon><span *ngIf="showMenuText">Links</span></button>
-      <button mat-menu-item [matMenuTriggerFor]="userMenu"><mat-icon>more_vert</mat-icon><span *ngIf="showMenuText">Users</span></button>
-      <button mat-menu-item [matMenuTriggerFor]="aboutMenu"><mat-icon>about</mat-icon><span *ngIf="showMenuText">About</span></button>
-
-    </mat-nav-list>
-
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <!-- Display the 3-Line "hamburger" menu icon -->
-      <button
-        type="button"
-        aria-label="Toggle Side Navigation"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      <mat-nav-list>
+        <!-- <button mat-menu-item [matMenuTriggerFor]="homeMenu"><mat-icon>home</mat-icon><span *ngIf="showMenuText">Home</span></button> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="aboutMenu"><mat-icon>contact_support</mat-icon><span *ngIf="showMenuText">About</span></button> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="photoMenu"><mat-icon>photo_library</mat-icon><span *ngIf="showMenuText">Photos</span></button> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="videoMenu"><mat-icon>video_library</mat-icon><span *ngIf="showMenuText">Videos</span></button> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="linkMenu"><mat-icon>link</mat-icon><span *ngIf="showMenuText">Links</span></button> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="userMenu"><mat-icon>person</mat-icon><span *ngIf="showMenuText">Users</span></button> -->
+      </mat-nav-list>
+    </mat-sidenav>
+  <!--  -->
+  <!-- <mat-sidenav-container class="sidenav-container"> -->
+  <!--  -->
+    <!-- <mat-sidenav-content> -->
+  <!--  -->
+      <!-- Add Content Here -->
+  <!--  -->
+    <!-- </mat-sidenav-content> -->
+  <!-- </mat-sidenav-container> -->
+  
+  <button mat-button [matMenuTriggerFor]="mainMenu"><mat-icon>menu</mat-icon><span>Menu</span></button>
+  
+  <mat-menu #mainMenu="matMenu" > default location: xPosition="after" yPosition="below">
+      <button mat-menu-item [matMenuTriggerFor]="homeMenu">
+        <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home">home</mat-icon>
+        <span *ngIf="showMenuText">Home</span>
       </button>
+      <button mat-menu-item [matMenuTriggerFor]="aboutMenu">
+        <mat-icon>about</mat-icon>
+        <span *ngIf="showMenuText">About</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="photoMenu">
+        <mat-icon>photo</mat-icon>
+        <span *ngIf="showMenuText">Photos</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="videoMenu">
+        <mat-icon>photos</mat-icon>
+        <span *ngIf="showMenuText">Videos</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="linkMenu">
+        <mat-icon>link</mat-icon>
+        <span *ngIf="showMenuText">Links</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="userMenu">
+        <mat-icon>more_vert</mat-icon>
+        <span *ngIf="showMenuText">Users</span>
+      </button>
+  </mat-menu>
+  
+  <mat-menu #homeMenu="matMenu">
+      <button mat-menu-item routerLink="">
+        <mat-icon>home</mat-icon>
+        <span *ngIf="showMenuText">Home</span></button>
+      <button mat-menu-item routerLink="dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span *ngIf="showMenuText">Dashboard</span></button>
+  </mat-menu>    
+  
+  <mat-menu #aboutMenu="matMenu">
+      <button mat-menu-item routerLink="about">
+        <mat-icon>contact_support</mat-icon>
+        <span *ngIf="showMenuText">About</span>
+      </button>
+      <button mat-menu-item routerLink="website">
+        <mat-icon>build</mat-icon>
+        <span *ngIf="showMenuText">Website</span>
+      </button>
+      <button mat-menu-item routerLink="contact-us">
+        <mat-icon>contact_mail</mat-icon>
+        <span *ngIf="showMenuText">Contact Us</span>
+      </button>
+  </mat-menu>
+  
+  <mat-menu #photoMenu="matMenu">
+      <button mat-menu-item routerLink="photos-list">
+        <mat-icon>burst_mode</mat-icon>
+        <mat-icon>blur_linear</mat-icon>
+        <span *ngIf="showMenuText">Photo List</span>
+      </button>
+      <button mat-menu-item routerLink="photo-add-edit">
+        <mat-icon>add_a_photo</mat-icon>
+        <span *ngIf="showMenuText">Add Photo</span>
+      </button>
+      <button mat-menu-item routerLink="photo-add-edit">
+        <mat-icon>edit</mat-icon>
+        <span *ngIf="showMenuText">Edit Photo</span>
+      </button>
+      <button mat-menu-item routerLink="photos-carousel">
+        <mat-icon>party_mode</mat-icon>
+        <span *ngIf="showMenuText">Photos Carousel</span>
+      </button>
+  </mat-menu>
+  
+  <mat-menu #videoMenu="matMenu">
+      <button mat-menu-item routerLink="videos-list">
+        <mat-icon>list</mat-icon>
+        <span *ngIf="showMenuText">Video List</span>
+      </button>
+      <button mat-menu-item routerLink="video-add-edit">
+        <mat-icon>video_call</mat-icon>
+        <span *ngIf="showMenuText">Add Video</span>
+      </button>
+      <button mat-menu-item routerLink="video-add-edit">
+        <mat-icon>edit</mat-icon>
+        <span *ngIf="showMenuText">Edit Video</span>
+      </button>
+      <button mat-menu-item routerLink="videos-carousel">
+        <mat-icon>switch_video</mat-icon>
+        <span *ngIf="showMenuText">Videos Carousel</span>
+      </button>
+  </mat-menu>
+  
+  <mat-menu #linkMenu="matMenu">
+    <button mat-menu-item routerLink="links-list">
+      <mat-icon>notes</mat-icon>
+      <span *ngIf="showMenuText">Links List</span>
+    </button>
+    <button mat-menu-item routerLink="link-add-edit">
+      <mat-icon>note_add</mat-icon>
+      <span *ngIf="showMenuText">Add Link</span>
+    </button>
+    <button mat-menu-item routerLink="link-add-edit">
+      <mat-icon>edit</mat-icon>
+      <span *ngIf="showMenuText">Edit Link</span>
+    </button>
+  </mat-menu>
+  
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item routerLink="login">
+      <mat-icon>power</mat-icon>
+      <span *ngIf="showMenuText">Login</span>
+    </button>
+    <button mat-menu-item routerLink="logoff">
+      <mat-icon>power_off</mat-icon>
+      <span *ngIf="showMenuText">Log off</span>
+    </button>
+    <button mat-menu-item routerLink="users-list">
+      <mat-icon>people</mat-icon>
+      <span *ngIf="showMenuText">User List</span>
+    </button>
+    <button mat-menu-item routerLink="register">
+      <mat-icon>person_add</mat-icon>
+      <span *ngIf="showMenuText">Register</span>
+    </button>
+    <button mat-menu-item routerLink="user-add-edit">
+      <mat-icon>edit</mat-icon>
+      <span *ngIf="showMenuText">Edit User</span>
+    </button>
+    <button mat-menu-item routerLink="privacy">
+      <mat-icon>P</mat-icon>
+      <span *ngIf="showMenuText">Privacy Statement</span>
+    </button>
+    <button mat-menu-item routerLink="terms">
+      <mat-icon>T</mat-icon>
+      <span *ngIf="showMenuText">Terms of Use</span>
+    </button>
+  </mat-menu>
 
-      <img
-        width="40"
-        alt="Angular Logo"
-        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-      />&nbsp;
-      <span>Maintz</span>
+  <!--
+  <a mat-list-item routerLink="about">About Maintz.com</a>
+  <a mat-list-item routerLink="website">Website Construction</a>
+  <a mat-list-item routerLink="contact-us">Contact Us</a>
 
-    </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-
-<button mat-button [matMenuTriggerFor]="mainMenu"><mat-icon>menu</mat-icon><span>Menu</span></button>
-
-<mat-menu #mainMenu="matMenu" > <!-- default location: xPosition="after" yPosition="below"> -->
-    <button mat-menu-item [matMenuTriggerFor]="homeMenu">
-      <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home">home</mat-icon>
-      <span *ngIf="showMenuText">Home</span>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="aboutMenu">
-      <mat-icon>about</mat-icon>
-      <span *ngIf="showMenuText">About</span>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="photoMenu">
-      <mat-icon>photo</mat-icon>
-      <span *ngIf="showMenuText">Photos</span>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="videoMenu">
-      <mat-icon>photos</mat-icon>
-      <span *ngIf="showMenuText">Videos</span>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="linkMenu">
-      <mat-icon>link</mat-icon>
-      <span *ngIf="showMenuText">Links</span>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="userMenu">
-      <mat-icon>more_vert</mat-icon>
-      <span *ngIf="showMenuText">Users</span>
-    </button>
-</mat-menu>
-
-<mat-menu #homeMenu="matMenu">
-    <button mat-menu-item routerLink="">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Home</span></button>
-    <button mat-menu-item routerLink="dashboard">
-      <mat-icon>dashboard</mat-icon>
-      <span *ngIf="showMenuText">Dashboard</span></button>
-</mat-menu>    
-
-<mat-menu #aboutMenu="matMenu">
-    <button mat-menu-item routerLink="about">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">About</span>
-    </button>
-    <button mat-menu-item routerLink="website">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Website</span>
-    </button>
-    <button mat-menu-item routerLink="contact-us">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Contact Us</span>
-    </button>
-</mat-menu>
-
-<mat-menu #photoMenu="matMenu">
-    <button mat-menu-item routerLink="photos-list">
-      <mat-icon>list</mat-icon>
-      <span *ngIf="showMenuText">Photo List</span>
-    </button>
-    <button mat-menu-item routerLink="photo-add-edit">
-      <mat-icon>plus</mat-icon>
-      <span *ngIf="showMenuText">Add Photo</span>
-    </button>
-    <button mat-menu-item routerLink="photo-add-edit">
-      <mat-icon>pencil</mat-icon>
-      <span *ngIf="showMenuText">Edit Photo</span>
-    </button>
-    <button mat-menu-item routerLink="photos-carousel">
-      <mat-icon>carousel</mat-icon>
-      <span *ngIf="showMenuText">Photos Carousel</span>
-    </button>
-</mat-menu>
-
-<mat-menu #videoMenu="matMenu">
-    <button mat-menu-item routerLink="videos-list">
-      <mat-icon>list</mat-icon>
-      <span *ngIf="showMenuText">Video List</span>
-    </button>
-    <button mat-menu-item routerLink="video-add-edit">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Add Video</span>
-    </button>
-    <button mat-menu-item routerLink="video-add-edit">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Edit Video</span>
-    </button>
-    <button mat-menu-item routerLink="videos-carousel">
-      <mat-icon>home</mat-icon>
-      <span *ngIf="showMenuText">Videos Carousel</span>
-    </button>
-</mat-menu>
-
-<mat-menu #linkMenu="matMenu">
-  <button mat-menu-item routerLink="links-list">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Links List</span>
-  </button>
-  <button mat-menu-item routerLink="link-add-edit">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Add Link</span>
-  </button>
-  <button mat-menu-item routerLink="link-add-edit">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Edit Link</span>
-  </button>
-</mat-menu>
-
-<mat-menu #userMenu="matMenu">
-  <button mat-menu-item routerLink="login">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Login</span>
-  </button>
-  <button mat-menu-item routerLink="logoff">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Log off</span>
-  </button>
-  <button mat-menu-item routerLink="users-list">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">User List</span>
-  </button>
-  <button mat-menu-item routerLink="register">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Register</span>
-  </button>
-  <button mat-menu-item routerLink="user-add-edit">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Edit User</span>
-  </button>
-  <button mat-menu-item routerLink="privacy">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Show Privacy Statement</span>
-  </button>
-  <button mat-menu-item routerLink="terms">
-    <mat-icon>home</mat-icon>
-    <span *ngIf="showMenuText">Show Terms of Use</span>
-  </button>
-</mat-menu>
-
-<span class="search-box">
+  <span class="search-box">
     <button mat-button class="btn btn-default"><mat-icon>search</mat-icon><span>Search</span></button>
     <form ngForm="searchForm" class="navbar-left navbar-form hidden" role="search">
-        <span class="input-group form-group">
-            <input type="text" class="form-control" placeholder="Search this website" name="q">
-        </span>
+      <span class="input-group form-group">
+        <input type="text" class="form-control" placeholder="Search this website" name="q">
+      </span>
     </form>
-</span>
+  </span>
+  -->
 
 
+  </mat-toolbar>
+
+</div>

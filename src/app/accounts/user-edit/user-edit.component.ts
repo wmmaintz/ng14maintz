@@ -7,10 +7,10 @@ import { JsonPipe } from '@angular/common';
 import { User } from '../user.model';
 import { AccountsService } from '../accounts.service';
 import { SharedModule } from "../../shared.module";
-import { UnderConstructionComponent } from 'src/app/core/under-construction/under-construction.component';
+import { UnderConstructionComponent } from '@app/core/under-construction/under-construction.component';
 
 @Component({
-  selector: 'app-user-edit',
+  selector: 'm-user-edit',
   templateUrl: './user-edit.component.html',
   styleUrls: [
     './user-edit.component.scss',

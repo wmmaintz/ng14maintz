@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./links-list.component.scss']
 })
 export class LinksListComponent implements OnInit {
+  isLoading:boolean = false;
 
   constructor() { }
 

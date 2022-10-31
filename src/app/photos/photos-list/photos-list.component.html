@@ -1,1 +1,4 @@
-<p>photo-list works!</p>
+<section *ngIf="!isLoading" class="section photo-section">
+    <p>photo-list works!</p>
+    {{photos.length}} photos loaded!
+</section>

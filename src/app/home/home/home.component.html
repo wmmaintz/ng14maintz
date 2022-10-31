@@ -1,55 +1,39 @@
-
-<section class="home-section">
-
-  <!--
-  <mat-spinner></mat-spinner>
-  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-  -->
-
-  <div class="row">
-      <div class="col-lg-offset-2 col-lg-8 col-md-offset-3 col-md-6 col-sm-12 col-xs-12 text-center">
-
-          <div class="section-heading">Welcome To</div>
-          <div class="section-subheading">
-              <img class="img img-responsive img-centered" 
-                      src="assets/home/maintz.com.png"
-                      alt="Maintz.com"/>
-          </div>
-
-      </div>
-  </div>
-  
-  <div class="calContainer">
-      <div class="calSubcontainer">
-
-          <!-- Javascript creates calenders here -->
-          <div class="row" id="calBox">
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div id="calLastMon"></div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div id="calThisMon"></div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div id="calNextMon"></div>
-              </div>
-
-          </div>
-      </div>
+<section *ngIf="!isLoading" class="home-section">
+  <m-loading *ngIf="isLoading"></m-loading>
+  <m-under-construction *ngIf="underConstruction"></m-under-construction>
+  <div class="welcome" fxLayout="row" fxLayoutAlign="space-around center">
+		<mat-grid-list cols="8" rowHeight="30px">
+			<mat-grid-tile colspan="1">
+        <div class="section-heading">Welcome To</div><br/>
+        <div class="section-subheading">
+            <img class="img img-responsive img-centered" 
+                    src="../../../assets/home/maintz.com.png"
+                    alt="Maintz.com"/>
+        </div>			</mat-grid-tile>
+    </mat-grid-list>
   </div>
 
-  <br/><br/>
+  <!-- <div style="border: 1px solid red;">
+    <svg  xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1" width="64" height="48" viewBox="0 0 64 48" xml:space="preserve">
+      <desc>Created with Fabric.js 3.6.6</desc>
+      <defs>
+      </defs>
+      <g transform="matrix(17.78 0 0 23.55 319.5 240.79)" style=""  >
+          <text xml:space="preserve" font-family="'Oswald', sans-serif" font-size="30" font-style="normal" font-weight="normal" style="stroke: rgb(0,1,11); stroke-opacity: 0; stroke-width: 5; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-7.84" y="5.65" style="stroke-width: 1; font-family: 'Playfair Display', serif; font-size: 18px; font-style: normal; font-weight: normal; fill: rgb(2,2,137); ">M</tspan></text>
+      </g>
+    </svg>
+  </div> -->
+
   
-  <div class="row">
+  <m-calendar-three-mon></m-calendar-three-mon>
+  
+  <div class="row"> <!-- Learn More Hyperlink -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-
           <a id="learnMore" class="btn btn-primary text-center" href="about">
               <span>Learn More</span>
           </a>
-
       </div>
   </div>
 

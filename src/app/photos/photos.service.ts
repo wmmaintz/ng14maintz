@@ -1,12 +1,33 @@
 import { Injectable } from '@angular/core';
-import * as Photos from '@data/json/photos.json';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Photo } from './photo.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PhotosService {
-  photos: any = (Photos as any).default;
+  photos: Photo[] = [];
+  dataFile: string = '@data/json/photos.json';
 
-  constructor() { }
+  constructor(public httpClient: HttpClient) {
+    this.getDataFromJSONFile();
+  }
 
+  getDataFromJSONFile() {
+    // fs.exists(this.dataFile, (exist) => {
+    //   if (exist) {
+
+        this.httpClient.get<Photo[]>(this.dataFile).subscribe((resp) => {this.photos = resp;});
+        console.log(`Loaded ${JSON.stringify(this.photos)} photos`);
+
+        //   } else {
+    //     console.log(`ERROR: Data File, ${this.dataFile} doesn't exist!`);
+    //   }
+    // });
+  }
+
+  getPhotos() {
+    return this.photos;
+  }
+  
 }

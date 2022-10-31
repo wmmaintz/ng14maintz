@@ -9,7 +9,7 @@ import { AccountsService } from '../accounts.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-register',
+  selector: 'm-register',
   templateUrl: './register.component.html',
   styleUrls: [
     './register.component.scss',
@@ -34,15 +34,15 @@ export class RegisterComponent implements OnInit {
       f.reset();
       if (f !== null) {
         this.user = {
-          UserId: 0,
-          Password: '',
-          Email: '',
-          Phone: '',
-          FirstName: '',
-          MI: '',
-          LastName: '',
-          Suffix: '',
-          Role: ''
+          userId: 0,
+          password: '',
+          email: '',
+          phone: '',
+          firstName: '',
+          mi: '',
+          lastName: '',
+          suffix: '',
+          role: ''
         };
       }
     }
