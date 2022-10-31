@@ -1,7 +1,7 @@
 REM The npm, yarn, and Angular/Cli Steps taken to create the maintz.com website.
 
-ng new --style scss --routing maintz
-cd maintz
+ng new --style scss --routing ng14maintz
+cd ng14aintz
 npm i
 del package-lock.json
 yarn install
@@ -70,6 +70,13 @@ ng g c videos/videoCarousel --module videos.module
 yarn add ngx-toaster
 yarn run ngcc
 
-
+REM Setup git
+echo "# ng14maintz" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/wmmaintz/ng14maintz.git
+git push -u origin main
 
 
