@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
+  selector: 'm-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: [
+    './about.component.scss',
+    '../about.scss'
+  ]
 })
 export class AboutComponent implements OnInit {
+  heading: string = 'About Maintz.com';
+  subHeading: string = 'Background Information.';
 
   constructor() { }
 

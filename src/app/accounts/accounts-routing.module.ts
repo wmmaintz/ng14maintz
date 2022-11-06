@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'logoff',     component: LogoffComponent },
   { path: 'privacy',    component: PrivacyComponent },
   { path: 'register',   component: RegisterComponent },
-  { path: 'terms',      component: TermsComponent },
   { path: 'user-edit',  component: UserEditComponent },
   { path: 'users',      component: UsersListComponent },
   { path: 'users-list', component: UsersListComponent },

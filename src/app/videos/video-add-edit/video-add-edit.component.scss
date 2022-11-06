@@ -1,5 +1,6 @@
-section {
-  margin-top: 60px;
+
+form {
+  border: 1px solid black;
 }
 
 .full-width {
@@ -16,16 +17,4 @@ section {
   margin: 5px 0;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
 
-.col {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.col:last-child {
-  margin-right: 0;
-}

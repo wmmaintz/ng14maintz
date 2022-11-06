@@ -1,7 +1,15 @@
-
 <div class="center-page">  
-  <mat-spinner color="accent" style="display: inline-block;"></mat-spinner><br/>
-  &nbsp;&nbsp;Loading ...<br/>
-  <mat-progress-spinner></mat-progress-spinner>
-  <hr/>
+
+    <mat-card class="text-center">
+        <mat-card-content>
+            <h4>Loading ...</h4>
+            <mat-progress-spinner
+                class="text-center"
+                [color]="spinnerColor"
+                [diameter]="spinnerSize"
+                mode="indeterminate">
+            </mat-progress-spinner>
+        </mat-card-content>
+    </mat-card>
+    
 </div>

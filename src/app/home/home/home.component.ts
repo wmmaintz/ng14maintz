@@ -1,27 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { timeout, timer } from 'rxjs';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'app-home',
+  selector: 'm-home',
   templateUrl: './home.component.html',
   styleUrls: [
-    './home.component.scss'
+    './home.component.scss',
+    '../home.scss'
   ]
 })
 export class HomeComponent implements OnInit {
+  heading: string = 'Home Screen';
+  subHeading: string = 'Welcome to Maintz.com.';
   isLoading: boolean = true;
   timeNow: string = new Date().toString();
-  underConstruction: boolean = true;
-
+  sliderValue: number = 50;
+  
   constructor() {  }
 
   ngOnInit(): void {
     this.isLoading = true;
-    console.log(`${this.getCurrentTime()}: ngOnInit - calling delayProcessingfor(1)`);
-    this.delayProcessingfor(1, 'ngOnInit');
+    console.log(`${this.getCurrentTime()}: ngOnInit - calling delayProcessingfor(2)`);
+    this.delayProcessingfor(2, 'ngOnInit');
   }
 
   delayProcessingfor(seconds: number, methodName: string) {

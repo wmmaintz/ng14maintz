@@ -1,11 +1,35 @@
-.account-section {
-    background-color: white;
-    color: #0070C6;
+@import '../../styles';
+
+.accounts-section {
+  margin: 0px;
+  height: 100vh;
+  //                                   Top Color, Mid Color, Bottom Color
+  background: -webkit-linear-gradient(#d0d0d0, #f5f5f5, #ffffff, #ffffff);
+  background:    -moz-linear-gradient(#d0d0d0, #f5f5f5, #ffffff, #ffffff);
+  background:     -ms-linear-gradient(#d0d0d0, #f5f5f5, #ffffff, #ffffff);
+  background:      -o-linear-gradient(#d0d0d0, #f5f5f5, #ffffff, #ffffff);
+  background:         linear-gradient(#d0d0d0, #f5f5f5, #ffffff, #ffffff);
+  color: #000000;
+
+  .about-div {
+    margin: 0 50px;
+    
+    .section-heading {
+      color: #000000;
+      text-shadow: 3px 2px 5px #777777;
+    }
+
+    .section-subheading {
+      color: #000000;
+      text-shadow: 2px 2px 6px #000000;
+    }
+
+    button,
+    .btn,
+    .btn-primary {
+      background-color: #0070C6;
+      color: #000000;
+    }
   }
-  .account-section button,
-  .account-section .btn,
-  .account-section .btn-primary {
-    background-color: #0070C6;
-    color: #000000;
-  }
-  
+
+}

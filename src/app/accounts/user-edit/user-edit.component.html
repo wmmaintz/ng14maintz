@@ -1,9 +1,22 @@
-<div class="heading">{{title}}</div>
-<div class="subheading">Under Construction</div>
-
+<section class="section accounts-section">
+    <div class="user-add-edit-section">
+    
+        <!-- <m-under-construction></m-under-construction> -->
+        
+        <div class="section-heading-text">
+    
+            <div class="center-text">
+                <h2 class="section-heading">{{heading}}</h2>
+                <h3 class="section-subheading text-primary">{{subHeading}}</h3>
+                <p *ngIf="users.length === 0" class="loaded">Loading user!"</p>
+                <p *ngIf="users.length !== 0" class="loaded">{{users.length}} users loaded!"</p>
+            </div>
+    
+        </div>
+            
 <!--
 <form [formGroup]="f" novalidate>
-<form #f="ngForm" (ngSubmit)="onSubmit(f)"><!-- novalidate> -->
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
     <!-- {{ f.value | json }} -->
 <!-- 
     <input type="text"     name="salutation" ngModel          #salutation="ngModel">
@@ -26,3 +39,7 @@
 <p>Form value: {{ f.value | json }}</p>
 <p>Form valid: {{ f.valid }}</p>
 -->
+
+    </div>
+
+</section>

@@ -12,11 +12,13 @@ ECHO.
 ECHO.
 ECHO Pushing %ProjName% contents to remote repository.
 ECHO.
-CALL git push origin master
-CALL git remote -v show -n %ProjName%
-CALL git status
+REM CALL git push origin master
 ECHO.
 PAUSE
+CALL git branch -M main
+CALL git push -u origin main
+CALL git remote -v show -n %ProjName%
+CALL git status
 :EXIT_PROG
 SET ProjDir=
 SET ProjName=

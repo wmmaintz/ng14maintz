@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class TermsComponent implements OnInit {
+  heading: string = 'Terms and Conditions';
+  subHeading: string = 'Agree or Exit!';
 
   constructor() { }
 

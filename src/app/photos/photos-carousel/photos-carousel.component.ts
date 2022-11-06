@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-photos-carousel',
+  selector: 'm-photos-carousel',
   templateUrl: './photos-carousel.component.html',
-  styleUrls: ['./photos-carousel.component.scss']
+  styleUrls: [
+    './photos-carousel.component.scss',
+    '../photos.scss'  
+  ]
 })
 export class PhotosCarouselComponent implements OnInit {
-  isLoading:boolean = false;
+  heading: string = 'Photos Carousel';
+  subHeading: string = 'A carousel of memories from the past.';
+  isLoading:boolean = true;
+  photos: any[] = [];
 
   constructor() { }
 

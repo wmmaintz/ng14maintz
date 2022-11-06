@@ -1,0 +1,30 @@
+@import "../../styles";
+
+.links-section {
+    margin: 0px;
+    height: 100vh;
+    //                                   Top Color, Mid Color, Bottom Color
+    background: -webkit-linear-gradient(#f9cbdd, #f5f5f5, #ffffff, #ffffff);
+    background:    -moz-linear-gradient(#f9cbdd, #f5f5f5, #ffffff, #ffffff);
+    background:     -ms-linear-gradient(#f9cbdd, #f5f5f5, #ffffff, #ffffff);
+    background:      -o-linear-gradient(#f9cbdd, #f5f5f5, #ffffff, #ffffff);
+    background:         linear-gradient(#f9cbdd, #f5f5f5, #ffffff, #ffffff);
+    color: #000000;
+    font-family: 'Droid Sans', sans-serif;
+    text-shadow: none;
+
+    .links-div {
+        margin: 0 50px;
+        
+        .section-heading {
+        color: #880000;
+        text-shadow: 3px 2px 5px #555555;
+        }
+
+        .section-subheading {
+        color: #330000;
+        text-shadow: 2px 2px 6px #333333;
+        }
+    }
+    
+}

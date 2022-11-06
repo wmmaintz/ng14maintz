@@ -1,1 +1,19 @@
-<p>users-list works!</p>
+<section class="accounts-section">
+    <div class="users-list-section">
+
+        <!-- <m-under-construction></m-under-construction> -->
+
+        <div class="section-heading-text">
+
+            <div class="center-text">
+                <h2 class="section-heading">{{heading}}</h2>
+                <h3 class="section-subheading text-primary">{{subHeading}}</h3>
+                <p *ngIf="users.length === 0" class="loaded">Loading users list!"</p>
+                <p *ngIf="users.length !== 0" class="loaded">{{users.length}} users loaded!"</p>
+            </div>
+
+        </div>
+
+        <p>users-list works!</p>
+    </div>
+</section>

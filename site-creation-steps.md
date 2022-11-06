@@ -2,16 +2,27 @@ REM The npm, yarn, and Angular/Cli Steps taken to create the maintz.com website.
 
 ng new --style scss --routing ng14maintz
 cd ng14aintz
-npm i
+npm install
 del package-lock.json
 yarn install
 yarn add timers
 yarn add moment
+npm install --save node-fetch
+npm install --save-dev @types/node-fetch
+npm install --save ajax
 
 ng add @angular/material
 ng g module material --flat
 ng g module shared --flat
 
+ng g service httpErrorHandler
+ng g service message
+ng g service httpErrorHandler
+ng g service in-memory-data
+
+ng g service core/loading
+ng g c core/loading --module app.module
+ng g c core/downloader --module app.module
 ng g c core/header --module app.module
 ng g c core/footer --module app.module
 ng g @angular/material:navigation core/navigation --module app.module
@@ -19,7 +30,6 @@ ng g c core/notFound --module app.module
 ng g c core/under-construction --module app.module
 ng g c core/calendar --module app.module
 ng g c core/calendar-three-mon --module app.module
-ng g c core/loading --module app.module
 ng g c core/carousel --module app.module
 
 ng g c home/home --module app.module

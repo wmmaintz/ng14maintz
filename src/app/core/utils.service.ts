@@ -14,4 +14,9 @@ export class UtilsService {
   // public fileExists(url: string): Observable<boolean> {
     // return this.httpClient.get(url).pipe(map(() => true), catchError(() => of(false)));
   // }
+
+  getFileDate(fullfilename): Date {
+    let fileDate = new Date();
+    return fileDate;
+  }
 }

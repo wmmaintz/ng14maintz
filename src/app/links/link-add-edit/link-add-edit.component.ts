@@ -4,11 +4,18 @@ import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'm-link-add-edit',
   templateUrl: './link-add-edit.component.html',
-  styleUrls: ['./link-add-edit.component.scss']
+  styleUrls: [
+    './link-add-edit.component.scss',
+    '../links.scss'
+]
 })
 export class LinkAddEditComponent {
-  isLoading:boolean = false;
-  addressForm = this.fb.group({
+  heading: string = 'Link Add/Edit';
+  subHeading: string = 'Add or Edit the link to another someone in the Maintz clan.';
+  isLoading:boolean = true;
+  links: any[] = [];
+
+  linkForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],

@@ -1,15 +1,25 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { StatesService } from '../../accounts/states.service';
 import { State } from "@app/accounts/state.model";
+
+import { StatesService } from '../../accounts/states.service';
+import { Video } from '../video.model';
+
 @Component({
   selector: 'm-video-add-edit',
   templateUrl: './video-add-edit.component.html',
-  styleUrls: ['./video-add-edit.component.scss']
+  styleUrls: [
+    './video-add-edit.component.scss',
+    '../videos.scss'
+  ]
 })
 export class VideoAddEditComponent {
-  isLoading:boolean = false;
-  addressForm = this.fb.group({
+  heading: string = 'Video Add/Edit';
+  subHeading: string = 'A collection of interesting videos.';
+  isLoading:boolean = true;
+  videos: Video[] = [];
+
+  videoForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],
@@ -29,8 +39,10 @@ export class VideoAddEditComponent {
 
   constructor(
     private fb: FormBuilder,
-    private statesService: StatesService) {
+    private statesService: StatesService
+  ) {
       this.states = statesService.getStates();
+      console.log(`video-add-edit.component.ts - Loaded ${this.states.length} states`);
     }
 
   onSubmit(): void {

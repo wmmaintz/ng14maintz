@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Video } from '../video.model';
+
 @Component({
   selector: 'm-videos-carousel',
   templateUrl: './videos-carousel.component.html',
@@ -9,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
   ]  
 })
 export class VideosCarouselComponent implements OnInit {
-  isLoading:boolean = false;
+  heading: string = 'Videos Carousel';
+  subHeading: string = 'A carousel of interesting videos.';
+  isLoading:boolean = true;
+  videos: Video[] = [];
 
   constructor() { }
 

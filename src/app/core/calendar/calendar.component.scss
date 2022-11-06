@@ -1,59 +1,65 @@
-.calContainer {
-    display: inline-block;
-    height: 100%;
-    margin: 0px auto;
-    overflow: auto;
-    padding: 0px;
-    text-align: center;
-    width: 100%;
+.calendar-card {
+  width: 200px;
+}
 
-    .calSubcontainer {
-      display: inline-block;
-      margin: 5px auto;
-      padding: 10px;
+// .calContainer {
+//     display: inline-block;
+//     height: 100%;
+//     margin: 0px auto;
+//     overflow: auto;
+//     padding: 0px;
+//     text-align: center;
+//     width: 100%;
+//     border: 1px solid lime;
 
-      #calBox {
-        margin: 0px;
-        padding: 10px;
-        width: 100%;
-      }
-    }
-  }
+//     .calSubcontainer {
+//       display: inline-block;
+//       margin: 5px auto;
+//       padding: 10px;
+//       border: 1px dotted limegreen;
 
-  .calTable {
-    background-color: #000000;
-    border: 1px dotted #ffff00;
-    color: #f5f5f5;
-    display: inline-block;
-    font-size: 8pt;
-    margin: 5px auto;
-    opacity: 1;
-    overflow: hidden;
-    padding: 0px;
+//       #calBox {
+//         margin: 0px;
+//         padding: 10px;
+//         width: 100%;
+//       }
+//     }
+//   }
 
-    .monHdr {
-      font-size: 12pt;
-      margin: 0px auto;
-      text-align: center;
-    }
+//   .calTable {
+//     background-color: #000000;
+//     border: 1px dotted #ffff00;
+//     color: #f5f5f5;
+//     display: inline-block;
+//     font-size: 8pt;
+//     margin: 5px auto;
+//     opacity: 1;
+//     overflow: hidden;
+//     padding: 0px;
 
-    .wkdayHdr {
-      font-size: 10pt;
-      margin: 10px 20px;
-      padding: 2px;
-      text-align: center;
-    }
+//     .monHdr {
+//       font-size: 12pt;
+//       margin: 0px auto;
+//       text-align: center;
+//     }
 
-    .calDayRow {
-      font-size: 8pt;
-      text-align: center;
-      width: 30px;
-    }
+//     .wkdayHdr {
+//       font-size: 10pt;
+//       margin: 10px 20px;
+//       padding: 2px;
+//       text-align: center;
+//     }
 
-    .hiLite {
-      background-color: #ffff00;
-      border-radius: 40%;
-      color: #000000;
-    }
-  }
+//     .calDayRow {
+//       font-size: 8pt;
+//       text-align: center;
+//       width: 30px;
+//     }
+
+//     .hiLite {
+//       background-color: #ffff00;
+//       border-radius: 40%;
+//       color: #000000;
+//     }
+//   }
 

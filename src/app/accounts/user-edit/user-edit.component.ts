@@ -18,7 +18,11 @@ import { UnderConstructionComponent } from '@app/core/under-construction/under-c
   ]
 })
 export class UserEditComponent implements OnInit {
-  title: string = 'Edit User Account';
+  heading: string = 'Edit User Account';
+  subHeading: string = 'Modify an existing registered user.';
+  isLoading:boolean = true;
+  users: any[] = [];
+  
   // @ViewChild('f') form: any;
   // @ViewChild("f", { static: NgForm });
   // ngModel: any;

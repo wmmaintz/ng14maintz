@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class UsersListComponent implements OnInit {
+  heading: string = 'Users List';
+  subHeading: string = 'A list of registered users.';
+  isLoading:boolean = true;
+  users: any[] = [];
 
   constructor() { }
 

@@ -20,6 +20,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatCommonModule } from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -69,6 +70,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
+    MatCommonModule,
     MatStepperModule,
     MatDatepickerModule,
     MatDialogModule,

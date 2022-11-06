@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingComponent } from '../../core/loading/loading.component';
+
+import { Video } from '../video.model';
 
 @Component({
   selector: 'm-videos-list',
@@ -10,8 +11,11 @@ import { LoadingComponent } from '../../core/loading/loading.component';
   ]
 })
 export class VideosListComponent implements OnInit {
-  isLoading:boolean = false;
-
+  heading: string = 'Videos List';
+  subHeading: string = 'A collection of interesting videos.';
+  isLoading:boolean = true;
+  videos: Video[] = [];
+  
   constructor() { }
 
   ngOnInit(): void {

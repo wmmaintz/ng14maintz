@@ -1,1 +1,27 @@
-[{}]
+[
+    { "id": 0, "type": "cat", "category": "Undefined", "name": "", "href": "", "target": "", "descript": "This has not yet been defined." },
+    { "id": 1, "type": "cat", "category": "Business Affiliates", "name": "", "href": "", "target": "", "descript": "The entrepreneurial spirit is alive and well within the Maintz family." },
+    { "id": 2, "type": "cat", "category": "JUST FOR FUN", "name": "", "href": "", "target": "", "descript": "These websites explore the lighter side." },
+    { "id": 3, "type": "cat", "category": "THE CLAN", "name": "", "href": "", "target": "", "descript": "Websites of the \"extended\" Maintz family." },
+    { "id": 4, "type": "link", "category": "Business Affiliates", "name": "All Business Computer Services", "href": "http://www.allbusinesscomputerservices.com", "target": "_blank", "descript": "My consulting company" },
+    { "id": 5, "type": "link", "category": "Business Affiliates", "name": "Elite Renovations", "href": "http://www.eliterenovations.us", "target": "_blank", "descript": "My son\"s construction/renovation company" },
+    { "id": 6, "type": "link", "category": "Business Affiliates", "name": "Altar'd Events", "href": "http://www.altardevents.com", "target": "_blank", "descript": "My daughters event-planning business" },
+    { "id": 7, "type": "link", "category": "JUST FOR FUN", "name": "Maintz Wildlife Preserve", "href": "http://mdc7.mdc.mo.gov/applications/moatlas/AreaSummaryPage.aspx?txtAreaID=7712", "target": "_blank", "descript": "Maintz Wildlife Preserve" },
+    { "id": 8, "type": "link", "category": "JUST FOR FUN", "name": "Roman Gladius Maintz Sword", "href": "http://www.kultofathena.com/product.asp?item=500360", "target": "_blank", "descript": "Roman Gladius Maintz Sword" },
+    { "id": 9, "type": "link", "category": "THE CLAN", "name": "Tommy Maintz", "href": "http://www.linkedin.com/in/tommymaintz", "target": "_blank", "descript": "Tommy Maintz" },
+    { "id": 10, "type": "link", "category": "THE CLAN", "name": "Twan Maintz", "href": "http://www.linkedin.com/in/twanmaintz", "target": "_blank", "descript": "Twan Maintz" },
+    { "id": 11, "type": "link", "category": "THE CLAN", "name": "Bill Maintz  II", "href": "http://www.allbusinesscomputerservices.com/management.html", "target": "_blank", "descript": "Bill Maintz  II" },
+    { "id": 12, "type": "link", "category": "THE CLAN", "name": "Bill Maintz III", "href": "http://www.linkedin.com/pub/bill-maintz/67/584/939", "target": "_blank", "descript": "Bill Maintz III" },
+    { "id": 13, "type": "link", "category": "THE CLAN", "name": "Wade Maintz", "href": "http://www.eliterenovations.us/about/the-owner.cshtml", "target": "_blank", "descript": "Wade Maintz" },
+    { "id": 14, "type": "link", "category": "THE CLAN", "name": "Allissa (Maintz) Reimer", "href": "http://www.linkedin.com/in/allissa-reimer-09791013", "target": "_blank", "descript": "Allissa (Maintz) Reimer" },
+    { "id": 15, "type": "link", "category": "THE CLAN", "name": "Danny Maintz", "href": "http://dannymaintzphotography.weebly.com/", "target": "_blank", "descript": "Danny Maintz Photography" },
+    { "id": 16, "type": "link", "category": "THE CLAN", "name": "David Maintz", "href": "http://www.linkedin.com/pub/david-maintz/38/163/a19", "target": "_blank", "descript": "David Maintz" },
+    { "id": 17, "type": "link", "category": "THE CLAN", "name": "Gisela Maintz", "href": "http://www.astro.uni-bonn.de/~gmaintz/", "target": "_blank", "descript": "Gisela Maintz" },
+    { "id": 18, "type": "link", "category": "THE CLAN", "name": "Dr. ir. J.B.Antoine Maintz", "href": "http://www.cs.uu.nl/staff/twan.html", "target": "_blank", "descript": "Dr. ir. J.B.Antoine Maintz" },
+    { "id": 19, "type": "link", "category": "THE CLAN", "name": "Jens Peter Maintz", "href": "http://www.facebook.com/Jens-Peter-Maintz-113293422079705/", "target": "_blank", "descript": "Jens Peter Maintz" },
+    { "id": 20, "type": "link", "category": "THE CLAN", "name": "Jesper Maintz", "href": "http://www.zoominfo.com/p/Jesper-Maintz/1857930792", "target": "_blank", "descript": "Jesper Maintz" },
+    { "id": 21, "type": "link", "category": "THE CLAN", "name": "Prof. Dr. Julia Maintz", "href": "http://www.cbs-edu.de/en/cbs/team/julia-maintz/", "target": "_blank", "descript": "Prof. Dr. Julia Maintz" },
+    { "id": 22, "type": "link", "category": "THE CLAN", "name": "Maximillian Maintz", "href": "http://maximilianmaintz.com/", "target": "_blank", "descript": "Maximillian Maintz" },
+    { "id": 23, "type": "link", "category": "THE CLAN", "name": "Philipp Maintz", "href": "http://www.philippmaintz.de/", "target": "_blank", "descript": "Philipp Maintz" },
+    { "id": 24, "type": "link", "category": "THE CLAN", "name": "Thomas Maintz", "href": "http://www.thomasmaintz.com/", "target": "_blank", "descript": "Thomas Maintz" }
+]

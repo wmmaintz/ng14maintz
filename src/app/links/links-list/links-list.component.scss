@@ -1,65 +1,58 @@
-.links-section {
-    background: -webkit-linear-gradient(#000080, #000080, transparent);
-    background: -moz-linear-gradient(#000080, #000080, transparent);
-    background: -ms-linear-gradient(#000080, #000080, transparent);
-    background: -o-linear-gradient(#000080, #000080, transparent);
-    background: linear-gradient(#000080, #000080, transparent);
-    padding: 0px;
-    text-shadow: none;
-  }
-  .links-section .section-heading {
-    color: #f5f5f5;
-    text-shadow: 2px 2px 4px #0070C6;
-  }
-  .links-section .section-subheading {
-    color: #99CCFF;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 2px #A3A3A3;
-  }
-  .links-section .link-group-heading {
-    color: #f5f5f5;
-  }
-  .links-section .link-group-subheading {
-    color: #99CCFF;
-  }
-  .links-section ul {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .links-section li {
-    color: #f5f5f5;
-    list-style: none;
-    margin-left: -20px;
-    margin-right: 20px;
-    padding: 0px;
-  }
-  .links-section .hyperLink {
-    color: #f5f5f5;
-    font-weight: normal;
-    list-style: none;
-  }
-  .links-section .hyperLink:hover {
-    color: #000080;
-  }
-  .links-section .hyperLinkDesc {
-    color: #0070C6;
-    font-size: 8pt;
-    margin-bottom: 20px;
-    margin-top: 0px;
-  }
-  .links-section blockquote {
-    background-color: #000080;
-    color: #f5f5f5;
-    font-size: 12pt;
-    margin: 10%;
-  }
-  .links-section .mfa-business {
-    color: #0070C6;
-  }
-  .links-section .mfa-clan {
-    color: #0070C6;
-  }
-  .links-section .mfa-fun {
-    color: #0070C6;
-  }
-  
+
+
+.link-group-heading {
+  color: #f5f5f5;
+}
+
+.link-group-subheading {
+  color: #99CCFF;
+}
+
+ul {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+li {
+  color: #f5f5f5;
+  list-style: none;
+  margin-left: -20px;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+.hyperLink {
+  color: #f5f5f5;
+  font-weight: normal;
+  list-style: none;
+}
+
+.hyperLink:hover {
+  color: #000080;
+}
+
+.hyperLinkDesc {
+  color: #0070C6;
+  font-size: 8pt;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+blockquote {
+  background-color: #000080;
+  color: #f5f5f5;
+  font-size: 12pt;
+  margin: 10%;
+}
+
+.mfa-business {
+  color: #0070C6;
+}
+
+.mfa-clan {
+  color: #0070C6;
+}
+
+.mfa-fun {
+  color: #0070C6;
+}

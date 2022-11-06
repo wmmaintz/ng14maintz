@@ -1,9 +1,9 @@
 export class Link {
-    Id: number = 0;
-    Type: string = "";
-    Category: string = "";
-    Name: string = "";
-    Href: string = "";
-    Target: string = "";
-    Descript: string = "";
+    id: number = 0;
+    type: string = "";
+    category: string = "";
+    name: string = "";
+    href: string = "";
+    target: string = "";
+    descript: string = "";
 }

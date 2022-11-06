@@ -1,0 +1,21 @@
+<section>
+    <div class="videos-section">
+        <div class="videos-div videos-gallery-div">
+        
+            <!-- <m-under-construction></m-under-construction> -->
+                        
+            <div class="section-heading-text">
+
+                <div class="center-text">
+                    <h2 class="section-heading">{{heading}}</h2>
+                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
+                    <p *ngIf="videos.length === 0" class="loaded">Loading video list!"</p>
+                    <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} video loaded!"</p>
+                </div>
+
+            </div>
+            
+            <p>videos-gallery works!</p>
+        </div>
+    </div>
+</section>

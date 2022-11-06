@@ -24,11 +24,12 @@
       "dom"
     ],
     "paths": {
-      "@app/*":  ["app/*"],
-      "@assets": ["assets"],
-      "@env/*":  ["environments/*"],
-      "@data/*": ["app/data/*"],
-      "@node/*": ["../node_modules/*"]
+      "@top":   ["./*"],
+      "@app/*": ["app/*"],
+      "@assets":["assets/*"],
+      "@env/*": ["environments/*"],
+      "@data/*":["app/data/*"],
+      "@node/*":["../node_modules/*"]
     },
   },
   "angularCompilerOptions": {

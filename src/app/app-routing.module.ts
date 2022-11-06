@@ -5,9 +5,10 @@ import { HomeComponent } from "./home/home/home.component";
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 
 const aboutModule = () => import('./about/about.module').then(x => x.AboutModule);
+const accountModule = () => import('./accounts/accounts.module').then(x => x.AccountsModule);
+const linksModule  = () => import('./links/links.module').then(x => x.LinksModule);
 const photosModule = () => import('./photos/photos.module').then(x => x.PhotosModule);
 const videosModule = () => import('./videos/videos.module').then(x => x.VideosModule);
-const linksModule  = () => import('./links/links.module').then(x => x.LinksModule);
 
 const routes: Routes = [
   { path: "", component:HomeComponent},

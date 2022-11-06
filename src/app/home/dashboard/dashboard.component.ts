@@ -4,11 +4,18 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { SharedModule } from '@app/shared.module';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'm-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: [
+    './dashboard.component.scss',
+    '../home.scss'
+  ]
 })
 export class DashboardComponent {
+  heading: string = 'Dashboard';
+  subHeading: string = 'Display website usage information at a glance.';
+
+  data:string[] = [];
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {

@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class PrivacyComponent implements OnInit {
+  heading: string = 'Privacy Statement';
+  subHeading: string = 'We value your privacy!';
 
   constructor() { }
 

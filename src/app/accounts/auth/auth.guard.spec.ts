@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Auth, AuthGuard } from './auth.guard';
+import { Auth } from './auth.guard';
+import { AuthGuard } from './auth.guard';
 
 describe('Auth', () => {
   it('should create an instance of Auth', () => {

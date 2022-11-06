@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LogoffComponent implements OnInit {
+  heading: string = 'LOGOFF';
+  subHeading: string = 'You have now been logged off of this website.';
 
   constructor() { }
 

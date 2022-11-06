@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LoginComponent implements OnInit {
+  heading: string = 'LOGIN';
+  subHeading: string = 'Provide your email address and password to fully access this website.';
 
   constructor() { }
 

@@ -17,7 +17,9 @@ import { Observable } from 'rxjs';
   ]
 })
 export class RegisterComponent implements OnInit {
-//  ngForm: NgForm = new NgForm(Validator,2);
+  heading: string = 'User Registration';
+  subHeading: string = 'Register to Enable Qualified Access to this Website.';
+  //  ngForm: NgForm = new NgForm(Validator,2);
   user: User = new User();
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$';
   
