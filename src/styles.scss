@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 html, body { height: 100%; }
 body { 
@@ -55,27 +55,35 @@ p {
  **/
 
  section {
-  margin-top: 0px;
+  margin-top: 55px;
   margin-bottom: 30px;
   background-color: #b8b8b8;
   color: black;
+  // border: 2px solid lime;
  }
 
 .section-heading {
+  // These are standard for all sections
   font-family: "Droid Serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   text-transform: none;
   font-style: italic;
   margin: 5px auto;
   padding: 0px 10px 0px;
-  color: whitesmoke;
-  text-shadow: 2px 3px 4px #333333;
+  // These may be modified in each section/module
+  color: #000000;
+  text-shadow: 3px 2px 5px #777777;
 }
 
-.section-subheading img {
-  margin: 0px auto 30px;
+.section-subheading {
+  // These are standard for all sections
+  margin: 0px auto;
   padding: 0px 10px 0px;
   width: 90%;
   max-width: 500px;
+  // These may be modified in each section/module
+  color: #000000;
+  text-shadow: 3px 2px 5px #777777;
+  margin-bottom: 10px;
 }
 
 .dropdown-menu {
@@ -88,6 +96,6 @@ p {
 .center-text {
   margin: 0 auto;
   width: 100%;
-  display: inline-block;
+  display: flex-block;
   text-align: center;
 }

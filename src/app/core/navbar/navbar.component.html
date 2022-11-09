@@ -21,6 +21,7 @@
     <button class="navbarBtn" [matMenuTriggerFor]="photoMenu" matTooltip="Display the PHOTOS menu"><mat-icon>photo_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Photos</span></button>
     <button class="navbarBtn" [matMenuTriggerFor]="videoMenu" matTooltip="Display the VIDEOS menu"><mat-icon>video_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Videos</span></button>
     <button class="navbarBtn" [matMenuTriggerFor]="linkMenu"  matTooltip="Display the LINKS menu"><mat-icon>link</mat-icon><span class="menu-text" *ngIf="showMenuText">Links</span></button>
+    <button class="navbarBtn" [matMenuTriggerFor]="miscMenu"  matTooltip="Display the MISCELLANEOUS menu"><mat-icon>misc</mat-icon><span class="menu-text" *ngIf="showMenuText">Misc</span></button>
     <button class="navbarBtn" routerLink="/login" *ngIf="!isLoggedIn" matTooltip="Login to the website"><mat-icon>power</mat-icon><span class="menu-text" *ngIf="showMenuText">Login</span></button>
     <button class="navbarBtn" routerLink="/logoff" *ngIf="isLoggedIn" matTooltip="Logoff of this website"><mat-icon>power_off</mat-icon><span class="menu-text" *ngIf="showMenuText">Logoff</span></button> 
   </mat-nav-list>
@@ -46,6 +47,10 @@
     <button mat-menu-item [matMenuTriggerFor]="linkMenu" matTooltip="Display The Links Menu">
       <mat-icon>link</mat-icon>
       <span *ngIf="showMenuText">Links</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="miscMenu" matTooltip="Display The Miscellaneous Menu">
+      <mat-icon>misc</mat-icon>
+      <span *ngIf="showMenuText">Misc</span>
     </button>
   </mat-menu>
 
@@ -168,5 +173,31 @@
     </button>
   </mat-menu>
 
+  <mat-menu #miscMenu="matMenu">
+    <button mat-menu-item routerLink="tictactoe">
+      <mat-icon>grid</mat-icon>
+      <span *ngIf="showMenuText">TicTacToe</span>
+    </button>
+    <button mat-menu-item routerLink="loading">
+      <mat-icon>circle</mat-icon>
+      <span *ngIf="showMenuText">Loading</span>
+    </button>
+    <button mat-menu-item routerLink="notfound">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="showMenuText">Not Found</span>
+    </button>
+    <button mat-menu-item routerLink="underconstruction">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="showMenuText">Under Construction</span>
+    </button>
+    <button mat-menu-item routerLink="downloader">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="showMenuText">Downloader</span>
+    </button>
+    <button mat-menu-item routerLink="sidebar">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="showMenuText">SideBar Menu</span>
+    </button>
+  </mat-menu>
 
 </mat-toolbar>

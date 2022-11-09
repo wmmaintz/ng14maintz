@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilsService } from '@app/core/utils.service';
+import { MatCard } from '@angular/material/card';
 // import * as path from 'path';
 
 @Component({
@@ -14,7 +15,8 @@ export class WebsiteComponent implements OnInit {
   heading: string = 'About The Website';
   subHeading: string = 'Technical information regarding this website\'s construction.';
   version: number = 14.1;
-  lastModDate: Date = new Date('');
+  lastModDate: string = new Date('11/9/2022').toLocaleDateString();
+
   // filePath: string = path.resolve("./");
   srcFile: string = 'website.component.ts';
 

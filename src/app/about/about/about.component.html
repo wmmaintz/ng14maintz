@@ -1,25 +1,28 @@
 <section>
+
     <div class="about-section">
+
         <div class="about-div about-about-div">
   
-            <div class="section-heading-text">
-
+            <!-- <div class="section-heading-text">
                 <div class="center-text">
                     <h2 class="section-heading">{{heading}}</h2>
                     <h3 class="section-subheading text-primary">{{subHeading}}</h3>
                 </div>
+            </div> -->
 
-            </div>
+            <mat-card>
 
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
 
-            <div class="row">
-                <div class="col-md-12 skip-md-1">
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+
+                <mat-card-content>
                     <p>This website is meant to share the many accomplishments of those who
                     share my last name, Maintz.  I think that all of us, at one time or another,
                     have wondered about our family tree.  Have you ever "Googled" your last name
-                    to see how many hits it receives?</p>
-                    <p>
-                    With a last name like Maintz, it's a little easier to track one's ancestry 
+                    to see how many hits it receives?</p><br/>
+                    <p>With a last name like Maintz, it's a little easier to track one's ancestry 
                     than it would be with a surname like Smith, for instance.  My grandparents
                     were German immigrants who settled in eastern Pennsylvania during the 
                     depression.  My paternal grandfather was a machinist in the Bethlehem Steel
@@ -36,21 +39,25 @@
                     was generous enough to donate a number of acres of land as a home for 
                     all species of birds.  Information about the Maintz Wildlife Preserve, around
                     the town of Cape Girardeau, Missouri can be accessed via the 
-                    <a href="#links">Links</a> page).</p>
-                    <p></p>
+                    <a href="#links">Links</a> page).</p><br/>
                     <p>According to ancestry.com, as of January 2014, there are 1.8 million 
                     members on record within the Maintz family tree (see 
                     <a href="http://search.ancestry.com/cgi-bin/sse.dll?rank=1&amp;cj=1&amp;ti=0&amp;_80004003=Maintz&amp;gsbco=1,All+Countries&amp;prox=1&amp;so=3&amp;db=pubmembertrees&amp;gss=mp-pubmembertrees&amp;_8000c003=Maintz&amp;ti.si=0&amp;sbo=0&amp;gsmpl=1,+&amp;gsdpl=1,+&amp;gsmco=1,All+Countries&amp;gsdco=1,All+Countries&amp;gsbpl=1,+&amp;netid=cj&amp;o_xid=0003056928&amp;o_lid=0003056928&amp;o_sch=Affiliate+External" target="_blank" title="Access ancestry.com's records">
-                    registry</a>).</p>
-                    <p></p>
+                    registry</a>).</p><br/>
                     <p align="left">I've tried to capture some of the websites and user 
                     profiles of other Maintz's on the internet and have placed links to them 
                     on the <a href="#links">Links</a> page.  The list continues to grow so please
                     don't think that this is an exhaustive list.  Please feel free to search
                     on your own.</p>
-                </div>
-            </div>
+                </mat-card-content>
 
+                <mat-card-footer>
+                    <m-sub-footer [version]="version" [lastModDate]="lastModDate"></m-sub-footer>
+                </mat-card-footer>
+
+            </mat-card>
+            <br/><br/>
         </div>
     </div>
+
 </section>

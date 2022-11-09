@@ -11,7 +11,43 @@
     
             </div>
 
-            <p>login works!</p>
+            <mat-grid-list>
+                <mat-card *ngIf="isLoggedIn" class="login-card">
+                    <mat-card-header class="center-text">
+                        <mat-card-title>
+                            <span class="center-text">Login</span>
+                        </mat-card-title>
+                        <mat-card-content class="login-card-content">
+                            <div>You have successfully logged into maintz.com</div>
+                        </mat-card-content>
+                    </mat-card-header>
+                </mat-card>
+                <mat-card *ngIf="isLoggedIn === false" class="login-card">
+                    <mat-card-header class="center-text">
+                        <mat-card-title>
+                            <span class="center-text">Please Login</span>
+                        </mat-card-title>
+                        <mat-card-content class="login-card-content">
+                            <div>Please enter your user email address below.</div><br/>
+                            <form class="login-form">
+                                <mat-form-field class="login-full-width" appearance="fill">
+                                  <mat-label>Email</mat-label>
+                                  <input type="email" matInput [formControl]="loginFormControl" [errorStateMatcher]="matcher"
+                                         placeholder="Ex. pat@example.com">
+                                  <mat-hint>In the form username@domain.com</mat-hint>
+                                  <mat-error *ngIf="loginFormControl.hasError('email') && !loginFormControl.hasError('required')">
+                                    Please enter a valid email address
+                                  </mat-error>
+                                  <mat-error *ngIf="loginFormControl.hasError('required')">
+                                    Email is <strong>required</strong>
+                                  </mat-error>
+                                </mat-form-field>
+                                <button class="btn btn-primary" (click)="login(user.email,user.password)">Login</button>
+                              </form>
+                        </mat-card-content>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-list>
         
         </div>
     </div>

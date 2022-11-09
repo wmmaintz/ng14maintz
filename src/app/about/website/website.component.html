@@ -1,68 +1,65 @@
 <!-- Website Section -->
 
 <section>
+
     <div class="about-section">
+
         <div class="about-div about-website-div">
     
-            <div class="section-heading-text">
-    
-                <div class="center-text">
-                    <h2 class="section-heading">{{heading}}</h2>
-                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                </div>
-    
-            </div>
+            <mat-card>
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+            </mat-card><br/>
 
-            <div class="row">
-                <div class="col-md-12 skip-md-1">
+            <mat-card>
+                <mat-card-content>
                     <h4>Responsive Design</h4>
                     <p>
-                        This website was constructed with HTML5, CSS3, and Javascript to achieve a "responsive design" and was built upon an Angular Single-Page Application (SPA) framework.  It also employs Twitter's bootstrap which is "the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web."  Additionally, Angular Material was utilized to standarize some of the components and color theme used in the UI design and presentation.  This allows the website to be viewed on multiple devices, from large desktop screens to mobile devices like tablets and smartphones.  The cascading style sheets were created using SCSS, a pre-compiler for generating Cascading Style Sheet (CSS) files, and all menu items and social media links utilize the Angular Material Icons.
+                        This website was constructed with html5, CSS3, and Javascript to achieve a "responsive design" and was built upon an Angular Single-Page Application (SPA) framework.  It also employs Twitter's bootstrap which is "the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web."  Additionally, Angular Material was utilized to standarize some of the components and color theme used in the UI design and presentation.  This allows the website to be viewed on multiple devices, from large desktop screens to mobile devices like tablets and smartphones.  The cascading style sheets were created using SCSS, a pre-compiler for generating Cascading Style Sheet (CSS) files, and all menu items and social media links utilize the Angular Material Icons.
                     </p>
-                    <div class="col-md-12"> <!-- Inline list of images -->
-                        <ul class="list-inline">
-                            <li><a target="_blank" href="http://alistapart.com/article/responsive-web-design">
-                                    <img src="assets/logos/web/responsive_web_design.png"></a></li>
-                            <li><a target="_blank" href="http://en.wikipedia.org/wiki/HTML5">
-                                    <img src="assets/logos/web/HTML5.png"></a></li>
-                            <li><a target="_blank" href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3">
-                                    <img src="assets/logos/web/CSS3.png"></a></li>
-                            <li><a target="_blank" href="https://www.javascript.com/">
-                                    <img src="assets/logos/web/javascript_logo.png"></a></li>
-                            <li><a target="_blank" href="https://jquery.com/">
-                                    <img src="assets/logos/web/jquery.png"></a></li>
-                            <li><a target="_blank" href="http://www.getbootstrap.com">
-                                    <img src="assets/logos/web/bootstrap.png"></a></li>
-                            <li><a target="_blank" href="http://glyphicons.com/">
-                                    <img src="assets/logos/web/glyphicons.jpg"></a></li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
+                    <!-- Inline list of images -->
+                    <ul class="list-inline">
+                        <li><a target="_blank" href="http://alistapart.com/article/responsive-web-design">
+                                <img src="assets/logos/web/responsive_web_design.png"></a></li>
+                        <li><a target="_blank" href="http://en.wikipedia.org/wiki/html5.png">
+                            <img src="assets/logos/web/html5.png"></a></li>
+                        <li><a target="_blank" href="http://en.wikipedia.org/wiki/Sass_(stylesheet_language)">
+                            <img src="assets/logos/web/scss_3.png"></a></li>
+                        <li><a target="_blank" href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3">
+                            <img src="assets/logos/web/css3.png"></a></li>
+                        <li><a target="_blank" href="https://www.javascript.com/">
+                                <img src="assets/logos/web/javascript_logo.png"></a></li>
+                        <li><a target="_blank" href="https://jquery.com/">
+                                <img src="assets/logos/web/jquery.png"></a></li>
+                        <li><a target="_blank" href="http://www.getbootstrap.com">
+                                <img src="assets/logos/web/bootstrap.png"></a></li>
+                        <li><a target="_blank" href="http://glyphicons.com/">
+                                <img src="assets/logos/web/glyphicons.jpg"></a></li>
+                    </ul>
+                </mat-card-content>
+            </mat-card><br/>
 
-            <div class="row">
-                <div class="col-md-12 skip-md-1">
+            <mat-card class="row">
+                <mat-card-content>
                     <h4>Single Page Application</h4>
                     <p>This website uses a Single Page Application design, meaning that all content is presented using a single HTML file as its base and sections of that base page are swapped in and out or replaced by other content that the user has selected to see.  This eliminates the need to repaint the entire screen in order to load multiple HTML pages everytime the user moves from one page to another.  Using the Angular framework allows this website to take the standard Model-View-Controller (MVC) pattern and extend it, employing a Model-View-Whatever design, including dependency injection, directives, two-way data binding, controllers, services, filters, helpers, and interceptors.</p>
-                    <div class="col-md-12"> <!-- Inline list of images -->
-                        <ul class="list-inline">
-                            <li><a target="_blank" href="https://www.angularjs.org">
-                                <img src="assets/logos/web/angular.jpg"></a></li>
-                            <li><a target="_blank" href="https://angular-ui.github.io/">
-                                <img src="assets/logos/web/angularui.png"></a></li>
-                            <li><a target="_blank" href="http://en.wikipedia.org/wiki/JavaScript">
-                                <img src="assets/logos/web/javascript.png"></a></li>
-                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">
-                                <img src="assets/logos/web/mvc.png"></a></li>
-                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/AngularJS">
-                                <img src="assets/logos/web/mvw.png"></a></li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
+                    <ul class="list-inline">
+                        <li><a target="_blank" href="https://www.angularjs.org">
+                            <img src="assets/logos/web/angular.jpg"></a></li>
+                        <li><a target="_blank" href="https://angular-ui.github.io/">
+                            <img src="assets/logos/web/angularui.png"></a></li>
+                        <li><a target="_blank" href="http://en.wikipedia.org/wiki/JavaScript">
+                            <img src="assets/logos/web/javascript.png"></a></li>
+                        <li><a target="_blank" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">
+                            <img src="assets/logos/web/mvc.png"></a></li>
+                        <li><a target="_blank" href="https://en.wikipedia.org/wiki/AngularJS">
+                            <img src="assets/logos/web/mvw.png"></a></li>
+                    </ul>
+                </mat-card-content>
+            </mat-card><br/>
 
-            <div class="row">
-                <div class="col-md-12 skip-md-1">
+            <mat-card>
+                <mat-card-content>
                     <h4>Development Automation</h4>
                     <p>This website was developed, constructed and compiled using some build automation 
                     tools like Node, Bower, Yeoman, Grunt, Gulp, and Less.  Node.js® is a JavaScript 
@@ -79,21 +76,20 @@
                     particularly when needing to test a website on multiple devices.</p>
                     <p>The Less compiler provides the developer with an increased versatility
                     in the creation of Cascading Style Sheets.</p>
-                    <div class="col-md-12">
-                        <ul class="list-inline">
-                            <li><a target="_blank" href="https://www.npmjs.com"><img src="assets/logos/web/node.png"></a></li>
-                            <li><a target="_blank" href="http://bower.io"><img src="assets/logos/web/bower.png"></a></li>
-                            <li><a target="_blank" href="http://yeoman.io"><img src="assets/logos/web/Yeoman.png"></a></li>
-                            <li><a target="_blank" href="http://www.gruntjs.com"><img src="assets/logos/web/grunt.png"></a></li>
-                            <li><a target="_blank" href="http://gulpjs.com"><img src="assets/logos/web/gulp-2x.png"></a></li>
-                            <li><a target="_blank" href="http://lesscss.org"><img src="assets/logos/web/less.png"></a></li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
+                    <ul class="list-inline">
+                        <li><a target="_blank" href="https://www.npmjs.com"><img src="assets/logos/web/node.png"></a></li>
+                        <li><a target="_blank" href="http://bower.io"><img src="assets/logos/web/bower.png"></a></li>
+                        <li><a target="_blank" href="http://yeoman.io"><img src="assets/logos/web/yeoman.png"></a></li>
+                        <li><a target="_blank" href="http://www.gruntjs.com"><img src="assets/logos/web/grunt.png"></a></li>
+                        <li><a target="_blank" href="http://gulpjs.com"><img src="assets/logos/web/gulp-2x.png"></a></li>
+                        <li><a target="_blank" href="http://lesscss.org"><img src="assets/logos/web/less.png"></a></li>
+                        <li><a target="_blank" href="https://sass-lang.com/"><img src="assets/logos/web/scss_3.png"></a></li>
+                    </ul>
+                </mat-card-content>
+            </mat-card><br/>
 
-            <div class="row">
-                <div class="col-md-12 skip-md-1">
+            <mat-card>
+                <mat-card-content>
                     <h4>Test Automation &amp; Test-Driven Development</h4>
                     <p>This website was developed, constructed and compiled using some test automation 
                     tools like Karma for unit-testing and Protractor for end-to-end testing.  Every time 
@@ -119,21 +115,22 @@
                     <p>Chai is a BDD / TDD Assertion Library for node and the browser that can be 
                     delightfully paired with any javascript testing framework.</p>
                     
-                    <div class="col-md-12">
-                        <ul class="list-inline">
-                            <li><a target="_blank" href="http://www.protractortest.org/"><img src="assets/logos/web/Protractor.png"></a></li>
-                            <li><a target="_blank" href="http://jasmine.github.io/2.4/introduction.htmlm"><img src="assets/logos/web/jasmine_favicon.png"></a></li>
-                            <li><a target="_blank" href="http://karma-runner.github.io"><img src="assets/logos/web/Karma.png"></a></li>
-                            <li><a target="_blank" href="http://phantomjs.org/"><img src="assets/logos/web/phantomjs.jpg"></a></li>
-                            <li><a target="_blank" href="http://chaijs.com/"><img src="assets/logos/web/chai.png"></a></li>
-                            <li><a target="_blank" href="https://mochajs.org/"><img src="assets/logos/web/mocha.png"></a></li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
+                    <ul class="list-inline center-text">
+                        <li><a target="_blank" href="http://www.protractortest.org/"><img src="assets/logos/web/protractor.png"></a></li>
+                        <li><a target="_blank" href="http://jasmine.github.io/2.4/introduction.htmlm"><img src="assets/logos/web/jasmine_favicon.png"></a></li>
+                        <li><a target="_blank" href="http://karma-runner.github.io"><img src="assets/logos/web/karma.png"></a></li>
+                        <li><a target="_blank" href="http://phantomjs.org/"><img src="assets/logos/web/phantomjs.jpg"></a></li>
+                        <li><a target="_blank" href="http://chaijs.com/"><img src="assets/logos/web/chai.png"></a></li>
+                        <li><a target="_blank" href="https://mochajs.org/"><img src="assets/logos/web/mocha.png"></a></li>
+                    </ul>
+                </mat-card-content>
 
-    <br/><br/><br/><br/>
-    <div class="subFooter">Version {{version}}<span class="text-right">{{lastModDate}}</span></div>
+                <mat-card-footer>
+                    <m-sub-footer [version]="version" [lastModDate]="lastModDate"></m-sub-footer>
+                </mat-card-footer>
+            </mat-card><br/><br/>
+
+        </div> <!-- class="about-div about-website-div" -->
+    </div> <!-- class="about-section" -->
+    <br/>
 </section>

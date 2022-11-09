@@ -5,8 +5,8 @@ import { AboutRoutingModule } from './about-routing.module';
 
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { PrivacyComponent } from '../about/privacy/privacy.component';
-import { TermsComponent } from '../about/terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 import { WebsiteComponent } from './website/website.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { WebsiteComponent } from './website/website.component';
     ContactUsComponent,
     PrivacyComponent,
     TermsComponent,
-    WebsiteComponent,
+    WebsiteComponent
   ],
   imports: [
     SharedModule,

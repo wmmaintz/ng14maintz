@@ -1,0 +1,15 @@
+.subFooter {
+    border: 2px solid beige;
+    color: grey;
+    margin: 0 10px;
+    font-size: .7em;
+
+    .leftText {
+      text-align: left;
+    }
+
+    .rightText {
+      position: absolute;
+      right: 10px;
+    }
+  }

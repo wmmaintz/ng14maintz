@@ -1,0 +1,16 @@
+.login-card {
+    position: relative;
+    margin: 100px auto;
+    max-width: 300px;
+    font-size: large;
+
+    .login-form {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .login-full-width {
+    width: 100%;
+    }
+}
