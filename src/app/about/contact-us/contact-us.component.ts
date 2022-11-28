@@ -14,7 +14,8 @@ import { UnderConstructionComponent } from '@app/core/under-construction/under-c
 export class ContactUsComponent implements OnInit {
   heading: string = 'Contact-Us';
   subHeading: string = 'Communicate with the website administrator.';
-
+  version: number = 14.1;
+  lastModDate: string = new Date('11/9/2022').toLocaleDateString();
   
   constructor() { }
 

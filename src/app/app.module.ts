@@ -25,6 +25,18 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { HomeComponent } from './home/home/home.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { ConfigComponent } from './config/config.component';
+import { MessagesComponent } from './messages/messages.component';
+import { InfLoadingComponent } from './core/inf-loading/inf-loading.component';
+import { ClickOutsideDirective } from './core/click-outside.directive';
+import { TestStuffComponent } from './core/test-stuff/test-stuff.component';
+
+// import { AnimatedButtonComponent } from './core/animated-button/animated-button.component';
+// import { AnimatedSubmitButtonComponent } from './core/animated-submit-button/animated-submit-button.component';
+// import { AnimatedDeleteButtonComponent } from './core/animated-delete-button/animated-delete-button.component';
+// import { AnimatedDownloadButtonComponent } from './core/animated-download-button/animated-download-button.component';
+// import { AnimatedMoreButtonComponent } from './core/animated-more-button/animated-more-button.component';
+// import { AnimatedIconButtonComponent } from './core/animated-icon-button/animated-icon-button.component';
 
 
 @NgModule({
@@ -35,7 +47,19 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
     NavbarComponent,
     NavigationComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConfigComponent,
+    MessagesComponent,
+    InfLoadingComponent,
+    ClickOutsideDirective,
+    TestStuffComponent,
+
+    // AnimatedButtonComponent,
+    // AnimatedSubmitButtonComponent,
+    // AnimatedDeleteButtonComponent,
+    // AnimatedDownloadButtonComponent,
+    // AnimatedMoreButtonComponent,
+    // AnimatedIconButtonComponent
   ],
   imports: [
     BrowserModule,

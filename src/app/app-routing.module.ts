@@ -8,9 +8,13 @@ import { CalendarComponent } from '@app/core/calendar/calendar.component';
 import { CalendarThreeMonComponent } from '@app/core/calendar-three-mon/calendar-three-mon.component';
 import { DownloaderComponent } from '@app/core/downloader/downloader.component';
 import { LoadingComponent } from '@app/core/loading/loading.component';
+import { InfLoadingComponent } from '@app/core/inf-loading/inf-loading.component';
 import { NotFoundComponent } from '@app/core/not-found/not-found.component';
 import { SidebarComponent } from '@app/core/sidebar/sidebar.component';
+import { TestStuffComponent } from '@app/core/test-stuff/test-stuff.component';
 import { UnderConstructionComponent } from '@app/core/under-construction/under-construction.component';
+
+import { ConfigComponent } from '@app/config/config.component';
 
 const aboutModule = () => import('./about/about.module').then(x => x.AboutModule);
 const accountModule = () => import('./accounts/accounts.module').then(x => x.AccountsModule);
@@ -32,15 +36,21 @@ const routes: Routes = [
   { path: "calendar3", component:CalendarThreeMonComponent},
   { path: "downloader", component:DownloaderComponent},
   { path: "loading", component:LoadingComponent},
+  { path: "infloading", component:InfLoadingComponent},
   { path: "notfound", component:NotFoundComponent},
   { path: "sidebar", component:SidebarComponent},
   { path: "underconstruction", component:UnderConstructionComponent},
+  { path: "config", component:ConfigComponent},
+  { path: "teststuff", component:TestStuffComponent},
+
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

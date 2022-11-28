@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'm-user-list',
   templateUrl: './users-list.component.html',
   styleUrls: [
-    './users-list.component.scss',
-    '../accounts.scss'
+    '../accounts.scss',
+    './users-list.component.scss'
   ]
 })
 export class UsersListComponent implements OnInit {

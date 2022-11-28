@@ -1,21 +1,33 @@
 <section>
+
     <div class="videos-section">
+  
         <div class="videos-div videos-list-div">
-        
-            <!-- <m-under-construction></m-under-construction> -->
-                        
-            <div class="section-heading-text">
+  
+            <mat-card class="section-heading-text">
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <p *ngIf="videos.length === 0" class="loaded">Loading videos!"</p>
+                <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} videos loaded!"</p>
+            </mat-card><br/>
+  
+            <p>{{videos.length}} videos loaded.</p>
 
-                <div class="center-text">
-                    <h2 class="section-heading">{{heading}}</h2>
-                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                    <p *ngIf="videos.length === 0" class="loaded">Loading video list!"</p>
-                    <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} video loaded!"</p>
-                </div>
 
-            </div>
+            <p>Video #0 - [{{videos[0].name}}]</p>
+            <p>Video #1 - [{{videos[1].name}}]</p>
+            <p>Video #2 - [{{videos[2].name}}]</p>
+            <p>Video #3 - [{{videos[3].name}}]</p>
+            <p>Video #4 - [{{videos[4].name}}]</p>
+            <p>Video #5 - [{{videos[5].name}}]</p>
 
-            <p>videos-list works!</p>
+            <p *ngFor="let v of videos; index as i">{{i}}</p>
+            <!-- <div *ngFor="let item of video | keyvalue">
+                {{item.key}}:{{item.value}}
+            </div> -->
+            <br/>
+            <p>---</p>
+            
         </div>
     </div>
 </section>

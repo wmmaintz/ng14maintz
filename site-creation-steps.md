@@ -15,10 +15,23 @@ ng add @angular/material
 ng g module material --flat
 ng g module shared --flat
 
-ng g service httpErrorHandler
 ng g service message
 ng g service httpErrorHandler
 ng g service in-memory-data
+ng g service requestCache
+ng g service config/config
+
+ng g interceptor interceptors/auth
+ng g interceptor interceptors/caching
+ng g interceptor interceptors/customJson
+ng g interceptor interceptors/ensureHttps
+ng g interceptor interceptors/logging
+ng g interceptor interceptors/noop
+ng g interceptor interceptors/retry
+ng g interceptor interceptors/trimName
+ng g interceptor interceptors/upload
+
+ng g c messages --module app.module
 
 ng g service core/loading
 ng g c core/loading --module app.module
@@ -31,7 +44,8 @@ ng g c core/under-construction --module app.module
 ng g c core/calendar --module app.module
 ng g c core/calendar-three-mon --module app.module
 ng g c core/carousel --module app.module
-
+ng g c core/subFooter --module app.module
+ng g service core/downloader/downloader --module app.module  
 ng g c home/home --module app.module
 ng g @angular/material:dashboard home/dashboard --module app.module
 
@@ -49,10 +63,11 @@ ng g interceptor accounts/auth/auth --module accounts.module
 ng g c accounts/login --module accounts.module
 ng g c accounts/logoff --module accounts.module
 ng g c accounts/privacy --module accounts.module
-ng generate @angular/material:address-form accounts/register --module accounts.module
+ng g @angular/material:address-form accounts/register --module accounts.module
 ng g c accounts/terms --module accounts.module
-ng generate @angular/material:address-form accounts/userEdit --module accounts.module
+ng g @angular/material:address-form accounts/userEdit --module accounts.module
 ng g c accounts/userList --module accounts.module
+ng g service accounts/auth/auth
 
 ng g module links  --route --routing
 ng g class --type model links/link --module links.module

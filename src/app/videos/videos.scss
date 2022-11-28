@@ -4,24 +4,31 @@
   margin: 0px;
   height: 100vh;
   //                                   Top Color, Mid Color, Bottom Color
-  background: -webkit-linear-gradient(#7eff70, #f5f5f5, #ffffff, #ffffff);
-  background:    -moz-linear-gradient(#7eff70, #f5f5f5, #ffffff, #ffffff);
-  background:     -ms-linear-gradient(#7eff70, #f5f5f5, #ffffff, #ffffff);
-  background:      -o-linear-gradient(#7eff70, #f5f5f5, #ffffff, #ffffff);
-  background:         linear-gradient(#7eff70, #f5f5f5, #ffffff, #ffffff);
+  background: -webkit-linear-gradient(#7eff70, #baeebe, #7eff70);
+  background:    -moz-linear-gradient(#7eff70, #baeebe, #7eff70);
+  background:     -ms-linear-gradient(#7eff70, #baeebe, #7eff70);
+  background:      -o-linear-gradient(#7eff70, #baeebe, #7eff70);
+  background:         linear-gradient(#7eff70, #baeebe, #7eff70);
   color: #000000;
 
   .videos-div {
-    margin: 0 50px;
+    margin: 0px 50px;
+    padding-top: 10px;
+    height: auto;
     
     .section-heading {
-      color: #000000;
-      text-shadow: 3px 2px 5px #0070C6;
+      text-shadow: 3px 2px 5px #24c600;
     }
 
-    .section-subheading {
-      color: #000000;
-      text-shadow: 2px 2px 6px #000000;
+    .top-right-img {
+      position: absolute;
+      top:10px;
+      right:10px;
+      float: right;
+      max-height: 200px;
+      max-width: 200px;
+      width:auto;
+      height: auto;
     }
   }
   

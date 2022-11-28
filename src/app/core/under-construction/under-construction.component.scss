@@ -1,12 +1,14 @@
 #underConstruction {
     position: relative;
-    margin: 0px 50px;
+    margin: 0px auto;
     text-align:center;
     color:black;
     background-color: rgb(253, 253, 193);
     border: 2px solid black;
+    max-width: 310px;
+    align-self: center;
 
     img {
-        height: 30px;
+        height: 40px;
     }
 }

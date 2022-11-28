@@ -59,7 +59,8 @@ p {
   margin-bottom: 30px;
   background-color: #b8b8b8;
   color: black;
-  // border: 2px solid lime;
+  height: auto;
+  border: 2px solid transparent;
  }
 
 .section-heading {
@@ -69,6 +70,7 @@ p {
   font-style: italic;
   margin: 5px auto;
   padding: 0px 10px 0px;
+  text-align: center;
   // These may be modified in each section/module
   color: #000000;
   text-shadow: 3px 2px 5px #777777;
@@ -76,14 +78,13 @@ p {
 
 .section-subheading {
   // These are standard for all sections
-  margin: 0px auto;
-  padding: 0px 10px 0px;
+  margin: 20px auto 10px;
+  padding: 10px 10px 10px;
   width: 90%;
   max-width: 500px;
   // These may be modified in each section/module
   color: #000000;
   text-shadow: 3px 2px 5px #777777;
-  margin-bottom: 10px;
 }
 
 .dropdown-menu {
@@ -95,7 +96,17 @@ p {
 
 .center-text {
   margin: 0 auto;
-  width: 100%;
+  // width: 100%;
   display: flex-block;
   text-align: center;
+}
+
+.disabled {
+  display: none;
+}
+
+.loaded {
+  color: red;
+  font-weight: normal;;
+  font-size: .7em;
 }

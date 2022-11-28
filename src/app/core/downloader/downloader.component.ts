@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DownloaderService } from './downloader.service';
 
 @Component({
-  selector: 'm-downloader',
+  selector: 'app-downloader',
   templateUrl: './downloader.component.html',
-  styleUrls: ['./downloader.component.scss']
+  providers: [ DownloaderService ]
 })
-export class DownloaderComponent implements OnInit {
+export class DownloaderComponent {
+  contents: string | undefined;
+  constructor(private downloaderService: DownloaderService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  clear() {
+    this.contents = undefined;
   }
 
+  download() {
+    this.downloaderService.getTextFile('assets/textfile.txt')
+      .subscribe(results => this.contents = results);
+  }
 }
+

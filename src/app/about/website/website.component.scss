@@ -1,37 +1,4 @@
 .about-website-div {
-
-  img {
-    height: 60px;
-    width: auto;
-    margin: 0 2px;
-  }
-  
-  .list-inline {
-    display: inline-block;
-    list-style: none;
-    list-style-type: none;
-    word-wrap: normal;
-    align-self: center;
-    align-content: center;
-
-    li {
-      float:left;
-      align-self: center;
-      align-content: center;
-      margin-right: 10px;
-      // display: inline;
-      // word-wrap: break-word;
-
-      :after{
-        padding: 10px;
-        // content: "|";
-      }
-
-      :last-child:after {
-        padding: 0;
-        // content: "";
-      }
-    }
-  }
+    height:auto;
 }
   

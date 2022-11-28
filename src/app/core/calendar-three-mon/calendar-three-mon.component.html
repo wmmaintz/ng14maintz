@@ -1,24 +1,9 @@
-<p>Three Month Calendar Component Loaded!!</p>
-<div class="calContainer"> <!-- 3 Month Calendar Display -->
-    <div class="calSubcontainer">
-        <!-- Javascript creates calenders here -->
-        <div class="row" id="calBox">
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div id="calLastMon"></div>
-                <m-calendar month="last"></m-calendar>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div id="calThisMon"></div>
-                <m-calendar month="this"></m-calendar>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div id="calNextMon"></div>
-                <m-calendar month="next"></m-calendar>
-            </div>
-
+<ng-container>
+    <div class="cal3Container">
+        <div class="cal3"> <!-- 3 Month Calendar Display -->
+            <m-calendar class="cal" [mmyyyy]="lastMmYy"></m-calendar>
+            <m-calendar class="cal" [mmyyyy]="thisMmYy"></m-calendar>
+            <m-calendar class="cal" [mmyyyy]="nextMmYy"></m-calendar>
         </div>
     </div>
-</div>
+</ng-container>

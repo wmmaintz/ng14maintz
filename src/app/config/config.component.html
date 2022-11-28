@@ -1,0 +1,30 @@
+<br/><br/><br/>
+<h3>Get configuration from config.json file</h3>
+<div>
+  <button type="button" (click)="clear(); getConfig()">Get Config Data</button>&nbsp;
+  <button type="button" (click)="clear(); getConfigResponse()">Get Config Data Response</button>&nbsp;
+  <button type="button" (click)="clear()">Clear Config Data</button>&nbsp;
+  <button type="button" (click)="clear(); makeConfigError()">Generate A configError</button>
+  <p>The Config Service has been called = [{{configServiceCalled}}]</p>
+  <span *ngIf="!config && configServiceCalled">
+    <p>Unable to read the config.json file.</p>
+  </span>
+  <span *ngIf="config" class="configText">
+      <p>&nbsp;Links API URL is "{{config.linksUrl}}"</p>
+      <p>Photos API URL is "{{config.photosUrl}}"</p>
+      <p>States API URL is "{{config.statesUrl}}"</p>
+      <p>&nbsp;Users API URL is "{{config.usersUrl}}"</p>
+      <p>Videos API URL is "{{config.videosUrl}}"</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date is "{{config.date.toString()}}" ({{getType(config.date)}})</p>
+      <div *ngIf="headers.length > 0">
+        <br/>Response headers:
+        <ul>
+          <li *ngFor="let header of headers">{{header}}</li>
+        </ul>
+      </div>
+  </span>
+</div>
+<p *ngIf="configError" class="error">{{configError | json}}</p>
+<br/>
+<br/>
+<br/>

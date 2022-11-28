@@ -1,1 +1,16 @@
-   
+section {
+    height: auto;
+
+    .about-section {
+        height: auto;
+
+        .about-div {
+            height: auto;
+            
+            .about-terms-div {
+                height: auto;
+
+            }
+        }
+    }
+}

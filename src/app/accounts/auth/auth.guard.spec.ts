@@ -12,6 +12,13 @@ describe('Auth', () => {
 describe('Auth.guard', ()=> {
   let auth: Auth;
 
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    auth = TestBed.inject(Auth);
+  });
+
+});
+
 describe('AuthGuard', () => {
   let guard: AuthGuard;
 

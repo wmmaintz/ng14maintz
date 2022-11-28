@@ -35,10 +35,15 @@ export class AccountsService {
     }
   }
 
+  getAuthorizationToken() {
+    return 'super-secret-auth-token';
+  }
+  
   logoff(user?: User){
     if(user) {
       user = new User();
     }
   }
   //registerUser() {}
+
 }

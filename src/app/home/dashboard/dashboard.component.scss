@@ -1,21 +1,48 @@
-.grid-container {
-  margin: 20px;
+.home_section {
+  //                                   Top Color, Mid Color, Bottom Color
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5, #ffffff, #ffffff);
+  background:    -moz-linear-gradient(#f5f5f5, #f5f5f5, #ffffff, #ffffff);
+  background:     -ms-linear-gradient(#f5f5f5, #f5f5f5, #ffffff, #ffffff);
+  background:      -o-linear-gradient(#f5f5f5, #f5f5f5, #ffffff, #ffffff);
+  background:         linear-gradient(#f5f5f5, #f5f5f5, #ffffff, #ffffff);
+  color: #000000;
+
+  .home-div {
+    
+    .home-dashboard-div {
+
+      .section-heading {
+        text-shadow: 2px 3px 4px #36624b;
+      }
+      
+      .grid-container {
+        margin: 20px;
+      }
+    }
+  }
+
 }
 
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-}
 
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
 
-.dashboard-card-content {
-  text-align: center;
+.testing {
+
+
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+
+  .dashboard-card-content {
+    text-align: center;
+  }
 }

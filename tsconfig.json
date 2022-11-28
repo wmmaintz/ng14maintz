@@ -24,11 +24,10 @@
       "dom"
     ],
     "paths": {
-      "@top":   ["./*"],
       "@app/*": ["app/*"],
       "@assets":["assets/*"],
       "@env/*": ["environments/*"],
-      "@data/*":["app/data/*"],
+      "@data/*":["assets/data/*"],
       "@node/*":["../node_modules/*"]
     },
   },

@@ -1,17 +1,15 @@
 <section>
-  <div class="links-section">
-      <div class="links-div links-add-edit-div">
 
-      <!-- <m-under-construction></m-under-construction> -->
-      
-      <div class="section-heading-text">
+  <div class="videos-section">
 
-            <div class="center-text">
-                <h2 class="section-heading">{{heading}}</h2>
-                <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                <p *ngIf="links.length === 0" class="loaded">Loading link list!"</p>
-                <p *ngIf="links.length !== 0" class="loaded">{{links.length}} links loaded!"</p>
-            </div>
+      <div class="videos-div videos-list-div">
+
+          <mat-card class="section-heading-text">
+              <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+              <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+              <p *ngIf="links.length === 0" class="loaded">Loading links!"</p>
+              <p *ngIf="links.length !== 0" class="loaded">{{links.length}} links loaded!"</p>
+          </mat-card><br/>
 
       </div>
 
@@ -116,6 +114,5 @@
         </mat-card>
       </form>
 
-    </div>
   </div>
 </section>

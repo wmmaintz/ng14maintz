@@ -1,0 +1,23 @@
+<br/><br/><br/>
+<div class="container">
+<h2>Test Stuff</h2>
+<button type="button" (click)="clearContents()">Clear</button><br/><br/>
+<button type="button" (click)="buttonPressed('Std Button')">Press Me</button><br/><br/>
+
+<m-animated-button [btn]="animBtn" (click)="localMethod('Animated Button', animBtn)"></m-animated-button><br/><br/>
+<m-animated-delete-button [btn]="delBtn" (click)="localMethod('Animated Delete Button', delBtn)">AnimatedDeleteButtonComponent</m-animated-delete-button>
+
+    <!--       
+    <m-animated-download-button>AnimatedDownloadButtonComponent</m-animated-download-button>
+    <m-animated-icon-button [icon]="'home'">AnimatedIconButtonComponent</m-animated-icon-button>
+    <m-animated-more-button>AnimatedMoreButtonComponent</m-animated-more-button>
+    <m-animated-submit-button>AnimatedSubmitButtonComponent</m-animated-submit-button>
+    -->
+
+
+
+<br/><br/>
+<p *ngIf="contents">Contents: {{contents}}</p>
+</div>
+<m-under-construction [webpart]="webpart"></m-under-construction>
+

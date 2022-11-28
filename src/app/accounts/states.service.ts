@@ -4,11 +4,13 @@ import { State } from './state.model';
 import { Observable, delay, of, Subject, tap } from 'rxjs';
 import { map, share, multicast, publish, publishLast, publishReplay, refCount} from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
+import * as DATA from '@data/json/states.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatesService {
+  state: State;
   states: State[] = [];
   dataFile: string = '@data/json/states.json';
 
@@ -19,13 +21,14 @@ export class StatesService {
   }
 
   loadData() {
+    this.states = DATA;
     // this.httpClient.get<State[]>(this.dataFile).subscribe((resp) => {this.states = resp;});
-    let source$ = ajax(this.dataFile).pipe(
-      map((state:any) => {
-        return state.response;
-      }),
-      tap((x) => console.log(`State returned at ${new Date().toUTCString()}`))
-    );
+    // let source$ = ajax(this.dataFile).pipe(
+    //   map((state:any) => {
+    //     return state.response;
+    //   }),
+    //   tap((x) => console.log(`State returned at ${new Date().toUTCString()}`))
+    // );
     console.log(`states.service.ts - Loaded ${this.states.length} states`);
   }
  

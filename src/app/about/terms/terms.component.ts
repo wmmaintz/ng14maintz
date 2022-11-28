@@ -10,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsComponent implements OnInit {
   heading: string = 'Terms and Conditions';
-  subHeading: string = 'Agree or Exit!';
-
+  subHeading: string = 'Of Use!';
+  version: number = 14.1;
+  lastModDate: string = new Date('11/9/2022').toLocaleDateString();
+  
   constructor() { }
 
   ngOnInit(): void {

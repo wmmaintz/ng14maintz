@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { timeout, timer } from 'rxjs';
-import * as moment from 'moment';
+import { Router } from "@angular/router";
 
 
 @Component({
   selector: 'm-home',
   templateUrl: './home.component.html',
   styleUrls: [
-    './home.component.scss',
-    '../home.scss'
+    '../home.scss',
+    './home.component.scss'
   ]
 })
 export class HomeComponent implements OnInit {
-  heading: string = 'Home Screen';
-  subHeading: string = 'Welcome to Maintz.com.';
+  heading: string = 'Welcome to Maintz.com';
+  subHeading: string = new Date().toLocaleDateString();
   isLoading: boolean = true;
   timeNow: string = new Date().toString();
   sliderValue: number = 50;
-  
-  constructor() {  }
+  imgEntry:boolean = true;
+  webpart = 'website';
+
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.isLoading = true;
@@ -32,7 +35,6 @@ export class HomeComponent implements OnInit {
     let delay = seconds * 1000;
     console.log(`${this.getCurrentTime()}: from ${methodName} BEFORE delayProcessingfor(${seconds})`);
     setTimeout( function () { self.loadingComplete()}, delay);
-
   }
 
   loadingComplete() {
@@ -45,5 +47,14 @@ export class HomeComponent implements OnInit {
     let formattedDate = datepipe.transform(new Date(), 'MM-dd-YYYY HH:mm:ss:ms');
     return formattedDate?.toString();
   }
+
+  toggleImgHeading(){
+    this.imgEntry = !this.imgEntry;
+  }
+  
+  gotoAbout() {
+    this.router.navigate(["/about"]);
+  }
+
 
 }

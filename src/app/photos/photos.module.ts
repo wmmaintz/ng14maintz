@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared.module';
 import { PhotosRoutingModule } from './photos-routing.module';
-
+import { PhotosService } from './photos.service';
 import { PhotoAddEditComponent } from './photo-add-edit/photo-add-edit.component';
 import { PhotosListComponent } from './photos-list/photos-list.component';
 import { PhotosCarouselComponent } from './photos-carousel/photos-carousel.component';
@@ -20,6 +20,9 @@ import { PhotosGalleryComponent } from './photos-gallery/photos-gallery.componen
     SharedModule
   ],
   exports: [
+  ],
+  providers: [
+    PhotosService
   ]
 })
 export class PhotosModule { }

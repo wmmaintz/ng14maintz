@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, Router, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
+
+export class Auth {
+  id: number;
+  username: string;
+  email: string;
+  pwd: string;
+  authenticated: boolean;
+}
 @Injectable({
   providedIn: 'root'
 })

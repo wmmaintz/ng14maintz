@@ -1,69 +1,151 @@
 @import "../../../styles.scss";
+@import "../core.scss";
+
+$fgcolor1: black;
+$bgcolor1: whitesmoke;
+$brcolor1: blue;
+$iccolor1: blue;
+
+$fgcolor2: white;
+$bgcolor2: blue;
+$brcolor2: white;
+$iccolor2: whitesmoke;
+
+$navbarbgcolortop: #666666;
+$navbarbgcolormid: #ffffff;
+$navbarbgcolorbot: #000000;
+$navbarbordrcolor: #000000;
+
 
 mat-toolbar {
-  background: -webkit-linear-gradient(#666666, #ffffff, #000000);
-  background: -moz-linear-gradient(#666666, #ffffff, #000000);
-  background: -ms-linear-gradient(#666666, #ffffff, #000000);
-  background: -o-linear-gradient(#666666, #ffffff, #000000);
-  background: linear-gradient(#666666, #ffffff, #000000);
-  background-color: lime;
-  
-  border: 0.25px solid #000000;
-  -moz-box-sizing: none;
-  -webkit-box-shadow: 0px 0px;
-  -webkit-box-sizing: none;
-  border: 0px;
-  box-shadow: 0px 0px;
+  background-color: -webkit-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color: -moz-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color: -ms-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color: -o-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color: linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color: red;
+  border-bottom: 0.25px solid $navbarbordrcolor;
+  box-shadow: 2px 3px;
   box-sizing: none;
+  -moz-box-shadow: 2px 3px;
+  -moz-box-sizing: none;
+  -webkit-box-shadow: 2px 3px;
+  -webkit-box-sizing: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 55px;
-  margin-top: 0px;
+  padding-top: 0px;
   z-index: 9999;
-  border: 1px solid grey;
-
-  div button {
-    border: 2px solid black;
-  }
-  div button mat-icon {
-    margin: 0 6px 5px;
-   }
 
   mat-nav-list {
     display: inline-flex;
+    margin: 0 5px 5px;
+  
+    .navbarBtn {
+      background-color: $bgcolor1;
+      border-radius: 25px;
+      border: 1px solid $brcolor1;
+      color: $fgcolor1;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;
+      height: 40px;
+      letter-spacing: .15rem;
+      margin: 10px 3px;
+      overflow: hidden;
+      padding: 7px;
+      position: relative;
+      text-transform: uppercase;
+      transition: all .3s;
+      z-index: 1;
+      display: inline-flex;
+
+      mat-icon {
+        margin-top:3px 2px;
+        color: $iccolor1;
+      }
+
+      .menu-text {
+        margin: 3px 1px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -3px;
+        width: 0;
+        height: 100%;
+        background-color: $bgcolor2;
+        color: $fgcolor2;
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+        border: px solid transparent;
+
+        mat-icon {
+          color: $iccolor2;
+        }
+    
+      }
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 105%;
+        height: 100%;
+        border-radius: 10rem;
+        z-index: -2;
+
+        mat-icon {
+          color: $iccolor2;
+          color: white;
+        }
+    
+      }
+      
+      &:hover {
+        color: $fgcolor2;
+        border: 1px solid $fgcolor2;
+        &:before {
+          width: 105%;
+        }
+        mat-icon {
+          color: $iccolor2;
+        }
+      }
+
+      &:active {
+        background-color: red;
+      }
+
+      a:hover, a:active{
+        color: $iccolor2;
+        border: 1px dotted red;
+      }
+
+    }
+
   }
-}
 
+  .dd-menu {
+    background-color: $bgcolor1;
+    color: $fgcolor1;
+    border: 1px solid $brcolor1;
+    // background-color: lime;
+    // color: red;
 
-.navbarBtn {
-  margin: -15px 10px;
-  border-radius: 25px;
-  background-color: lightgrey;
-  color: black;
-  font-weight: bold;
-  height: 40px;
-  display: flex;
-
-  mat-icon {
-    margin-top:3px;
+    &:hover {
+      background-color: $bgcolor2;
+      color: $fgcolor2;
+      border: 1px solid $brcolor2;
+    }
   }
 
-  .menu-text {
-    margin-bottom: 35px;
-    margin-top: 10px;
-  }
-
-  a:hover, a:active{
-    color: lightgray;
-  }
-
-}
-
-mat-menu-item ,
-.submenu {
-  background-color: lime;
 }
 
 
@@ -92,10 +174,3 @@ mat-menu-item ,
 // .sidenav {
 //   width: 200px;
 // }
-
-.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-

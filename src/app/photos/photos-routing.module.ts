@@ -9,7 +9,7 @@ import { PhotosGalleryComponent } from './photos-gallery/photos-gallery.componen
 const routes: Routes = [
   { path: 'photo-add-edit',  component: PhotoAddEditComponent },
   { path: 'photos',          component: PhotosListComponent },
-  { path: 'photos-list',     component: PhotosListComponent },
+  { path: 'photos-list/#top',     component: PhotosListComponent },
   { path: 'photos-carousel', component: PhotosCarouselComponent },
   { path: 'photos-gallery',  component: PhotosGalleryComponent },
 ];

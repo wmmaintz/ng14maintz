@@ -1,23 +1,20 @@
 <section>
+
     <div class="videos-section">
+  
         <div class="videos-div videos-carousel-div">
-
-            <!-- <m-under-construction></m-under-construction> -->
-            
-            <div class="section-heading-text">
-
-                <div class="center-text">
-                    <h2 class="section-heading">{{heading}}</h2>
-                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                    <p *ngIf="videos.length === 0" class="loaded">Loading video list!"</p>
-                    <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} video loaded!"</p>
-                </div>
-
-            </div>
-
-            <br/>
-            <p>videos-carousel loaded!</p>
-
+  
+            <mat-card class="section-heading-text">
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <p *ngIf="videos.length === 0" class="loaded">Loading videos!"</p>
+                <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} videos loaded!"</p>
+            </mat-card><br/>
+  
         </div>
+
+        <br/>
+        <p>videos-carousel loaded!</p>
+
     </div>
 </section>

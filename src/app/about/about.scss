@@ -1,7 +1,7 @@
 @import '../../styles';
 
 .about-section {
-  margin: 0px;
+  margin: 0px auto;
   //                                   Top Color, Mid Color, Bottom Color
   background: -webkit-linear-gradient(#fafecc, #fffeef, #fafecc);
   background:    -moz-linear-gradient(#fafecc, #fffeef, #fafecc);
@@ -11,21 +11,54 @@
   background-size: cover;
   color: #000000;
   height: auto;
+  border: 3px solid transparent;
 
   .about-div {
-    margin: 0px 50px;
+    margin: 10px 50px;
     padding-top: 10px;
+    height: auto;
     
     .section-heading {
-      color: #000000;
-      text-shadow: 3px 2px 5px #777777;
+      text-shadow: 3px 2px 5px #77774f;
     }
   
-    .section-subheading {
-      color: #000000;
-      text-shadow: 3px 2px 5px #777777;
-      margin-bottom: 10px;
+    img {
+      height: 60px;
+      width: auto;
+      margin: 0 2px;
     }
-
+    
+    .list-inline {
+      display: inline-block;
+      list-style: none;
+      list-style-type: none;
+      word-wrap: normal;
+      align-self: center;
+      align-content: center;
+  
+      li {
+        float:left;
+        align-self: center;
+        align-content: center;
+        margin-right: 10px;
+        // display: inline;
+        // word-wrap: break-word;
+  
+        :after{
+          padding: 10px;
+          // content: "|";
+        }
+  
+        :last-child:after {
+          padding: 0;
+          // content: "";
+        }
+      }
+      
+      mat-grid-list {
+        height: auto;
+      }
+    }
+    
   }
 }

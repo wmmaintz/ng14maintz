@@ -1,35 +1,50 @@
 <mat-toolbar>
-  <div fxHide.gt-xs>
-      <button class="navbarBtn"
-        mat-icon-button
-        routerLink="/"
-        matTooltip="Display the HOME screen"
-        aria-label="This button displays the HOME screen tooltip when focused or hovered over">
-        <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home" tooltip="Home">home</mat-icon>
-      </button>
-  </div>
 
-  <mat-nav-list>
-    <button class="navbarBtn" *ngIf="user.role=='admin'"
-      [matMenuTriggerFor]="adminMenu"
-      matTooltip="Display the ADMINISTRATORS menu"
-      aria-label="This button displays the ADMINISTRATORS menu tooltip when focused or hovered over">
-      <mat-icon aria-hidden="false" aria-label="Admin icon" fontIcon="domain" tooltip="Admin Menu">Documentation</mat-icon>&nbsp;
+  <mat-nav-list><!-- Main Menu -->
+      <!--
+      mat-icon-button
+       -->
+      <button class="navbarBtn"
+      fxHide.gt-xs
+      routerLink="/"
+      matTooltip="Display the HOME screen"
+      aria-label="This button displays the HOME screen tooltip when focused or hovered over">
+      <mat-icon aria-hidden="false" aria-label="Home icon" >home</mat-icon>
+    </button>
+
+    <button class="navbarBtn dropdown" [matMenuTriggerFor]="adminMenu" matTooltip="Display the ADMINISTRATORS menu"
+      *ngIf="user.role=='admin'" aria-label="This button displays the ADMINISTRATORS menu tooltip when selected"
+      [ngClass]="{ 'open': isDropDownOpen}">
+      <mat-icon aria-hidden="false" aria-label="Admin icon">fingerprint</mat-icon>
       <span class="menu-text" *ngIf="showMenuText">Admin</span>
     </button>
-    <button class="navbarBtn" [matMenuTriggerFor]="aboutMenu" matTooltip="Display the ABOUT menu"><mat-icon>contact_support</mat-icon><span class="menu-text" *ngIf="showMenuText">About</span></button>
-    <button class="navbarBtn" [matMenuTriggerFor]="photoMenu" matTooltip="Display the PHOTOS menu"><mat-icon>photo_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Photos</span></button>
-    <button class="navbarBtn" [matMenuTriggerFor]="videoMenu" matTooltip="Display the VIDEOS menu"><mat-icon>video_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Videos</span></button>
-    <button class="navbarBtn" [matMenuTriggerFor]="linkMenu"  matTooltip="Display the LINKS menu"><mat-icon>link</mat-icon><span class="menu-text" *ngIf="showMenuText">Links</span></button>
-    <button class="navbarBtn" [matMenuTriggerFor]="miscMenu"  matTooltip="Display the MISCELLANEOUS menu"><mat-icon>misc</mat-icon><span class="menu-text" *ngIf="showMenuText">Misc</span></button>
-    <button class="navbarBtn" routerLink="/login" *ngIf="!isLoggedIn" matTooltip="Login to the website"><mat-icon>power</mat-icon><span class="menu-text" *ngIf="showMenuText">Login</span></button>
-    <button class="navbarBtn" routerLink="/logoff" *ngIf="isLoggedIn" matTooltip="Logoff of this website"><mat-icon>power_off</mat-icon><span class="menu-text" *ngIf="showMenuText">Logoff</span></button> 
+    <button class="navbarBtn" [matMenuTriggerFor]="aboutMenu" matTooltip="Display the ABOUT menu">
+      <mat-icon>contact_support</mat-icon><span class="menu-text" *ngIf="showMenuText">About</span>
+    </button>
+    <button class="navbarBtn" [matMenuTriggerFor]="photoMenu" matTooltip="Display the PHOTOS menu">
+      <mat-icon>photo_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Photos</span>
+    </button>
+    <button class="navbarBtn" [matMenuTriggerFor]="videoMenu" matTooltip="Display the VIDEOS menu">
+      <mat-icon>video_library</mat-icon><span class="menu-text" *ngIf="showMenuText">Videos</span>
+    </button>
+    <button class="navbarBtn" [matMenuTriggerFor]="linkMenu"  matTooltip="Display the LINKS menu">
+      <mat-icon>link</mat-icon><span class="menu-text" *ngIf="showMenuText">Links</span>
+    </button>
+    <button class="navbarBtn" [matMenuTriggerFor]="miscMenu"  matTooltip="Display the MISCELLANEOUS menu">
+      <mat-icon>pages</mat-icon><span class="menu-text" *ngIf="showMenuText">Misc</span>
+    </button>
+    <button class="navbarBtn" routerLink="/login" *ngIf="!isLoggedIn" matTooltip="Login to the website">
+      <mat-icon>power</mat-icon><span class="menu-text" *ngIf="showMenuText">Login</span>
+    </button>
+    <button class="navbarBtn" routerLink="/logoff" *ngIf="isLoggedIn" matTooltip="Logoff of this website">
+      <mat-icon>power_off</mat-icon><span class="menu-text" *ngIf="showMenuText">Logoff</span>
+    </button> 
   </mat-nav-list>
 
-  <mat-menu class="submenu" > <!-- #mainMenu="matMenu"> -->
+  <mat-menu class="navbarBtn" > #mainMenu="matMenu">
 
     <button mat-menu-item [matMenuTriggerFor]="adminMenu" matTooltip="Display The Admin Menu">
-      <mat-icon>domain</mat-icon>
+      <mat-icon>gavel</mat-icon>
       <span *ngIf="showMenuText">Admin</span>
     </button>
     <button mat-menu-item [matMenuTriggerFor]="aboutMenu" matTooltip="Display The About Menu">
@@ -55,17 +70,17 @@
   </mat-menu>
 
   <mat-menu #adminMenu="matMenu">
-    <button mat-menu-item routerLink="dashboard">
+    <button class="submenu-item" mat-menu-item routerLink="dashboard">
       <mat-icon>dashboard</mat-icon>
       <span *ngIf="showMenuText">Dashboard</span>
     </button>
-    <button mat-menu-item [matMenuTriggerFor]="userMenu">
+    <!-- <button class="submenu-item" [matMenuTriggerFor]="userMenu">
       <mat-icon aria-hidden="false" aria-label="People icon" fontIcon="people" tooltip="Users Submenu">people</mat-icon>
       <span *ngIf="showMenuText">Users</span>
     </button>
-    </mat-menu>    
+  </mat-menu>    
 
-  <mat-menu #userMenu="matMenu">
+  <mat-menu #userMenu="matMenu"> -->
     <button mat-menu-item routerLink="login">
       <mat-icon>power</mat-icon>
       <span *ngIf="showMenuText">Login</span>
@@ -111,25 +126,25 @@
       </button>
     </mat-menu>
 
-  <mat-menu #photoMenu="matMenu">
-      <button mat-menu-item routerLink="photos-list">
+  <mat-menu #photoMenu="matMenu" >
+      <button mat-menu-item routerLink="/photos-list">
         <mat-icon>burst_mode</mat-icon>
         <mat-icon>blur_linear</mat-icon>
         <span *ngIf="showMenuText">Photo List</span>
       </button>
-      <button mat-menu-item routerLink="photo-add-edit">
+      <button mat-menu-item routerLink="/photo-add-edit">
         <mat-icon>add_a_photo</mat-icon>
         <span *ngIf="showMenuText">Add Photo</span>
       </button>
-      <button mat-menu-item routerLink="photo-add-edit">
+      <button mat-menu-item routerLink="/photo-add-edit">
         <mat-icon>edit</mat-icon>
         <span *ngIf="showMenuText">Edit Photo</span>
       </button>
-      <button mat-menu-item routerLink="photos-gallery">
+      <button mat-menu-item routerLink="/photos-gallery">
         <mat-icon>party_mode</mat-icon>
         <span *ngIf="showMenuText">Photos Gallery</span>
       </button>
-      <button mat-menu-item routerLink="photos-carousel">
+      <button mat-menu-item routerLink="/photos-carousel">
         <mat-icon>party_mode</mat-icon>
         <span *ngIf="showMenuText">Photos Carousel</span>
       </button>
@@ -182,6 +197,10 @@
       <mat-icon>circle</mat-icon>
       <span *ngIf="showMenuText">Loading</span>
     </button>
+    <button mat-menu-item routerLink="infLoading">
+      <mat-icon>circle</mat-icon>
+      <span *ngIf="showMenuText">Infinity Loading</span>
+    </button>
     <button mat-menu-item routerLink="notfound">
       <mat-icon>home</mat-icon>
       <span *ngIf="showMenuText">Not Found</span>
@@ -194,9 +213,17 @@
       <mat-icon>home</mat-icon>
       <span *ngIf="showMenuText">Downloader</span>
     </button>
+    <button mat-menu-item routerLink="config">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="showMenuText">Config</span>
+    </button>
     <button mat-menu-item routerLink="sidebar">
       <mat-icon>home</mat-icon>
       <span *ngIf="showMenuText">SideBar Menu</span>
+    </button>
+    <button mat-menu-item routerLink="teststuff">
+      <mat-icon>build</mat-icon>
+      <span *ngIf="showMenuText">Test Stuff</span>
     </button>
   </mat-menu>
 

@@ -1,0 +1,122 @@
+// @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
+
+// Variables
+$speed: "0.25s";
+$transition: all #{$speed} cubic-bezier(0.310, -0.105, 0.430, 1.400);
+
+$color: #787878;
+$color-dark: #575757;
+$btnHeight: 80px;
+$btnWidth: 400px;
+
+/* Main Styles */
+.animBtn {
+    display: block;
+    background-color: $color;
+    width: $btnWidth;
+    height: $btnHeight;
+    line-height: $btnHeight;
+    margin: 0px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2px 3px 26px 0 rgba(0,0,0,.9);
+    transition: $transition;
+  
+    mat-icon {
+        position: absolute;
+        top: $btnHeight/3;
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+    }
+
+  span {
+    display: inline-block;;
+    text-align: center;
+    width: 72%;
+    line-height: inherit;
+    font-size: 20px;
+    text-transform: uppercase;
+    left: 0;
+    transition: $transition;
+    
+    &:after {
+      content: '';
+      background-color: $color-dark;
+      width: 2px;
+      height: 70%;
+      position: absolute;
+      top: 15%;
+      right: -1px;
+      right: 25%;
+    }
+  }
+  
+  mat-icon {
+    width: 28%;
+    right: 0;
+    transition: $transition;
+    
+    .fa {
+      font-size: 30px;
+      vertical-align: middle;
+      transition: $transition, height #{$speed} ease;
+    }
+    
+    .ready {
+      height: 36px;
+    }
+    
+    .success {
+      display: none;
+    }
+  }
+  
+  &.success,
+  &:hover {
+    
+    span {
+      left: -72%;
+      opacity: 0;
+    }
+    
+    .mat-icon {
+      width: 100%;
+      
+      .fa {
+        font-size: 45px;
+      }
+    }
+  }
+  
+  &.success {
+    background-color: #27ae60;
+    
+    .icon {
+      
+      .fa-remove {
+        display: none;
+      }
+      
+      .fa-check {
+        display: inline-block;
+      }
+    }
+  }
+  
+  &:hover {
+    opacity: .9;
+    
+    mat-icon .fa-remove {
+      height: 46px;
+    }
+  }
+  
+  &:active {
+    opacity: 1;
+  }
+}

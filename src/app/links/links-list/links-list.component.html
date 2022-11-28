@@ -1,20 +1,16 @@
 <section>
+
     <div class="links-section">
-        <div class="links-div links-add-edit-div">
   
-            <!-- <m-under-construction></m-under-construction> -->
-            
-            <div class="section-heading-text">
-
-                <div class="center-text">
-                    <h2 class="section-heading">{{heading}}</h2>
-                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                    <p *ngIf="links.length === 0" class="loaded">Loading links!"</p>
-                    <p *ngIf="links.length !== 0" class="loaded">{{links.length}} links loaded!"</p>
-                </div>
-
-            </div>
-
+        <div class="links-div links-list-div">
+  
+            <mat-card class="section-heading-text">
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <p *ngIf="links.length === 0" class="loaded">Loading links!"</p>
+                <p *ngIf="links.length > 0" class="loaded">{{links.length}} links loaded!"</p>
+            </mat-card><br/>
+  
             <p>UL Listing: {{links[1].name}}</p>
             <ul>
                 <li *ngFor="let link of links">[{{link.type}}][{{link.category}}][{{link.name}}]
@@ -22,10 +18,10 @@
                 </li>
             </ul>
 
-            <mat-nav-list>
-                <a mat-list-item *ngFor="let link of links"> {{link}} </a>
+            <mat-nav-list *ngIf="links.length > 0">
+                <a mat-list-item *ngFor="let link of links"> {{link.name}} </a>
             </mat-nav-list>
-
+    
         </div>
     </div>
 </section>

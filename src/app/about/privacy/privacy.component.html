@@ -1,17 +1,32 @@
 <section>
+
     <div class="about-section">
+
         <div class="about-div about-privacy-div">
     
-            <div class="section-heading-text">
+            <mat-card>
+                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+            </mat-card><br/>
     
-                <div class="center-text">
-                    <h2 class="section-heading">{{heading}}</h2>
-                    <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-                </div>
-    
-            </div>
-            
-            <p>privacy works!</p>
+            <mat-card>
+                <mat-card-content>
+                    <h4>We Keep Your Information Private</h4>
+                    <p>privacy statement goes here!</p>
+
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>                    
+                </mat-card-content>
+
+                <mat-card-footer>
+                    <m-sub-footer [version]="version" [lastModDate]="lastModDate"></m-sub-footer>
+                </mat-card-footer>
+
+            </mat-card>
+            <br/><br/>
+
         </div>
     </div>
+    <br/>
 </section>

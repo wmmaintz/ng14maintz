@@ -1,5 +1,12 @@
-.calendar-card {
+mat-card {
   width: 200px;
+  color: black;
+  content: 'calendar';
+
+  mat-card-title {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 
 // .calContainer {

@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-// import { ImageGridComponent }
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Photo }  from '../photo.model';
+import { PhotosService } from '../photos.service';
+
+// import { ImageGridComponent } from '@angular/material/grid-list';
 
 @Component({
   selector: 'm-photos-gallery',
@@ -9,15 +14,28 @@ import { Component, OnInit } from '@angular/core';
     '../photos.scss'  
   ]
 })
-export class PhotosGalleryComponent implements OnInit {
+export class PhotosGalleryComponent {
   heading: string = 'Photos Gallery';
   subHeading: string = 'A grid of memories from the past.';
   isLoading:boolean = true;
-  photos: any[] = [];
+  photos: Photo[] = [];
+  serviceCalled:boolean = false;
+  serviceError = undefined;
 
-  constructor() { }
+  constructor(
+    private photoService: PhotosService
+  ) { 
+      console.log(`${new Date().toLocaleTimeString()} : photos-gallery.component.constructor: calling loadPhotos`);
+      this.loadPhotos();
+      console.log(`${new Date().toLocaleTimeString()} : photos-gallery.component.constructor: back from calling loadPhotos`);
+  }
 
-  ngOnInit(): void {
+  loadPhotos(): void {
+    this.photoService.loadPhotos()
+      .subscribe({
+        next: (data: Photo[]) => this.photos = { ...data }, // success path
+        error: error => this.serviceError = error // error path
+      });
   }
 
 }

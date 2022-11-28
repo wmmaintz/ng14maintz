@@ -7,8 +7,8 @@ import { SharedModule } from '@app/shared.module';
   selector: 'm-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: [
-    './dashboard.component.scss',
-    '../home.scss'
+    '../home.scss',
+    './dashboard.component.scss'
   ]
 })
 export class DashboardComponent {

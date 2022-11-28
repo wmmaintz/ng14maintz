@@ -6,7 +6,7 @@ import { Directionality } from '@angular/cdk/bidi';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-
+import { event } from 'jquery';
 
 import { SharedModule } from '../../shared.module';
 import { User } from '../../accounts/user.model';
@@ -21,6 +21,20 @@ export class NavbarComponent {
   isLoggedIn = true;
   showMenuText: boolean = true;
   user: User = new User();
+  isMenuOpened: boolean = false;
+  isDropDownOpen: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.user.role = "admin";  // user or admin
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpened = !this.isMenuOpened;
+  }
+
+  clickedOutside(): void {
+    this.isMenuOpened = false;
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -28,11 +42,16 @@ export class NavbarComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.user.role = "admin";
-  }
-
-  onToggleSidenav(){
+  onToggleSidenav(): void {
     this.triggerBtn.openMenu();
   }
+
+  openDropDown(){
+
+  }
+
+  closeDropDown(){
+
+  }
+
 }

@@ -20,11 +20,14 @@ export class WebsiteComponent implements OnInit {
   // filePath: string = path.resolve("./");
   srcFile: string = 'website.component.ts';
 
-  constructor(private utilService: UtilsService) { 
+  constructor(
+    private utilService: UtilsService
+    ) { 
     // console.log(this.filePath);
     // console.log(`    filePath = [${this.filePath}]`);
     console.log(this.srcFile);
-    console.log(`     srcFile = [${this.srcFile}]`);
+    console.log(`       srcFile = [ ${this.srcFile} ]`);
+    console.log(`srcFile exists = [ ${this.utilService.fileExists(this.srcFile)} ]`);
     // let fullFileName = this.filePath + this.srcFile;
     // console.log(`fullFileName = [${fullFileName}]`);
     

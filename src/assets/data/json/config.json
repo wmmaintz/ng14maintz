@@ -1,0 +1,10 @@
+{
+    "heroesUrl": "api/heroes",
+    "linksUrl" : "assets/data/json/links.json",
+    "photosUrl": "assets/data/json/photos.json",
+    "statesUrl": "assets/data/json/states.json",
+    "usersUrl" : "assets/data/json/users.json",
+    "videosUrl": "assets/data/json/videos.json",
+    "textfile" : "assets/textFile.txt",
+    "date"     : "11-11-2022"
+}

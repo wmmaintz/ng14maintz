@@ -1,19 +1,16 @@
 <section>
+
   <div class="photos-section">
+
       <div class="photos-div photos-add-edit-div">
-  
-        <!-- <m-under-construction></m-under-construction> -->
 
-        <div class="section-heading-text">
+          <mat-card class="section-heading-text">
+              <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
+              <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+              <p *ngIf="photos.length === 0" class="loaded">Loading photos!"</p>
+              <p *ngIf="photos.length !== 0" class="loaded">{{photos.length}} photos loaded!"</p>
+          </mat-card><br/>
 
-          <div class="center-text">
-              <h2 class="section-heading">{{heading}}</h2>
-              <h3 class="section-subheading text-primary">{{subHeading}}</h3>
-              <p *ngIf="photos.length === 0" class="loaded">Loading photo!"</p>
-              <p *ngIf="photos.length !== 0" class="loaded">{{photos.length}} photo loaded!"</p>
-          </div>
-
-        </div>
 
       <!--
       <span>Upload  </span> <mat-icon>cloud_upload</mat-icon><br/>
