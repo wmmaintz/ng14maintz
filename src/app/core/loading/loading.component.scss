@@ -1,19 +1,26 @@
 .center-page {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding-top: 150px;
-    vertical-align: middle;
+    width: auto;
+    height: auto;
     text-align: center;
-    background-color: white;
+    align-content: center;
+    background-color: whitesmoke;
     background-size: cover;
     z-index: 999;
+    border: 3px solid green;
 
     mat-card {
+        padding-top: 150px;
         width: 100%;
         height: 100vh;
+        font-size: 2em;
+
+        h2 {
+            margin: 10px auto 50px;
+        }
+
+        mat-progress-spinner {
+            margin: 10px auto;
+        }
     }
 
 }

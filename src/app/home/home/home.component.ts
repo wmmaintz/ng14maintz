@@ -12,33 +12,36 @@ import { Router } from "@angular/router";
   ]
 })
 export class HomeComponent implements OnInit {
+  debug: boolean = false;
   heading: string = 'Welcome to Maintz.com';
-  subHeading: string = new Date().toLocaleDateString();
+  subHeading: string = '- - -';
   isLoading: boolean = true;
-  timeNow: string = new Date().toString();
+  today: string = new Date().toLocaleDateString();
   sliderValue: number = 50;
   imgEntry:boolean = true;
   webpart = 'website';
 
   constructor(
     private router: Router
-  ) {}
+  ) {
+    // this.imgEntry = false;
+  }
 
   ngOnInit(): void {
     this.isLoading = true;
-    console.log(`${this.getCurrentTime()}: ngOnInit - calling delayProcessingfor(2)`);
-    this.delayProcessingfor(2, 'ngOnInit');
+    if(this.debug) console.log(`home: ngOnInit - calling delayProcessingfor(2)`);
+    this.delayProcessingfor(2, 'home.ngOnInit');
   }
 
   delayProcessingfor(seconds: number, methodName: string) {
     var self = this;
     let delay = seconds * 1000;
-    console.log(`${this.getCurrentTime()}: from ${methodName} BEFORE delayProcessingfor(${seconds})`);
+    if(this.debug) console.log(`home: from ${methodName} BEFORE delayProcessingfor(${seconds})`);
     setTimeout( function () { self.loadingComplete()}, delay);
   }
 
   loadingComplete() {
-    console.log(`${this.getCurrentTime()}: loadingComplete - resetting isLoading to false`);
+    if(this.debug) console.log(`home.loadingComplete - resetting isLoading to false`);
     this.isLoading =false;
   }
 

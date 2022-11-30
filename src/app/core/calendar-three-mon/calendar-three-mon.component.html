@@ -1,9 +1,26 @@
-<ng-container>
     <div class="cal3Container">
         <div class="cal3"> <!-- 3 Month Calendar Display -->
-            <m-calendar class="cal" [mmyyyy]="lastMmYy"></m-calendar>
-            <m-calendar class="cal" [mmyyyy]="thisMmYy"></m-calendar>
-            <m-calendar class="cal" [mmyyyy]="nextMmYy"></m-calendar>
+
+            <mat-card class="calendar-card">
+                <mat-card-title>
+                    <div class="title">{{lastMmmYyyy}}</div>
+                </mat-card-title>
+                <mat-card-content id="calLastMon"></mat-card-content>
+            </mat-card>
+
+            <mat-card class="calendar-card">
+                <mat-card-title>
+                    <div class="title">{{thisMmmYyyy}}</div>
+                </mat-card-title>
+                <mat-card-content id="calThisMon"></mat-card-content>
+            </mat-card>
+
+            <mat-card class="calendar-card">
+                <mat-card-title>
+                    <div class="title">{{nextMmmYyyy}}</div>
+                </mat-card-title>
+                <mat-card-content id="calNextMon"></mat-card-content>
+            </mat-card>
+
         </div>
     </div>
-</ng-container>

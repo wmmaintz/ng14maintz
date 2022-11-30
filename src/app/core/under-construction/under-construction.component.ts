@@ -13,6 +13,6 @@ export class UnderConstructionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(`The value passed to underConstruction is [${this.webpart}]`);
+    console.log(`under-construction: The value passed is [${this.webpart}]`);
   }
 }

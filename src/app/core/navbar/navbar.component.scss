@@ -2,12 +2,12 @@
 @import "../core.scss";
 
 $fgcolor1: black;
-$bgcolor1: whitesmoke;
-$brcolor1: blue;
-$iccolor1: blue;
+$bgcolor1: lightgray;
+$brcolor1: #000000;
+$iccolor1: #000000;
 
 $fgcolor2: white;
-$bgcolor2: blue;
+$bgcolor2: #000000;
 $brcolor2: white;
 $iccolor2: whitesmoke;
 
@@ -16,14 +16,12 @@ $navbarbgcolormid: #ffffff;
 $navbarbgcolorbot: #000000;
 $navbarbordrcolor: #000000;
 
-
 mat-toolbar {
   background-color: -webkit-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
-  background-color: -moz-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
-  background-color: -ms-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
-  background-color: -o-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
-  background-color: linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
-  background-color: red;
+  background-color:    -moz-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color:     -ms-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color:      -o-linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
+  background-color:         linear-gradient($navbarbgcolortop, $navbarbgcolormid, $navbarbgcolorbot);
   border-bottom: 0.25px solid $navbarbordrcolor;
   box-shadow: 2px 3px;
   box-sizing: none;
@@ -38,6 +36,7 @@ mat-toolbar {
   height: 55px;
   padding-top: 0px;
   z-index: 9999;
+  background: red;
 
   mat-nav-list {
     display: inline-flex;
@@ -48,6 +47,7 @@ mat-toolbar {
       border-radius: 25px;
       border: 1px solid $brcolor1;
       color: $fgcolor1;
+      color: grey;
       display: inline-block;
       font-size: 1rem;
       font-weight: bold;
@@ -103,7 +103,6 @@ mat-toolbar {
 
         mat-icon {
           color: $iccolor2;
-          color: white;
         }
     
       }

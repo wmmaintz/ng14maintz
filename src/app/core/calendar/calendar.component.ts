@@ -24,13 +24,14 @@ export class CalendarComponent implements OnInit {
   ngOnInit(): void {
     this.mon = parseInt(this.mmyyyy.substr(0,2));
     this.yr = parseInt(this.mmyyyy.substr(2,4));
-    console.log(`The value passed to calendar is [${this.mmyyyy}]`);
-    console.log(`mmyyyy=[${this.mmyyyy}]  mon=[${this.mon}] / yr=[${this.yr}]`);
+    console.log(`calendar: The value passed to calendar is [${this.mmyyyy}]`);
+    console.log(`calendar: mmyyyy=[${this.mmyyyy}]  mon=[${this.mon}] / yr=[${this.yr}]`);
     this.mmmyyStr = this.m[this.mon] + ' ' + this.mmyyyy.substr(2,4);
     this.targetHtml=document.getElementById('calendarTbl');
-    console.log(`id = [${this.targetHtml.id}]`);
+    // console.log(`calendar: id = [${this.targetHtml.id}]`);
     // this.targetHtml.innerHTML = this.getCalendarHTML(this.mon, this.yr, false);
     this.calendarTbl = this.getCalendarHTML(this.mon, this.yr, false);
+    console.log(`calendar: calendarTbl = [${this.calendarTbl}]`);
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -126,10 +127,6 @@ export class CalendarComponent implements OnInit {
       return htmlText;
   }
   
-  showCalender() {
-
-  }
-
   showCalenders() {
 
       var today = new Date();                                     // today's date

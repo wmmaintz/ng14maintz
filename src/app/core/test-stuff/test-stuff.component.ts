@@ -25,7 +25,7 @@ export class TestStuffComponent implements OnInit {
   ) {
     this.initBtn(this.animBtn);
     this.initBtn(this.delBtn);
-    this.delBtn.btnTextBeg = "Animated Delete Button";
+    // this.delBtn.btnTextBeg = "Animated Delete Button";
    }
 
   ngOnInit(): void {
