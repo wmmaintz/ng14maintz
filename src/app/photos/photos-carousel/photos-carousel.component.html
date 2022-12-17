@@ -5,15 +5,22 @@
         <div class="photos-div photos-carousel-div">
 
             <mat-card class="section-heading-text">
-                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading centerText">{{subHeading}}</mat-card-subtitle>
                 <p *ngIf="photos.length === 0" class="loaded">Loading photos!"</p>
                 <p *ngIf="photos.length !== 0" class="loaded">{{photos.length}} photos loaded!"</p>
             </mat-card><br/>
 
+            <p>Photo-carousel loaded {{photos.length}} photos!</p>
 
-            <p>photo-carousel works!</p>
-            
+            <mat-card>
+                <ul>
+                    <li *ngFor="let photo of photos">{{photo.name}}</li>
+                </ul>
+            </mat-card>
+
+            <br/>
+
         </div>
     </div>
 </section>

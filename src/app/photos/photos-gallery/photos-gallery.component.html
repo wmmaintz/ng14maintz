@@ -5,8 +5,8 @@
         <div class="photos-div photos-gallery-div">
 
             <mat-card class="section-heading-text">
-                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading centerText">{{subHeading}}</mat-card-subtitle>
                 <p *ngIf="photos.length === 0" class="loaded">Loading photos!"</p>
                 <p *ngIf="photos.length !== 0" class="loaded">{{photos.length}} photos loaded!"</p>
             </mat-card><br/>
@@ -16,7 +16,11 @@
             <ul *ngFor="let photo of photos; let i = index">
                 <li *ngIf="photo.name !== '' "> <img src="{{photo.thumbnail}}">&nbsp;{{i}}:&nbsp;{{photo.name}}</li>
             </ul>
-            <br/><br/>
+            
+
+            <m-under-construction [webpart]="'component'"></m-under-construction>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     </div>
 </section>

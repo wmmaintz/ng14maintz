@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 import { Video } from '../video.model';
 import { VideosService } from '../videos.service';
+import { UtilsService } from '@app/core/utils.service';
+
 
 @Component({
   selector: 'm-video-add-edit',
@@ -32,11 +34,12 @@ export class VideoAddEditComponent {
 
   constructor(
     private fb: FormBuilder,
-    private videosService: VideosService
+    private videosService: VideosService,
+    private utils: UtilsService
   ) {
-    console.log(`Video-add-edit: Attemtpting to retrieve Video [${this.videoId}] from VideosService}]`)
+    this.utils.log(`Video-add-edit: Attemtpting to retrieve Video [${this.videoId}] from VideosService}]`)
     this.video = this.videosService.getVideo(this.videoId);
-    console.log(`Video [${this.video.name}] loaded}]`)
+    this.utils.log(`Video [${this.video.name}] loaded}]`)
   }
 
   onSubmit(): void {

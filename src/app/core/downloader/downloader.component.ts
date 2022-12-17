@@ -7,15 +7,20 @@ import { DownloaderService } from './downloader.service';
   providers: [ DownloaderService ]
 })
 export class DownloaderComponent {
+  file2Download: string = 'assets/logs/website.log'
   contents: string | undefined;
-  constructor(private downloaderService: DownloaderService) {}
+
+  constructor(private downloaderService: DownloaderService) {
+    // Test this file for XCORS compatibility
+    // this.file2Download = 'http://www.allbusinesscomputerservices.com/docs/Resume_Bill_Maintz_AppDev.pdf';
+  }
 
   clear() {
     this.contents = undefined;
   }
 
   download() {
-    this.downloaderService.getTextFile('assets/textfile.txt')
+    this.downloaderService.getTextFile(this.file2Download)
       .subscribe(results => this.contents = results);
   }
 }

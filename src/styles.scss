@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html, body { height: 100%; }
+html, body { height: 100vh; }
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: whitesmoke;
+  background: url("assets/images/home/blue-smoke-wallpaper-hd1.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 :host {
@@ -54,37 +57,42 @@ p {
  **
  **/
 
- section {
-  margin-top: 55px;
+.container {
+  margin: 1rem;
+}
+
+section {
+  // margin-top: 55px;
   margin-bottom: 30px;
-  background-color: #b8b8b8;
+  background-color: transparent;
   color: black;
   height: auto;
   border: 2px solid transparent;
- }
 
-.section-heading {
-  // These are standard for all sections
-  font-family: "Droid Serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-  text-transform: none;
-  font-style: italic;
-  margin: 5px auto;
-  padding: 0px 10px 0px;
-  text-align: center;
-  // These may be modified in each section/module
-  color: #000000;
-  text-shadow: 3px 2px 5px #777777;
-}
-
-.section-subheading {
-  // These are standard for all sections
-  margin: 20px auto 10px;
-  padding: 10px 10px 10px;
-  width: 90%;
-  max-width: 500px;
-  // These may be modified in each section/module
-  color: #000000;
-  text-shadow: 3px 2px 5px #777777;
+  .section-heading {
+    // These are standard for all sections
+    font-family: "Droid Serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-transform: none;
+    font-style: italic;
+    margin: 5px auto;
+    padding: 0px 10px 0px;
+    text-align: center;
+    // These may be modified in each section/module
+    color: #000000;
+    text-shadow: 3px 2px 5px #777777;
+  }
+  
+  .section-subheading {
+    // These are standard for all sections
+    margin: 20px auto 10px;
+    padding: 10px 10px 10px;
+    width: 90%;
+    max-width: 500px;
+    // These may be modified in each section/module
+    color: #000000;
+    text-shadow: 3px 2px 5px #777777;
+  }
+  
 }
 
 .dropdown-menu {
@@ -94,9 +102,8 @@ p {
   text-align: left;
 }
 
-.center-text {
+.centerText {
   margin: 0 auto;
-  // width: 100%;
   display: flex-block;
   text-align: center;
 }

@@ -13,14 +13,14 @@ import { Video } from '../video.model';
 import { VideosService } from '../videos.service';
 import { LoadingService } from '@app/core/loading.service';
 import { MessageService } from '@app/messages/message.service';
-import * as DATA from '@data/json/videos.json';
+import { UtilsService } from '@app/core/utils.service';
 
 @Component({
   selector: 'm-videos-list',
   templateUrl: './videos-list.component.html',
   styleUrls: [
-    './videos-list.component.scss',
-    '../videos.scss'
+    '../videos.scss',
+    './videos-list.component.scss'
   ],
   providers: [VideosService]
 })
@@ -34,11 +34,14 @@ export class VideosListComponent implements OnInit {
     private liveAnnouncer: LiveAnnouncer,
     private videosService: VideosService,
     private messageService: MessageService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private utils: UtilsService
   ) { }
 
   ngOnInit(): void {
-    this.videos = DATA;
+    this.videosService.getVideos()
+      .subscribe(data => this.videos = data);
+    this.isLoading = false;
   }
 
 }

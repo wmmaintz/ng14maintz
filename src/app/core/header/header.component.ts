@@ -8,7 +8,7 @@ import { MatMenuTrigger } from "@angular/material/menu";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
   navbarMenu: boolean = true;
   sidebarMenu: boolean = false;
 

@@ -1,3 +1,8 @@
+.photos-div {
+  height: 100%;
+  background-color: transparent;
+}
+
 #photoCarousel {
   width: 96%;
   height: auto;
@@ -10,7 +15,7 @@
     margin-top: 20px;
 
     carousel {
-      background-color: #99CCFF;
+      // background-color: #99CCFF;
       margin: 2px;
       object-fit: contain;
       height: 420px;

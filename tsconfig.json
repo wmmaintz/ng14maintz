@@ -29,7 +29,7 @@
       "@env/*": ["environments/*"],
       "@data/*":["assets/data/*"],
       "@node/*":["../node_modules/*"]
-    },
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

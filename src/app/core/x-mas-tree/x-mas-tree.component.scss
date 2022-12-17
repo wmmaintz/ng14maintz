@@ -1,0 +1,64 @@
+main {
+    width: var(--size);
+    height: var(--size);
+    --size: 60vmin;
+    margin: auto;
+    position: relative;
+    display: flex;
+    perspective: 100vmin;
+    --back: hsl(173 100% 50%);
+    --fore: hsl(var(--fore-hue) 100% 50%);
+    --fore-hue: 343;
+  
+    animation: colors 20000ms infinite linear;
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: auto;
+    list-style: none;
+    transform-origin: 50% 0%;
+  }
+  li {
+    --size: 1vmin;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--back);
+    margin-bottom: calc(var(--size) * 0.5);
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    background: hsl(193 100% 5%);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @property --fore-hue {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 343;
+  }
+  @keyframes colors {
+    10% {
+      --fore-hue: 343;
+    }
+    30% {
+      --fore-hue: 383;
+    }
+    70% {
+      --fore-hue: 213;
+    }
+    90%,
+    100% {
+      --fore-hue: 343;
+    }
+  }
+  

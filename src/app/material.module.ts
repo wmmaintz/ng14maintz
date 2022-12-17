@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // CDK Modules
 import { A11yModule } from '@angular/cdk/a11y';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
@@ -48,6 +48,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+
+
 
 @NgModule({
   exports: [
@@ -99,6 +101,9 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 
 export class MaterialModule {}

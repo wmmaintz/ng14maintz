@@ -1,7 +1,32 @@
 <mat-card class="calendar-card">
     <mat-card-title>
-        <div class="header">{{mmmyyStr}}</div>
-        <div>{{calendarTbl}}</div>
+        <div class="monHdr">{{mmmyy}}</div>
     </mat-card-title>
-    <!-- <mat-calendar [disabled]="true" [@input]=""></mat-calendar> -->
+        
+    <mat-card-content>
+        <div class="cal">
+            <table class="calTable">
+                <tr>
+                    <td *ngFor="let wd of weekdays" id="{{wd}}" class="wkdayHdr">{{wd}}</td>
+                </tr>
+                <!-- All calendars can be displayed in a 7x6 matrix -->
+                <!--
+                     7 columns for Sunday through Saturday and
+                     6 rows to accommodate the possibility of a month
+                     starting in mid-week and ending in mid-week which
+                     would produce 4 fully populated weeks and two partially
+                     populated weeks - hence 6 weeks containing one or more
+                     days of the month.
+                -->
+                <tr class="calDayRow" *ngFor="let ritem of [0,1,2,3,4,5]; let r = index">
+                    <td *ngFor="let citem of [].constructor(7); let c = index" id="cell{{(r*7)+(c+1)}}">
+                        <span *ngIf="calDays[(r*7) + c].display !== ' '">{{calDays[(r*7) + c].display}}</span>
+                        <!-- <span *ngIf="calDays[(r*7) + c].display === 0">&nbsp;</span> -->
+                    </td>
+                </tr>
+               
+            </table>
+        </div>
+    </mat-card-content>
 </mat-card>
+

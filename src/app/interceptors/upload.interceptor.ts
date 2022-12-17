@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 /** Simulate server replying to file upload request */
 @Injectable()
 export class UploadInterceptor implements HttpInterceptor {
+  
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (req.url.indexOf('/upload/file') === -1) {
       return next.handle(req);

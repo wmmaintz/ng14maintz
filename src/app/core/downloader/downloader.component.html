@@ -2,5 +2,8 @@
 <h2>Download the text file</h2>
 <button type="button" (click)="download()">Download</button>
 <button type="button" (click)="clear()">clear</button>
-<p *ngIf="contents">Contents: "{{contents}}"</p>
+<mat-card *ngIf="contents">
+    <mat-card-titl>Contents: </mat-card-titl>
+    <mat-card-content><pre>{{contents}}</pre></mat-card-content>
+</mat-card>
 

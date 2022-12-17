@@ -4,14 +4,17 @@
 
     <div class="home-div home-home-div">
 
-      <div class="section-heading-div">
+      <m-x-mas-tree></m-x-mas-tree>
+      
+      <div class="section-heading-div container">
+
         <mat-card class="section-heading-text" *ngIf="!imgEntry">
-          <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-          <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
-          <mat-card-content class="section-subheading center-text">{{today}}</mat-card-content>
+          <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+          <!-- <mat-card-subtitle class="section-subheading centerText">{{today}}</mat-card-subtitle> -->
+          <!-- <mat-card-content class="section-subheading centerText">{{subHeading}}</mat-card-content> -->
         </mat-card>
 
-        <div class="section-heading-img center-text" *ngIf="imgEntry">
+        <div class="section-heading-img centerText" *ngIf="imgEntry">
           <br/>
           <div class="section-heading">Welcome To</div>
           <div class="section-subheading">
@@ -21,11 +24,16 @@
           </div>
           <div class="section-subheading" style="color:white;">Today is {{today}}</div>
         </div>
+        
       </div>
 
-      <div class="calendars center-text">
-        <m-calendar-three-mon>3 Month Calendar Is Loading</m-calendar-three-mon>
+      <div class="calendars centerText">
+        <m-calendar-three-mon [thisMonthsDate]="thisMonthsDate">3 Month Calendar Is Loading</m-calendar-three-mon>
       </div>
+      
+      <!-- <div class="underConstruction">
+        <m-under-construction [webpart]="webpart"></m-under-construction>
+      </div> -->
       
       <div class="readMore">&nbsp;&nbsp;&nbsp;
         <div class="btn">
@@ -67,11 +75,7 @@
           </g>
         </svg>
       </div>
-
-      <div class="underConstruction">
-        <m-under-construction [webpart]="webpart"></m-under-construction>
-      </div>
-      
+      <br/>
     </div>
   </div>
 </section>

@@ -1,11 +1,13 @@
-.contactus-div {
-  background-color: #000080;
-  background-image: 'assets/images/home/world.jpg';
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: auto;
+.about-contactus-div {
 
+  mat-grid-list {
+    border: 1px solid red;
+    padding: .2rem;
+  }
+  mat-grid-tile{
+    border: 1px solid blue;
+    padding: .2rem;
+  }
   .form-group {
     margin-bottom: 25px;
 
@@ -65,4 +67,11 @@
   .lead {
     color: #666666;
   }
+
+  
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
 }

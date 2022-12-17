@@ -2,58 +2,135 @@
 
   <div class="about-section">
 
-      <div class="about-div about-contactus-div">
+    <div class="about-div about-contactus-div">
 
-          <mat-card>
-              <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-              <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
-          </mat-card><br/>
+      <mat-card>
+          <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+          <mat-card-subtitle class="section-subheading centerText">{{subHeading}}</mat-card-subtitle>
+      </mat-card><br/>
 
-          <!-- <m-under-construction></m-under-construction> -->
-          
-      <mat-grid-list cols="3" rows="14">
-    
-        <mat-grid-tile colspan="1">
-          <div class="section-subheading">Left Column</div>
-        </mat-grid-tile>
-  
-        <mat-grid-tile colspan="1">
-          <div class="section-subheading">Center Column</div>
-        </mat-grid-tile>
-  
-        <mat-grid-tile colspan="1">
-          <div class="section-subheading">Right Column</div>
-        </mat-grid-tile>
-    
-      </mat-grid-list>
+      <mat-card>
+        <br/><m-under-construction [webpart]="'component'"></m-under-construction><br/>
 
-      <mat-grid-list cols="3">
-    
-        <mat-grid-tile colspan="1">
-          <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-        </mat-grid-tile>
-  
-        <mat-grid-tile colspan="1">
-          <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-        </mat-grid-tile>
-  
-        <mat-grid-tile colspan="1">
-          <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-        </mat-grid-tile>
-    
-      </mat-grid-list>
-      <br/>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+          <mat-card class="contact-info">
 
+            <mat-card-header>
+              <mat-card-title>Contact Information</mat-card-title>
+            </mat-card-header>
+
+            <!-- <mat-card-content> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <input matInput placeholder="Company" formControlName="company"> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <input matInput placeholder="First name" formControlName="firstName"> -->
+                    <!-- <mat-error *ngIf="form.controls['firstName'].hasError('required')"> -->
+                      <!-- First name is <strong>required</strong> -->
+                    <!-- </mat-error> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <input matInput placeholder="Last name" formControlName="lastName"> -->
+                    <!-- <mat-error *ngIf="form.controls['lastName'].hasError('required')"> -->
+                      <!-- Last name is <strong>required</strong> -->
+                    <!-- </mat-error> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <textarea matInput placeholder="Address" formControlName="address"></textarea> -->
+                    <!-- <mat-error *ngIf="form.controls['address'].hasError('required')"> -->
+                      <!-- Address is <strong>required</strong> -->
+                    <!-- </mat-error> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row" *ngIf="!hasUnitNumber"> -->
+                <!-- <div class="col"> -->
+                  <!-- <button mat-button type="button" (click)="hasUnitNumber = !hasUnitNumber"> -->
+                    <!-- + Add C/O, Apt, Suite, Unit -->
+                  <!-- </button> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row" *ngIf="hasUnitNumber"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <textarea matInput placeholder="Address 2" formControlName="address2"></textarea> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <input matInput placeholder="City" formControlName="city"> -->
+                    <!-- <mat-error *ngIf="form.controls['city'].hasError('required')"> -->
+                      <!-- City is <strong>required</strong> -->
+                    <!-- </mat-error> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <mat-select placeholder="State" formControlName="state"> -->
+                      <!-- <mat-option *ngFor="let state of states" [value]="state.abbreviation"> -->
+                        <!-- {{ state.name }} -->
+                      <!-- </mat-option> -->
+                    <!-- </mat-select> -->
+                    <!-- <mat-error *ngIf="form.controls['state'].hasError('required')"> -->
+                      <!-- State is <strong>required</strong> -->
+                    <!-- </mat-error> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-form-field class="full-width"> -->
+                    <!-- <input matInput #postalCode maxlength="5" placeholder="Postal Code (5 digits)" type="number" formControlName="postalCode"> -->
+                    <!-- <mat-hint align="end">{{postalCode.value.toString()}}</mat-hint> -->
+                    <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+                  <!-- </mat-form-field> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row"> -->
+                <!-- <div class="col"> -->
+                  <!-- <mat-card> -->
+                    <!-- <mat-card-content> -->
+                      <!-- <h3><strong>Send contact information to:</strong></h3> -->
+                    <!-- </mat-card-content> -->
+                    <!-- <mat-card-content> -->
+                      <!-- <mat-radio-group formControlName="recipient"> -->
+                        <!-- <mat-radio-button value="admin">Administrator</mat-radio-button> -->
+                        <!-- <mat-radio-button value="wmstr">Webmaster</mat-radio-button> -->
+                        <!-- <mat-radio-button value="mrktg">Marketing</mat-radio-button> -->
+                      <!-- </mat-radio-group> -->
+                    <!-- </mat-card-content> -->
+                  <!-- </mat-card> -->
+                <!-- </div> -->
+              <!-- </div> -->
+            <!-- </mat-card-content> -->
+            
+            <mat-card-actions>
+              <button mat-raised-button color="primary" type="submit">Submit</button>
+            </mat-card-actions>
+          </mat-card>
+        </form>
+
+        <mat-card-footer>
+          <m-sub-footer [version]="version" [lastModDate]="lastModDate"></m-sub-footer>
+        </mat-card-footer>
+
+      </mat-card>
     </div>
-        
-    <p>contact-us works!</p>
-
+    <br/>
   </div>
 </section>
   

@@ -21,15 +21,15 @@ export class WebsiteComponent implements OnInit {
   srcFile: string = 'website.component.ts';
 
   constructor(
-    private utilService: UtilsService
+    private utils: UtilsService
     ) { 
-    // console.log(this.filePath);
-    // console.log(`    filePath = [${this.filePath}]`);
-    console.log(this.srcFile);
-    console.log(`       srcFile = [ ${this.srcFile} ]`);
-    console.log(`srcFile exists = [ ${this.utilService.fileExists(this.srcFile)} ]`);
+    // this.utils.log(this.filePath);
+    // this.utils.log(`    filePath = [${this.filePath}]`);
+    this.utils.log(this.srcFile);
+    this.utils.log(`       srcFile = [ ${this.srcFile} ]`);
+    this.utils.log(`srcFile exists = [ ${this.utils.fileExists(this.srcFile)} ]`);
     // let fullFileName = this.filePath + this.srcFile;
-    // console.log(`fullFileName = [${fullFileName}]`);
+    // this.utils.log(`fullFileName = [${fullFileName}]`);
     
     
     // this.lastModDate = this.utilService.getFileDate(fullFileName);

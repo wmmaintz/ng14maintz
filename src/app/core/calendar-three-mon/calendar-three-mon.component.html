@@ -1,26 +1,12 @@
     <div class="cal3Container">
         <div class="cal3"> <!-- 3 Month Calendar Display -->
-
-            <mat-card class="calendar-card">
-                <mat-card-title>
-                    <div class="title">{{lastMmmYyyy}}</div>
-                </mat-card-title>
-                <mat-card-content id="calLastMon"></mat-card-content>
-            </mat-card>
-
-            <mat-card class="calendar-card">
-                <mat-card-title>
-                    <div class="title">{{thisMmmYyyy}}</div>
-                </mat-card-title>
-                <mat-card-content id="calThisMon"></mat-card-content>
-            </mat-card>
-
-            <mat-card class="calendar-card">
-                <mat-card-title>
-                    <div class="title">{{nextMmmYyyy}}</div>
-                </mat-card-title>
-                <mat-card-content id="calNextMon"></mat-card-content>
-            </mat-card>
-
+            <p>&nbsp;&nbsp;***&nbsp;&nbsp; {{lastMmYyyy}}<br/></p>
+            <p>&nbsp;&nbsp;***&nbsp;&nbsp; {{thisMmYyyy}}<br/></p>
+            <p>&nbsp;&nbsp;***&nbsp;&nbsp; {{nextMmYyyy}}&nbsp;&nbsp;***&nbsp;&nbsp; <br/></p>
+        </div><br/><br/>
+        <div class="cal3"> <!-- 3 Month Calendar Display -->
+            <!-- <m-calendar [mmyyyy]="lastMmYyyy"></m-calendar> -->
+            <m-calendar [mmyyyy]="thisMmYyyy"></m-calendar>
+            <!-- <m-calendar [mmyyyy]="nextMmYyyy"></m-calendar> -->
         </div>
     </div>

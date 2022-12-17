@@ -1,22 +1,22 @@
 @import '../../styles';
 
 .about-section {
-  margin: 0px auto;
+  margin: 1rem;
   //                                   Top Color, Mid Color, Bottom Color
-  background: -webkit-linear-gradient(#fafecc, #fffeef, #fafecc);
-  background:    -moz-linear-gradient(#fafecc, #fffeef, #fafecc);
-  background:     -ms-linear-gradient(#fafecc, #fffeef, #fafecc);
-  background:      -o-linear-gradient(#fafecc, #fffeef, #fafecc);
-  background:         linear-gradient(#fafecc, #fffeef, #fafecc);
-  background-size: cover;
+  // background: -webkit-linear-gradient(#2d2d2d, #333333, #888888);
+  // background:    -moz-linear-gradient(#2d2d2d, #333333, #888888);
+  // background:     -ms-linear-gradient(#2d2d2d, #333333, #888888);
+  // background:      -o-linear-gradient(#2d2d2d, #333333, #888888);
+  // background:         linear-gradient(#2d2d2d, #333333, #888888);
+  // background: transparent repeat;
+  // background-size: cover;
   color: #000000;
-  height: auto;
+  // height: auto;
   border: 3px solid transparent;
 
   .about-div {
-    margin: 10px 50px;
-    padding-top: 10px;
     height: auto;
+    background-repeat: repeat;
     
     .section-heading {
       text-shadow: 3px 2px 5px #77774f;

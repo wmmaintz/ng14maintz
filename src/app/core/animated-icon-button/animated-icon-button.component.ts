@@ -17,4 +17,12 @@ export class AnimatedIconButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  acknowledgeButtonPress(btnName) {
+    alert(`The ${btnName} was just pressed.`)
+  }
+
+  buttonPressed(btnName: string) {
+    this.acknowledgeButtonPress(btnName);
+  }
+  
 }

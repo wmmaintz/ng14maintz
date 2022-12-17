@@ -1,0 +1,110 @@
+[
+    {
+        "menuGroup" : "top", 
+        "name"      : "home", 
+        "matTooltip": "HomeTooltip", 
+        "matIcon"   : "home", 
+        "display"   : "", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/dashboard",
+        "roleNeeded": "",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "top", 
+        "name"      : "adminMenu", 
+        "matTooltip": "Admin Menu Tooltip", 
+        "matIcon"   : "fingerprint", 
+        "display"   : "ADMIN", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "dropdown",
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "dashboard", 
+        "matTooltip": "Dashboard Tooltip", 
+        "matIcon"   : "home", 
+        "display"   : "Dashboard", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/dashboard",
+        "roleNeeded": "admin",
+        "subMenuGrp": "accounts"
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "addUser", 
+        "matTooltip": "Add a New User Account", 
+        "matIcon"   : "check", 
+        "display"   : "Add User", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/register", 
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "editUser", 
+        "matTooltip": "Edit An Existing User Account", 
+        "matIcon"   : "check", 
+        "display"   : "Edit User", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/user-edit", 
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "login", 
+        "matTooltip": "Login to the website", 
+        "matIcon"   : "power", 
+        "display"   : "Login", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/login",
+        "roleNeeded": "admin", 
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "logoff", 
+        "matTooltip": "Logoff the website", 
+        "matIcon"   : "power_off", 
+        "display"   : "Logoff", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/logoff",
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "users", 
+        "matTooltip": "Show a List of Users", 
+        "matIcon"   : "people", 
+        "display"   : "Users List", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/users-list",
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    },
+    {
+        "menuGroup" : "adminMenu", 
+        "name"      : "addUser", 
+        "matTooltip": "Add a New User Account", 
+        "matIcon"   : "check", 
+        "display"   : "Add User", 
+        "ariaLabel" : "ariaLabel", 
+        "ariaHidden": false, 
+        "routerLink": "/register",
+        "roleNeeded": "admin",
+        "subMenuGrp": ""
+    }
+]

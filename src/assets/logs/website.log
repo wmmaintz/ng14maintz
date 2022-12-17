@@ -1,0 +1,45 @@
+
+Initial Chunk Files                    | Names                    |   Raw Size
+vendor.js                              | vendor                   |    6.22 MB |
+main.js                                | main                     | 1021.54 kB |
+polyfills.js                           | polyfills                |  317.00 kB |
+styles.css, styles.js                  | styles                   |  290.99 kB |
+runtime.js                             | runtime                  |   14.13 kB |
+
+| Initial Total            |    7.82 MB
+
+Lazy Chunk Files                       | Names                    |   Raw Size
+src_app_games_games_module_ts.js       | games-games-module       |    5.42 kB |
+src_app_photos_photos_module_ts.js     | photos-photos-module     |    3.09 kB |
+src_app_videos_videos_module_ts.js     | videos-videos-module     |    3.08 kB |
+src_app_accounts_accounts_module_ts.js | accounts-accounts-module |    3.00 kB |
+src_app_about_about_module_ts.js       | about-about-module       |    2.90 kB |
+src_app_links_links_module_ts.js       | links-links-module       |    2.50 kB |
+
+Build at: 2022-12-16T17:57:23.077Z - Hash: df98d0be7e008ef1 - Time: 9599ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 14.13 kB |
+
+10 unchanged chunks
+
+Build at: 2022-12-16T17:57:24.329Z - Hash: 76844705fef1523d - Time: 977ms
+
+√ Compiled successfully.
+
+11 unchanged chunks
+
+Build at: 2022-12-16T17:57:28.043Z - Hash: 76844705fef1523d - Time: 510ms
+
+√ Compiled successfully.
+
+11 unchanged chunks
+
+Build at: 2022-12-16T17:57:33.552Z - Hash: 76844705fef1523d - Time: 845ms
+
+√ Compiled successfully.

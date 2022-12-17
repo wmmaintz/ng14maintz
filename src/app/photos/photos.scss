@@ -1,14 +1,16 @@
 @import "../../styles";
 
 .photos-section {
-    margin: 0px auto;
     //                                   Top Color, Mid Color, Bottom Color
-    background: -webkit-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
-    background:    -moz-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
-    background:     -ms-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
-    background:      -o-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
-    background:         linear-gradient(#00CCFF, #bfeef6, #00CCFF);
-    background-size: cover;
+    // background: -webkit-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
+    // background:    -moz-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
+    // background:     -ms-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
+    // background:      -o-linear-gradient(#00CCFF, #bfeef6, #00CCFF);
+    // background:         linear-gradient(#00CCFF, #bfeef6, #00CCFF);
+    // background-size: cover;
+    
+    // height: 2000px;
+    
     color: #000000;
     height: auto;
     border: 3px solid transparent;
@@ -17,7 +19,7 @@
         margin: 10px 50px;
         padding-top: 10px;
         height: auto;
-        
+
         .section-heading {
         text-shadow: 3px 2px 5px #0070C6;
         }

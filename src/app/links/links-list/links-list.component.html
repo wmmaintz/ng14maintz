@@ -5,13 +5,13 @@
         <div class="links-div links-list-div">
   
             <mat-card class="section-heading-text">
-                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading centerText">{{subHeading}}</mat-card-subtitle>
                 <p *ngIf="links.length === 0" class="loaded">Loading links!"</p>
                 <p *ngIf="links.length > 0" class="loaded">{{links.length}} links loaded!"</p>
             </mat-card><br/>
   
-            <p>UL Listing: {{links[1].name}}</p>
+            <h4>UL Listing: {{links.length}} links!</h4>
             <ul>
                 <li *ngFor="let link of links">[{{link.type}}][{{link.category}}][{{link.name}}]
                     <a href="link.href">{{link.href}}</a>

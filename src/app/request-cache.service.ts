@@ -9,7 +9,7 @@ export interface RequestCacheEntry {
   lastRead: number;
 }
 
-export abstract class RequestCache {
+export abstract class RequestCacheService {
   abstract get(req: HttpRequest<any>): HttpResponse<any> | undefined;
   abstract put(req: HttpRequest<any>, response: HttpResponse<any>): void;
 }
@@ -17,7 +17,7 @@ export abstract class RequestCache {
 const maxAge = 30000; // maximum cache age (ms) 30000 = 30 seconds
 
 @Injectable()
-export class RequestCacheWithMap implements RequestCache {
+export class RequestCacheWithMap implements RequestCacheService {
   cache = new Map<string, RequestCacheEntry>();
 
   constructor(

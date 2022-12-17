@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AnimatedButton } from '../animated-button.model';
+import { UtilsService } from '@app/core/utils.service';
+
 
 /// https://webdeasy.de/en/top-css-buttons-en/?referer=dev-updated-f41
 /// #30
@@ -13,11 +15,12 @@ export class AnimatedDeleteButtonComponent implements OnInit {
   @Input() btn: AnimatedButton = this.defineBtn();
   btnClass: string = '';
   
-  constructor() {
-    console.log(`this.btn.btnTextBeg = [${this.btn.btnTextBeg}]`)
+  constructor(
+    private utils: UtilsService) {
+    this.utils.log(`this.btn.btnTextBeg = [${this.btn.btnTextBeg}]`)
     if(this.btn === undefined){ this.defineBtn(); }
-    console.log(`btnTextBeg = [${this.btn.btnTextBeg}]`)
-    console.log(`btnId = [${this.btn.btnId}]`)
+    this.utils.log(`btnTextBeg = [${this.btn.btnTextBeg}]`)
+    this.utils.log(`btnId = [${this.btn.btnId}]`)
     this.btnClass = this.btn.btnClassBeg;
   }
 

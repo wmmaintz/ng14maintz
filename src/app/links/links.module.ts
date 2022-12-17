@@ -3,8 +3,8 @@ import { NgModule } from "@angular/core";
 import { SharedModule } from '../shared.module';
 import { LinksRoutingModule } from './links-routing.module';
 import { LinksService } from './links.service';
-import { LinksListComponent } from './links-list/links-list.component';
 import { LinkAddEditComponent } from './link-add-edit/link-add-edit.component';
+import { LinksListComponent } from './links-list/links-list.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,8 @@ import { LinkAddEditComponent } from './link-add-edit/link-add-edit.component';
     LinkAddEditComponent
   ],
   imports: [
-    SharedModule,
-    LinksRoutingModule
+    LinksRoutingModule,
+    SharedModule
   ],
   exports: [
   ],

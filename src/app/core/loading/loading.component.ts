@@ -11,7 +11,7 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
   ]
 })
 export class LoadingComponent implements OnInit {
-  isLoading: boolean = false;
+  isLoading: boolean = true;
   spinnerColor: string = 'primary';
   spinnerSize: number = 80;
   mode: string = 'determinate';

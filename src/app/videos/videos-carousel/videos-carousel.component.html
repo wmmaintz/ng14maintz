@@ -5,16 +5,20 @@
         <div class="videos-div videos-carousel-div">
   
             <mat-card class="section-heading-text">
-                <mat-card-title class="section-heading center-text">{{heading}}</mat-card-title>
-                <mat-card-subtitle class="section-subheading center-text">{{subHeading}}</mat-card-subtitle>
+                <mat-card-title class="section-heading centerText">{{heading}}</mat-card-title>
+                <mat-card-subtitle class="section-subheading centerText">{{subHeading}}</mat-card-subtitle>
                 <p *ngIf="videos.length === 0" class="loaded">Loading videos!"</p>
                 <p *ngIf="videos.length !== 0" class="loaded">{{videos.length}} videos loaded!"</p>
             </mat-card><br/>
   
         </div>
 
+        <ul *ngFor="let video of videos; let i = index">
+            <li *ngIf="video.name !== '' ">{{i}}-{{video.id}} <img src="{{video.img}}">|{{video.category}}|{{video.name}}|{{video.descript}}</li>
+        </ul>
+
         <br/>
-        <p>videos-carousel loaded!</p>
+        <p>videos-carousel - {{videos.length}} videos loaded!</p>
 
     </div>
 </section>

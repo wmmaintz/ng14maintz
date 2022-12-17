@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UtilsService } from '@app/core/utils.service';
+
 
 @Component({
   selector: 'm-under-construction',
@@ -9,10 +11,11 @@ export class UnderConstructionComponent implements OnInit {
   underConstruction: boolean = true;
   @Input() webpart: string = '';
 
-  constructor() { 
+  constructor(
+    private utils: UtilsService) { 
   }
 
   ngOnInit(): void {
-    console.log(`under-construction: The value passed is [${this.webpart}]`);
+    this.utils.log(`under-construction: The value passed is [${this.webpart}]`);
   }
 }

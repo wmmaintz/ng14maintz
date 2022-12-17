@@ -2,9 +2,7 @@
 
   <mat-nav-list><!-- Main Menu -->
 
-    <!--
-    mat-icon-button
-    -->
+    <!-- <mat-icon>more_vert</mat-icon> -->
     
     <button class="navbarBtn"
       fxHide.gt-xs
@@ -43,7 +41,7 @@
     </button> 
   </mat-nav-list>
 
-  <mat-menu class="navbarBtn" > #mainMenu="matMenu">
+  <mat-menu class="navbarBtn" #mainMenu="matMenu">
 
     <button mat-menu-item [matMenuTriggerFor]="adminMenu" matTooltip="Display The Admin Menu">
       <mat-icon>gavel</mat-icon>
@@ -69,6 +67,7 @@
       <mat-icon>misc</mat-icon>
       <span *ngIf="showMenuText">Misc</span>
     </button>
+    <span *ngIf="menuItems">{{menuItems.length}}</span>
   </mat-menu>
 
   <mat-menu #adminMenu="matMenu">
@@ -130,7 +129,6 @@
 
   <mat-menu #photoMenu="matMenu" >
       <button mat-menu-item routerLink="/photos-list">
-        <mat-icon>burst_mode</mat-icon>
         <mat-icon>blur_linear</mat-icon>
         <span *ngIf="showMenuText">Photo List</span>
       </button>
@@ -199,7 +197,7 @@
       <mat-icon>circle</mat-icon>
       <span *ngIf="showMenuText">Loading</span>
     </button>
-    <button mat-menu-item routerLink="infLoading">
+    <button mat-menu-item routerLink="/infloading">
       <mat-icon>circle</mat-icon>
       <span *ngIf="showMenuText">Infinity Loading</span>
     </button>
@@ -230,3 +228,68 @@
   </mat-menu>
 
 </mat-toolbar>
+
+<br/><br/><br/>
+<mat-card *ngIf="showTable && menuItems">
+  <mat-card-content>
+    <pre>{{ menuItems | json }}</pre>
+    <hr>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="showTable && menuItems">
+  <mat-card-header>[{{menuItems.length}}] menu-items</mat-card-header>
+  <mat-card-content>
+    <table>
+      <thead>
+        <th>menuGroup</th>
+        <th>name</th>
+        <th>matTooltip</th>
+        <th>matIcon</th>
+        <th>display</th>
+        <th>ariaLabel</th>
+        <th>ariaHidden</th>
+        <th>routerLink</th>
+        <th>subMenuGrp</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let menuItem of menuItems; let i as index">
+        <td>[{{i}}]{{menuItem.menuGroup}}</td>
+        <td>{{menuItem.name}}</td>
+        <td>{{menuItem.matTooltip}}</td>
+        <td>{{menuItem.matIcon}}</td>
+        <td>{{menuItem.display}}</td>
+        <td>{{menuItem.ariaLabel}}</td>
+        <td>{{menuItem.ariaHidden}}</td>
+        <td>{{menuItem.routerLink}}</td>
+        <td>{{menuItem.subMenuGrp}}</td>
+      </tr>
+      <!-- <tr><td>---</td></tr>
+      <tr>
+        <td>[0]{{menuItems[0].menuGroup}}</td>
+        <td>{{menuItems[0].name}}</td>
+        <td>{{menuItems[0].matTooltip}}</td>
+        <td>{{menuItems[0].matIcon}}</td>
+        <td>{{menuItems[0].display}}</td>
+        <td>{{menuItems[0].ariaLabel}}</td>
+        <td>{{menuItems[0].ariaHidden}}</td>
+        <td>{{menuItems[0].routerLink}}</td>
+        <td>{{menuItems[0].subMenuGrp}}</td>
+      </tr>
+      <tr>
+        <td>[1]{{menuItems[1].menuGroup}}</td>
+        <td>{{menuItems[1].name}}</td>
+        <td>{{menuItems[1].matTooltip}}</td>
+        <td>{{menuItems[1].matIcon}}</td>
+        <td>{{menuItems[1].display}}</td>
+        <td>{{menuItems[1].ariaLabel}}</td>
+        <td>{{menuItems[1].ariaHidden}}</td>
+        <td>{{menuItems[1].routerLink}}</td>
+        <td>{{menuItems[1].subMenuGrp}}</td>
+      </tr> -->
+      </tbody>
+    </table>
+    <hr>
+  </mat-card-content>
+</mat-card>
+<br/>

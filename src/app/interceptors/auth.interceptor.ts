@@ -7,9 +7,6 @@ import {
 
 import { Observable } from 'rxjs';
 
-
-
-
 import { AccountsService } from '../accounts/accounts.service';
 
 @Injectable()
@@ -34,7 +31,6 @@ export class AuthInterceptor implements HttpInterceptor {
 
     // send cloned request with header to the next handler.
     return next.handle(authReq);
-    // return next.handle(request);
   }
 
 }

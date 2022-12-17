@@ -7,7 +7,7 @@ import {
 import { Observable, of } from 'rxjs';
 import { startWith, tap } from 'rxjs/operators';
 
-import { RequestCache } from '../request-cache.service';
+import { RequestCacheService } from '../request-cache.service';
 import { searchUrl } from '../package-search/package-search.service';
 
 
@@ -23,7 +23,8 @@ import { searchUrl } from '../package-search/package-search.service';
  */
 @Injectable()
 export class CachingInterceptor implements HttpInterceptor {
-  constructor(private cache: RequestCache) {}
+  
+  constructor( private cache: RequestCacheService ) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     // continue if not cacheable.
@@ -58,7 +59,7 @@ function isCacheable(req: HttpRequest<any>) {
 function sendRequest(
   req: HttpRequest<any>,
   next: HttpHandler,
-  cache: RequestCache): Observable<HttpEvent<any>> {
+  cache: RequestCacheService): Observable<HttpEvent<any>> {
   return next.handle(req).pipe(
     tap(event => {
       // There may be other events besides the response.

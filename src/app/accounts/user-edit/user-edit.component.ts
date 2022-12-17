@@ -8,6 +8,8 @@ import { User } from '../user.model';
 import { AccountsService } from '../accounts.service';
 import { SharedModule } from "../../shared.module";
 import { UnderConstructionComponent } from '@app/core/under-construction/under-construction.component';
+import { UtilsService } from '@app/core/utils.service';
+
 
 @Component({
   selector: 'm-user-edit',
@@ -49,7 +51,8 @@ export class UserEditComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private accountsService: AccountsService
+    private accountsService: AccountsService,
+    private utils: UtilsService
   ) {
     // this.createForm();
    }
@@ -94,8 +97,8 @@ export class UserEditComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
-    console.log(f.value);  // { first: '', last: '' }
-    console.log(f.valid);  // false
+    this.utils.log(f.value);  // { first: '', last: '' }
+    // this.utils.log(f.valid);  // false
   }
   
 }

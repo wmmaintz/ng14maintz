@@ -27,6 +27,7 @@
     "angular-material": "^0.8.0",
     "fs": "^0.0.1-security",
     "hammerjs": "^2.0.8",
+    "jquery": "^3.6.2",
     "moment": "^2.29.4",
     "ng-gallery": "^7.1.2",
     "ngx-toaster": "^1.0.1",

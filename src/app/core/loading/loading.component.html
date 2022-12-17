@@ -1,18 +1,15 @@
-<div class="center-page">  
-
-    <mat-card class="text-center">
-        <mat-card-content>
-            <h2>Loading ...</h2>
-            <mat-progress-spinner
-                class="text-center"
-                [color]="spinnerColor"
-                [diameter]="spinnerSize"
-                mode="indeterminate">
-            </mat-progress-spinner>
-        </mat-card-content>
-    </mat-card>
-    
-</div>
+<mat-card *ngIf="isLoading">
+    <!-- <br/><br/> -->
+    <mat-card-title><h2>Loading ...</h2></mat-card-title>
+    <mat-card-content>        
+        <mat-progress-spinner
+            class="text-center"
+            [color]="spinnerColor"
+            [diameter]="spinnerSize"
+            mode="indeterminate">
+        </mat-progress-spinner>
+    </mat-card-content>
+</mat-card>
 
 <!-- To call from another component: 
 

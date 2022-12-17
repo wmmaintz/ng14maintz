@@ -13,7 +13,7 @@ import { Link } from '../link.model';
 import { LinksService } from '../links.service';
 import { LoadingService } from '@app/core/loading.service';
 import { MessageService } from '@app/messages/message.service';
-import * as DATA from '@data/json/links.json';
+import { UtilsService } from '@app/core/utils.service';
 
 @Component({
   selector: 'm-links-list',
@@ -28,17 +28,20 @@ export class LinksListComponent implements OnInit {
   heading: string = 'Links List';
   subHeading: string = 'A list of hyperlinks to other Maintz\'s.';
   isLoading:boolean = true;
-  links: any[] = [];
+  links: Link[] = [];
 
   constructor(
-    private liveAnnouncer: LiveAnnouncer,
-    private linksService: LinksService,
-    private messageService: MessageService,
-    private loadingService: LoadingService
+    private _liveAnnouncer: LiveAnnouncer,
+    private _linksService: LinksService,
+    private _messageService: MessageService,
+    private _loadingService: LoadingService,
+    private utils: UtilsService
   ) { }
 
   ngOnInit(): void {
-    this.links = DATA;
+    this._linksService.getLinks()
+      .subscribe(data => this.links = data);
+    this.isLoading = false;
   }
 
 }

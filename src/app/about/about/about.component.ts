@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from '@app/core/utils.service';
 
 @Component({
   selector: 'm-about',
@@ -17,12 +18,14 @@ export class AboutComponent implements OnInit {
   // filePath: string = path.resolve("./");
   srcFile: string = 'about.component.ts';
 
-  constructor() {
-    console.log('About Component - constructor');
+  constructor(
+    private utils: UtilsService
+  ) {
+    this.utils.log('About Component - constructor');
   }
 
   ngOnInit(): void {
-    console.log('About Component - ngOnInit');
+    this.utils.log('About Component - ngOnInit');
   }
 
 }

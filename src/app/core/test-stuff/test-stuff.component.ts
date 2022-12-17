@@ -6,6 +6,8 @@ import * as moment from 'moment';
 import { AnimatedButton } from '@app/core/animated-button.model';
 import { AnimatedButtonComponent } from '@app/core/animated-button/animated-button.component';
 import { AnimatedDeleteButtonComponent } from '../animated-delete-button/animated-delete-button.component';
+import { UtilsService } from '@app/core/utils.service';
+
 
 @Component({
   selector: 'app-test-stuff',
@@ -14,14 +16,15 @@ import { AnimatedDeleteButtonComponent } from '../animated-delete-button/animate
 })
 export class TestStuffComponent implements OnInit {
   contents: string = ' ';
-  webpart:string = "this test stuff";
+  webpart:string = "test stuff";
 
   // Animated button
   animBtn: AnimatedButton;
   delBtn: AnimatedButton;
 
   constructor(
-    private animBtnComp: AnimatedButtonComponent
+    private animBtnComp: AnimatedButtonComponent,
+    private utils: UtilsService
   ) {
     this.initBtn(this.animBtn);
     this.initBtn(this.delBtn);
@@ -31,12 +34,18 @@ export class TestStuffComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  acknowledgeButtonPress(btnName) {
+    alert(`The ${btnName} was just pressed.`)
+  }
+
   buttonPressed(btnName: string){
     this.contents += btnName + ', ';
+    this.acknowledgeButtonPress(btnName);
   }
 
   clearContents(){
     this.contents = ' ';
+    this.acknowledgeButtonPress('Clear Contents Button');
   }
   
   initBtn(btn: AnimatedButton) {
@@ -53,34 +62,34 @@ export class TestStuffComponent implements OnInit {
   localMethod(btnName: string, btn: AnimatedButton){
     this.contents += btnName + ', ';
     this.dumpButtonProps(btn);
-    console.log(`TestStuffComponent - Local Method Called from ${btnName}`);
-    console.log('TestStuffComponent - Calling animBtnComp.btnClicked()');
+    this.utils.log(`TestStuffComponent - Local Method Called from ${btnName}`);
+    this.utils.log('TestStuffComponent - Calling animBtnComp.btnClicked()');
     this.animBtnComp.btnClicked();
-    console.log('TestStuffComponent - animBtnComp.btnClicked() Called');
-    console.log('TestStuffComponent - Calling animBtnComp.btnReset()');
+    this.utils.log('TestStuffComponent - animBtnComp.btnClicked() Called');
+    this.utils.log('TestStuffComponent - Calling animBtnComp.btnReset()');
     this.animBtnComp.btnReset();
-    console.log('TestStuffComponent - animBtnComp.btnReset() Called');
+    this.utils.log('TestStuffComponent - animBtnComp.btnReset() Called');
     alert('TestStuffComponent - Local Method Called');
   }
 
   dumpButtonProps(btn: AnimatedButton) {
-    console.log(`      btnId = ${btn.btnId}`);
-    console.log(`btnTextBeg  = ${btn.btnTextBeg}`);
-    console.log(`btnTextHov  = ${btn.btnTextHov}`);
-    console.log(`btnTextEnd  = ${btn.btnTextEnd}`);
-    console.log(`btnTextCan  = ${btn.btnTextCan}`);
-    console.log(`btnClassBeg = ${btn.btnClassBeg}`);
-    console.log(`btnClassEnd = ${btn.btnClassEnd}`);
-    console.log(`btnClassCan = ${btn.btnClassCan}`);
-    console.log(`iconNameBeg = ${btn.iconNameBeg}`);
-    console.log(`iconNameEnd = ${btn.iconNameEnd}`);
-    console.log(`iconNameCan = ${btn.iconNameCan}`);
-    console.log(`fgColorBeg  = ${btn.fgColorBeg}`);
-    console.log(`fgColorEnd  = ${btn.fgColorEnd}`);
-    console.log(`fgColorCan  = ${btn.fgColorCan}`);
-    console.log(`bgColorBeg  = ${btn.bgColorBeg}`);
-    console.log(`bgColorEnd  = ${btn.bgColorEnd}`);
-    console.log(`bgColorCan  = ${btn.bgColorCan}`);
+    this.utils.log(`      btnId = ${btn.btnId}`);
+    this.utils.log(`btnTextBeg  = ${btn.btnTextBeg}`);
+    this.utils.log(`btnTextHov  = ${btn.btnTextHov}`);
+    this.utils.log(`btnTextEnd  = ${btn.btnTextEnd}`);
+    this.utils.log(`btnTextCan  = ${btn.btnTextCan}`);
+    this.utils.log(`btnClassBeg = ${btn.btnClassBeg}`);
+    this.utils.log(`btnClassEnd = ${btn.btnClassEnd}`);
+    this.utils.log(`btnClassCan = ${btn.btnClassCan}`);
+    this.utils.log(`iconNameBeg = ${btn.iconNameBeg}`);
+    this.utils.log(`iconNameEnd = ${btn.iconNameEnd}`);
+    this.utils.log(`iconNameCan = ${btn.iconNameCan}`);
+    this.utils.log(`fgColorBeg  = ${btn.fgColorBeg}`);
+    this.utils.log(`fgColorEnd  = ${btn.fgColorEnd}`);
+    this.utils.log(`fgColorCan  = ${btn.fgColorCan}`);
+    this.utils.log(`bgColorBeg  = ${btn.bgColorBeg}`);
+    this.utils.log(`bgColorEnd  = ${btn.bgColorEnd}`);
+    this.utils.log(`bgColorCan  = ${btn.bgColorCan}`);
   }
    
 }

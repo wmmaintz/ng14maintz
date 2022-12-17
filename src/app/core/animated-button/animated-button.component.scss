@@ -27,7 +27,7 @@ $btnWidth: 400px;
   
     mat-icon {
         position: absolute;
-        top: $btnHeight/3;
+        top: calc($btnHeight/3);
         vertical-align: middle;
         display: inline-block;
         height: 100%;

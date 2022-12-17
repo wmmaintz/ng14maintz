@@ -1,21 +1,22 @@
 // Icon Colors
-$green        : #16A085;
+$green        : #02f32a;
 $red          : #C82647;
-$green-l      : #8CC63F;
+$green-l      : #3fc661;
 $orange       : #EB9532;
 $purple       : #7E3661;
+$yellow       : #ffee00;
 
-$background   : #2d2c3e;
+$background   : transparent; //#2d2c3e;
 $background-b : #2d2c3e;
 
-$icon-size	  : 60px;
-$border-radius: 0.5;//15% = 0.15, 50% = 0.50 etc.
+$icon-size	  : 4rem;
+$border-radius: 0.25;//15% = 0.15, 50% = 0.50 etc.
 
 // Text
 $white		  : #FFFFFF;
 
 section {
-	background: $background-b;
+	background: $background;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow: hidden;
@@ -24,9 +25,7 @@ section {
 
 .container{
 	display: table;
-	height: 95vh;
-	width: 90%;
-	padding-bottom: 5vh;
+	padding-bottom: 1em;
 	margin: auto auto;
 
 	@media (max-width: 900px){
@@ -49,9 +48,13 @@ h1{
 	color: $white;
 }
 
+mat-icon {
+	transform: scale(2);
+}
+
 .icon-container{
-	margin-top: 30px;
-	width: 100%;
+	margin-top: 0px;
+	// width: 100%;
 	height: $icon-size;
 }
 
@@ -61,10 +64,13 @@ h1{
 	display: inline-block;
 	width: $icon-size;
 	height: $icon-size;
-	margin-left: $icon-size/5;
-	margin-right: $icon-size/5;
+	margin-left: calc($icon-size/5);
+	margin-right: calc($icon-size/5);
 	border-radius: $icon-size*$border-radius;
+	border: 2px solid black;
 	overflow: hidden;
+	background-color: whitesmoke;
+	color: navy;
 
 	&::before, &::after{
 		content: '';
@@ -80,8 +86,8 @@ h1{
 	i{
 		position: relative;
 		color: $white;
-		font-size: $icon-size/2;
-		margin-top: $icon-size/4;
+		font-size: calc($icon-size/2);
+		margin-top: calc($icon-size/4);
 		transition: all 0.25s ease;
 	}
 }
@@ -117,14 +123,12 @@ h1{
 	&::after{
 		box-shadow: inset 0 0 0 1px $red;
 	}
-
 	&::before{
-		background: $red;
-		box-shadow: inset 0 0 0 $icon-size $background;
+		background: white;
+		box-shadow: inset 0 0 0 $icon-size $background-b;
 	}
-
 	&:hover::before{
-		box-shadow: inset 0 0 0 1px $background;
+		box-shadow: inset 0 0 0 1px $background-b;
 	}
 }
 
@@ -135,8 +139,8 @@ h1{
 
 	&:hover::before{
 		box-shadow: 
-		inset 0 $icon-size/2 0 0 $green-l,
-		inset 0 $icon-size/-2 0 0 $green-l;
+		inset 0 calc($icon-size/2) 0 0 $green-l,
+		inset 0 calc($icon-size/-2) 0 0 $green-l;
 	}
 
 	&::after{
